@@ -1,0 +1,67 @@
+[global_config]
+  enabled_plugins = ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  title_transmit_bg_color = "#af735c"
+  focus = mouse
+[keybindings]
+  rotate_ccw = <Shift><Alt>r
+  rotate_cw = <Alt>r
+[profiles]
+  [[default]]
+    background_image = None
+    login_shell = True
+    use_system_font = False
+    urgent_bell = True
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    font = Ubuntu Mono 13
+  [[Beta]]
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    login_shell = True
+    background_image = None
+    use_system_font = False
+    foreground_color = "#ffffff"
+    font = Ubuntu Mono derivative Powerline 11
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[Beta]]
+    [[[child0]]]
+      position = 3072:551
+      type = Window
+      order = 0
+      parent = ""
+      size = 759, 506
+    [[[child1]]]
+      position = 252
+      type = VPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 378
+      type = HPaned
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = Beta
+      group = Beta
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal5]]]
+      profile = Beta
+      group = Beta
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal4]]]
+      profile = Beta
+      group = Beta
+      type = Terminal
+      order = 0
+      parent = child3
+[plugins]
