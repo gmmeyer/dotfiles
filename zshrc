@@ -11,10 +11,15 @@ alias chrome='google-chrome-stable'
 # prefer pry to irb
 alias irb='pry'
 # alias node, two characters matters.
-alias node='nodejs'
+# alias node='nodejs'
 # emacs aliases.
-alias emacs='emacs -nw'
-alias e='emacs -nw'
+alias emacs='emacs24-nox'
+alias e='emacs24-nox'
+
+# I do not want nautilus to open 
+# on the desktop every time I open nautilus
+alias nautilus='nautilus --no-desktop'
+alias term='terminator'
 
 # better apt-gets
 alias apt4='sudo apt-get update && sudo apt-get dist-upgrade && 
@@ -35,10 +40,6 @@ alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="awesomepanda"
-# ZSH_THEME="random"
-# ZSH_THEME='junkfood'
-# ZSH_THEME='aussiegeek'
-# ZSH_THEME='gmmeyer'
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -82,17 +83,17 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(bundler colorize colored-man command-not-found 
-	debian git gitextra gitfast 
-	node postgres rails rake rvm sublime ssh-agent
+	debian git gitextra gitfast # node 
+	postgres rails rake rvm sublime ssh-agent
 	zsh_reload z)
 
 # last-working-dir github
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -110,3 +111,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+export NVM_DIR="/home/greg/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+function gi() { curl http://www.gitignore.io/api/$@ ;}
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

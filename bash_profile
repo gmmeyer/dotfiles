@@ -15,6 +15,7 @@ alias sublime='sublime_text'
 
 # alias node, two characters matters.
 alias node='nodejs'
+alias nautilus='nautilus --no-desktop'
 
 # alias for xfce4-terminal
 alias term='xfce4-terminal'
@@ -66,3 +67,5 @@ source "$HOME/.rvm/scripts/rvm"
 
 [[ -r "$HOME/.rvm/scripts/completion" ]]
 source "$HOME/.rvm/scripts/completion"
+export NVM_DIR="/home/greg/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

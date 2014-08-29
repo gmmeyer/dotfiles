@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/greg'
+let g:netrw_dirhist_2='/home/greg/Dropbox/Dev/tango_with_django_project'
+let g:netrw_dirhist_3='/home/greg/Dropbox/Dev/django_tutorial'
+let g:netrw_dirhist_4='/home/greg/Dropbox/Dev'
+let g:netrw_dirhist_5='/home/greg/Dropbox/Dev/django_tutorial'
+let g:netrw_dirhist_6='/home/greg/Dropbox/Dev/django_tutorial/mysite'
+let g:netrw_dirhist_7='/home/greg/Dropbox/Dev/django_tutorial'
+let g:netrw_dirhist_8='/home/greg/Dropbox/Dev/django_tutorial/polls'
+let g:netrw_dirhist_9='/home/greg/Dropbox/blog posts/spoonfeeding.md'
