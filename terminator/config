@@ -12,14 +12,14 @@
     use_system_font = False
     urgent_bell = True
     palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
-    font = Ubuntu Mono 13
+    font = Inconsolata Medium 13
   [[Beta]]
     palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     login_shell = True
     background_image = None
     use_system_font = False
     foreground_color = "#ffffff"
-    font = Ubuntu Mono derivative Powerline 11
+    font = Inconsolata Medium 11
 [layouts]
   [[default]]
     [[[child1]]]
