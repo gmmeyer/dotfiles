@@ -4,7 +4,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Load RVM into a shell session *as a function*
 
 # emacs, not vim, as default
-export EDITOR='emacs'
+# export EDITOR='emacs-nox'
+export EDITOR='vim'
 
 alias chrome='google-chrome-stable'
 
