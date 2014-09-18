@@ -4,8 +4,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Load RVM into a shell session *as a function*
 
 # emacs, not vim, as default
-# export EDITOR='emacs-nox'
-export EDITOR='vim'
+export EDITOR='emacs -nw'
+# export EDITOR='vim'
 
 alias chrome='google-chrome-stable'
 
@@ -17,15 +17,15 @@ alias irb='pry'
 alias emacs='emacs24-nox'
 alias e='emacs24-nox'
 
-# I do not want nautilus to open 
+# I do not want nautilus to open
 # on the desktop every time I open nautilus
 alias nautilus='nautilus --no-desktop'
 alias term='terminator'
 
 # better apt-gets
-alias apt4='sudo apt-get update && sudo apt-get dist-upgrade && 
+alias apt4='sudo apt-get update && sudo apt-get dist-upgrade &&
             sudo apt-get autoremove && sudo apt-get autoclean'
-alias apt6='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && 
+alias apt6='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade &&
             sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -83,8 +83,8 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler colorize colored-man command-not-found 
-	debian git gitextra gitfast # node 
+plugins=(bundler colorize colored-man command-not-found
+	debian git gitextra gitfast # node
 	postgres rails rake rvm sublime ssh-agent
 	zsh_reload z)
 

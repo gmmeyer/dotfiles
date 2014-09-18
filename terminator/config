@@ -13,7 +13,7 @@
     urgent_bell = True
     palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     foreground_color = "#ffffff"
-    font = Inconsolata for Powerline Medium 13
+    font = Inconsolata for Powerline Medium 11
   [[Beta]]
     background_image = None
     login_shell = True
@@ -22,6 +22,12 @@
     palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     foreground_color = "#ffffff"
     font = Inconsolata for Powerline Medium 11
+  [[bright]]
+    use_system_font = False
+    font = Inconsolata for Powerline Medium 12
+    background_color = "#ffffff"
+    background_image = None
+    foreground_color = "#000000"
 [layouts]
   [[default]]
     [[[child1]]]
