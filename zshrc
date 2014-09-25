@@ -7,6 +7,9 @@ export ZSH=$HOME/.oh-my-zsh
 export EDITOR='emacs -nw'
 # export EDITOR='vim'
 
+# autoload -U compinit && compinit
+autoload -U bashcompinit && bashcompinit
+
 alias chrome='google-chrome-stable'
 
 # prefer pry to irb
@@ -96,6 +99,12 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
+
+if [ -f ~/.config/exercism/exercism_completion.bash ]; then
+  . ~/.config/exercism/exercism_completion.bash
+fi
+
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

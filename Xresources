@@ -1,9 +1,19 @@
+URxvt*loginShell:                       true
+URxvt*background:                       black
+URxvt*foreground:                       white
+URxvt*font:                             xft:UbuntuMono:style=Regular:size=10
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
+Xft.hinting: true 
+Xft.hintstyle: hintfull 
+Xft.antialias: rgba 
+Xft.rgba: rgb
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       240x84
 ! URxvt*chdir:                          string
 ! URxvt*reverseVideo:                   boolean
 ! URxvt*loginShell:                     true
-URxvt*loginShell:                       true
 ! URxvt*jumpScroll:                     boolean
 ! URxvt*skipScroll:                     boolean
 ! URxvt*pastableTabs:                   boolean
@@ -35,9 +45,7 @@ URxvt*loginShell:                       true
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
 ! URxvt*background:                     black
-URxvt*background:                       black
 ! URxvt*foreground:                     white
-URxvt*foreground:                       white
 ! URxvt*color0:                         color
 ! URxvt*color1:                         color
 ! URxvt*color2:                         color
@@ -72,7 +80,6 @@ URxvt*foreground:                       white
 ! URxvt*backgroundPixmap:               file[;geom]
 ! URxvt*iconFile:                       file
 ! URxvt*font:                           9x15:size=15
-URxvt*font:                             xft:UbuntuMono:style=Regular:size=10
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
