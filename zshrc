@@ -86,8 +86,8 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler colorize colored-man command-not-found
-	debian git gitextra gitfast # node
+plugins=(autoenv bundler colorize colored-man command-not-found
+	debian git gitextra gitfast nvm # node
 	postgres rails rake rvm sublime ssh-agent
 	zsh_reload z)
 
@@ -103,8 +103,6 @@ export PATH=/usr/local/bin:$PATH
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash
 fi
-
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -125,7 +123,7 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 export NVM_DIR="/home/greg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-function gi() { curl http://www.gitignore.io/api/$@ ;}
+function gi() { curl -s https://www.gitignore.io/api/$@ ;}
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
