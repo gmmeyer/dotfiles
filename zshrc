@@ -86,7 +86,7 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autoenv bundler colorize colored-man command-not-found
+plugins=(bundler colorize colored-man command-not-found
 	debian git gitextra gitfast nvm # node
 	postgres rails rake rvm sublime ssh-agent
 	zsh_reload z)
