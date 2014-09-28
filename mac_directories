@@ -1,0 +1,5 @@
+#Keyboard Brightness
+/sys/class/leds/smc::kbd_backlight
+
+#Brightness
+/sys/class/backlight/acpi_video0
