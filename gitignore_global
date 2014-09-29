@@ -30,4 +30,8 @@
 ehthumbs.db
 Thumbs.db
 
+# stupid sublime text 
 *.fuse_hidden*
+
+# pyenv, since I'm the only one who uses it
+.python-version
