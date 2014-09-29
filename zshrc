@@ -41,7 +41,7 @@ ZSH_THEME="awesomepanda"
 
 CASE_SENSITIVE="true"
 
-plugins=(bundler colored-man git nvm rails ssh-agent zsh_reload)
+plugins=(bundler colored-man git nvm rails ssh-agent zsh_reload lein)
 
 # last-working-dir github
 source $ZSH/oh-my-zsh.sh
