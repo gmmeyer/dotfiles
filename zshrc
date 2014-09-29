@@ -29,7 +29,9 @@ alias bi="bundle_install"
 alias emacs='emacs24-nox'
 alias e='emacs24-nox'
 alias st='subl'
+alias stt='subl .'
 alias at='atom'
+alias att='atom .'
 
 # I do not want nautilus to open
 # on the desktop every time I open nautilus
@@ -69,6 +71,10 @@ export PATH=/usr/local/bin:$PATH
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash
 fi
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 [[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 export NVM_DIR="/home/greg/.nvm"
