@@ -74,8 +74,8 @@ sudo apt-get install -y  python python3 ruby \
   emacs24-nox zsh sublime-text-installer awesome awesome-extra \
   xfce4-terminal google-chrome-beta xubuntu-desktop network-manager skype \
   pidgin pidgin-plugin-pack pidgin-skype blueman xfce4-volumed \
-  xfce4-power-manager dropbox terminator spotify r-base \
-  r-recommended nodejs mongodb-org oracle-java8-installer rxvt-unicode synaptic redis nginx
+  xfce4-power-manager dropbox terminator spotify-client r-base \
+  r-recommended nodejs mongodb-org oracle-java8-installer rxvt-unicode synaptic redis-server nginx
 
 sudo pipelight-plugin --update
 sudo pipelight-plugin --enable silverlight

@@ -1,0 +1,3 @@
+[submodule "awesome-dangerzone"]
+	path = awesome-dangerzone
+	url = git@github.com:gmmeyer/awesome-dangerzone.git
