@@ -15,7 +15,7 @@ sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian trusty co
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty" >> /etc/apt/sources.list.d/r.list'
 
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+sudo apt-key adv --keyserver hkp://,keyserver.ubuntu.com:80 --recv 7F0CEB10
 echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 
 
@@ -40,10 +40,10 @@ sudo dpkg -i google-chrome*
 
 sudo apt-get -y update
 
-HOMEDIR = '/home/greg/'
-DOTFILES = $HOMEDIR'dotfiles'
-CONFIGFILES = $HOMEDIR'config'
-BACKUP = $DOTFILES"/backup_dotfiles"
+HOMEDIR='/home/greg/'
+DOTFILES=$HOMEDIR'dotfiles'
+CONFIGFILES=$HOMEDIR'config'
+BACKUP=$DOTFILES"/backup_dotfiles"
 
 # git clone git@github.com:gmmeyer/awesome-dangerzone.git /home/greg/.config/awesome
 git clone git@github.com:gmmeyer/dotfiles.git $DOTFILES
@@ -54,8 +54,8 @@ mkdir $BACKUP
 
 for i in 'bash_profile' 'bashrc' 'gitconfig' 'gitignore' 'gitignore_global' 'inputrc' 'profile' 'urxvt' 'vim' 'vimrc' 'Xresources' 'zlogin' 'zshrc'
 do
-  ORIGINAL = $DOTFILES$i
-  TARGET = $HOMEDIR$i
+  ORIGINAL=$DOTFILES$i
+  TARGET=$HOMEDIR'.'$i
 
   if [ -e $TARGET]
   then
@@ -74,8 +74,8 @@ sudo apt-get install -y  python python3 ruby \
   emacs24-nox zsh sublime-text-installer awesome awesome-extra \
   xfce4-terminal google-chrome-beta xubuntu-desktop network-manager skype \
   pidgin pidgin-plugin-pack pidgin-skype blueman xfce4-volumed \
-  xfce4-power-manager dropbox terminator urxvt spotify r-base \
-  r-recommended nodejs mongodb-org oracle-java8-installer rxvt-unicode synaptic
+  xfce4-power-manager dropbox terminator spotify r-base \
+  r-recommended nodejs mongodb-org oracle-java8-installer rxvt-unicode synaptic redis nginx
 
 sudo pipelight-plugin --update
 sudo pipelight-plugin --enable silverlight
@@ -86,7 +86,7 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 curl -sSL https://get.rvm.io | bash -s stable
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 curl https://raw.githubusercontent.com/creationix/nvm/v0.17.2/install.sh | bash
-curl -L https://npmjs.org/install.sh | sh
+# curl -L https://npmjs.org/install.sh | sh
 
 
 #git clone git@github.com:gmmeyer/dotfiles.git /home/greg/dotfiles
