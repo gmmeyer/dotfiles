@@ -27,26 +27,29 @@ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | 
 
 
 # Another thing I need to do in this is to generate an ssl key
+PPAS=('pipelight/stable'
+    'ubuntu-wine/ppa'
+    'gnome3-team/gnome3'
+    'pidgin-developers/ppa'
+    'webupd8team/sublime-text-3'
+    'webupd8team/java'
+    'webupd8team/atom'
+    'webupd8team/brackets'
+    'libreoffice/ppa'
+    'klaus-vormweg/awesome'
+    'git-core/ppa'
+    'fkrull/deadsnakes'
+    'rwky/redis'
+    'mozillateam/firefox-next'
+)
 
-sudo add-apt-repository -y ppa:pipelight/stable
-sudo add-apt-repository -y ppa:ubuntu-wine/ppa
-sudo add-apt-repository -y ppa:gnomea3-team/gnome3
-sudo add-apt-repository -y ppa:pidgin-developers/ppa
-sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
-sudo add-apt-repository -y ppa:webupd8team/java
-sudo add-apt-repository -y ppa:webupd8team/atom
-sudo add-apt-repository -y ppa:webupd8team/brackets
-sudo add-apt-repository -y ppa:libreoffice/ppa
-sudo add-apt-repository -y ppa:klaus-vormweg/awesome
-sudo add-apt-repository -y ppa:git-core/ppa
-sudo add-apt-repository -y ppa:fkrull/deadsnakes
-sudo add-apt-repository -y ppa:rwky/redis
-sudo add-apt-repository -y ppa:mozillateam/firefox-next
+for i in ${PPAS[@]}; do
+
+    sudo add-apt-repository -y 'ppa:'$i
+
+done
 
 sudo apt-get -y update
-
-# What I really need to do is save the home directory into a variable,
-# then, all of this can be executed by a superuser.
 
 HOMEDIR='~/'
 DOTFILES=$HOMEDIR'dotfiles'
@@ -56,14 +59,34 @@ BACKUP=$DOTFILES"/backup_dotfiles"
 # git clone git@github.com:gmmeyer/awesome-dangerzone.git /home/greg/.config/awesome
 git clone git@github.com:gmmeyer/dotfiles.git $DOTFILES
 
+cd $DOTFILES
+git submodule init
+git submodule update
+cd $HOMEDIR
 ln -s $DOTFILES"awesome-dangerzone" $CONFIGFILES"awesome"
 ln -s $DOTFILES"terminator" $CONFIGFILES"terminator"
-mkdir $BACKUP
 
 # Add emacs lisp in there when it becomes useful
+dotfiles=('bash_profile'
+    'bashrc'
+    'emacs'
+    'emacs.d'
+    'gitconfig'
+    'gitignore'
+    'gitignore_global'
+    'inputrc'
+    'profile'
+    'urxvt'
+    'vim'
+    'vimrc'
+    'Xresources'
+    'zlogin'
+    'zshrc'
+)
 
-for i in 'bash_profile' 'bashrc' 'emacs' 'emacs.d' 'gitconfig' 'gitignore' 'gitignore_global' 'inputrc' 'profile' 'urxvt' 'vim' 'vimrc' 'Xresources' 'zlogin' 'zshrc'
-do
+mkdir $BACKUP
+
+for i in ${dotfiles[@]}; do
   ORIGINAL=$DOTFILES$i
   TARGET=$HOMEDIR'.'$i
 
@@ -74,7 +97,6 @@ do
 
   ln -s $ORIGINAL $TARGET
 done
-
 
 # needs to be more here
 # I could just save the apps via dpkg and then reinstall them via the same
