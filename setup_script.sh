@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# This setup script is just for me, personally, for when I have to put together a new comptuer.
+# I don't suggest anyone actually use it. It's mostly for me to remember what I have to do to put it together.
+# I've never actually tested it (and there are much better ways of doing it than what I'm doing here).
+# If you do use this, I take no responsibility for breaking your computer.
+
+#git clone git@github.com:gmmeyer/dotfiles.git /home/greg/dotfiles
+
 sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 sudo add-apt-repository "deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) main"
 
@@ -36,11 +43,12 @@ sudo add-apt-repository -y ppa:fkrull/deadsnakes
 sudo add-apt-repository -y ppa:rwky/redis
 sudo add-apt-repository -y ppa:mozillateam/firefox-next
 
-sudo dpkg -i google-chrome*
-
 sudo apt-get -y update
 
-HOMEDIR='/home/greg/'
+# What I really need to do is save the home directory into a variable,
+# then, all of this can be executed by a superuser.
+
+HOMEDIR='~/'
 DOTFILES=$HOMEDIR'dotfiles'
 CONFIGFILES=$HOMEDIR'config'
 BACKUP=$DOTFILES"/backup_dotfiles"
@@ -48,11 +56,13 @@ BACKUP=$DOTFILES"/backup_dotfiles"
 # git clone git@github.com:gmmeyer/awesome-dangerzone.git /home/greg/.config/awesome
 git clone git@github.com:gmmeyer/dotfiles.git $DOTFILES
 
-sudo ln -s $DOTFILES"awesome-dangerzone" $CONFIGFILES"awesome"
-sudo ln -s $DOTFILES"terminator" $CONFIGFILES"terminator"
+ln -s $DOTFILES"awesome-dangerzone" $CONFIGFILES"awesome"
+ln -s $DOTFILES"terminator" $CONFIGFILES"terminator"
 mkdir $BACKUP
 
-for i in 'bash_profile' 'bashrc' 'gitconfig' 'gitignore' 'gitignore_global' 'inputrc' 'profile' 'urxvt' 'vim' 'vimrc' 'Xresources' 'zlogin' 'zshrc'
+# Add emacs lisp in there when it becomes useful
+
+for i in 'bash_profile' 'bashrc' 'emacs' 'emacs.d' 'gitconfig' 'gitignore' 'gitignore_global' 'inputrc' 'profile' 'urxvt' 'vim' 'vimrc' 'Xresources' 'zlogin' 'zshrc'
 do
   ORIGINAL=$DOTFILES$i
   TARGET=$HOMEDIR'.'$i
@@ -62,7 +72,7 @@ do
     mv $TARGET $BACKUP
   fi
 
-  sudo ln -s $ORIGINAL $TARGET
+  ln -s $ORIGINAL $TARGET
 done
 
 
@@ -70,7 +80,9 @@ done
 # I could just save the apps via dpkg and then reinstall them via the same
 sudo apt-get install -y --install-recommends pipelight-multi nvidia-331-updates
 
-sudo apt-get install -y  python python3 ruby \
+# Check this for misnamed stuff. I know there's a few.
+# Also, I should alphabetize these to make it easier to maintain the list
+sudo apt-get install -y google-chrome-stable  python python3 ruby \
   emacs24-nox zsh sublime-text-installer awesome awesome-extra \
   xfce4-terminal google-chrome-beta xubuntu-desktop network-manager skype \
   pidgin pidgin-plugin-pack pidgin-skype blueman xfce4-volumed \
@@ -86,17 +98,6 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 curl -sSL https://get.rvm.io | bash -s stable
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 curl https://raw.githubusercontent.com/creationix/nvm/v0.17.2/install.sh | bash
-# curl -L https://npmjs.org/install.sh | sh
-
-
-#git clone git@github.com:gmmeyer/dotfiles.git /home/greg/dotfiles
-
-# I could generalize this script rather trivially by recording what the home directory is before I kick it to root.
-#for i in $( ls /home/greg/dotfiles ); do
-#  ORIGINAL = "/home/greg/dotfiles/"$i
-#  MOVE_TO = "/home/greg/."$i
-#  cp $ORIGINAL $MOVE_TO
-#end
 
 sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
