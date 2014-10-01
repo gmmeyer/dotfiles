@@ -1,10 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Load RVM into a shell session *as a function*
-
-
-# autoload -U compinit && compinit
 autoload -U bashcompinit && bashcompinit
 
 alias chrome='google-chrome-stable'
@@ -22,8 +18,6 @@ alias att='atom .'
 
 # emacs, not vim, as default
 export EDITOR='emacs'
-
-alias term='terminator'
 
 # better apt-gets
 alias apt4='sudo apt-get update && sudo apt-get dist-upgrade &&
