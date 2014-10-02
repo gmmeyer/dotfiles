@@ -109,7 +109,8 @@ sudo apt-get install -y google-chrome-stable  python python3 ruby \
   xfce4-terminal google-chrome-beta xubuntu-desktop network-manager skype \
   pidgin pidgin-plugin-pack pidgin-skype blueman xfce4-volumed \
   xfce4-power-manager dropbox terminator spotify-client r-base \
-  r-recommended nodejs mongodb-org oracle-java8-installer rxvt-unicode synaptic redis-server nginx
+  r-recommended nodejs mongodb-org oracle-java8-installer \
+  rxvt-unicode synaptic redis-server nginx keychain
 
 sudo pipelight-plugin --update
 sudo pipelight-plugin --enable silverlight

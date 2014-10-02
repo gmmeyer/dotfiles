@@ -2,6 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 autoload -U bashcompinit && bashcompinit
+autoload -U compinit && compinit
 
 alias chrome='google-chrome-stable'
 
@@ -35,7 +36,10 @@ ZSH_THEME="awesomepanda"
 
 CASE_SENSITIVE="true"
 
-plugins=(bundler colored-man git nvm rails ssh-agent zsh_reload lein)
+plugins=(bundler colored-man git lein nvm rails zsh_reload)
+
+# autoloads keychain for ssh
+eval `keychain --eval --agents ssh -Q --quiet id_rsa`
 
 # last-working-dir github
 source $ZSH/oh-my-zsh.sh
