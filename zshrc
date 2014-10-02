@@ -36,7 +36,7 @@ ZSH_THEME="awesomepanda"
 
 CASE_SENSITIVE="true"
 
-plugins=(bundler colored-man git lein nvm rails zsh_reload)
+plugins=(bundler colored-man git lein nvm pip rails zsh_reload)
 
 # autoloads keychain for ssh
 eval `keychain --eval --agents ssh -Q --quiet id_rsa`
