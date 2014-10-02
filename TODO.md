@@ -13,6 +13,7 @@ What I wanna do to make everything better! A ~~cross out~~ means that it's done.
 ## Dotfiles
 
 - clean up and organize zshrc
+- look into using antigen instead of ohmyzsh
 
 ## EMACS
 
