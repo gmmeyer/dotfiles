@@ -7,7 +7,7 @@ What I wanna do to make everything better! A ~~cross out~~ means that it's done.
 
 - testing
 - do setup and installation of node, ruby, etc with RVM, NVM, etc in the setup script. (This will require sourcing RVM, etc, from within the setup script.)
-- alphebetize the installed packages to make them easier to manage
+- ~~alphebetize the installed packages to make them easier to manage~~
 - setup nginx automatically
 
 ## Dotfiles
@@ -25,6 +25,11 @@ What I wanna do to make everything better! A ~~cross out~~ means that it's done.
 
 - alias vim='rm -f' and vi='rm -rf'
 - look into oh my vim and vundle
+
+## GUI Editor Stuff
+
+- How dumb is it to keep them like this?
+  - Explore better ways to do it
 
 ## Sublime Text
 

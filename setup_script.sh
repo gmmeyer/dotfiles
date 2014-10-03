@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # This setup script is just for me, personally, for when I have to put together a new comptuer.
 # I don't suggest anyone actually use it. It's mostly for me to remember what I have to do to put it together.
@@ -7,10 +7,12 @@
 
 #git clone git@github.com:gmmeyer/dotfiles.git /home/greg/dotfiles
 
+# Also, I know there are better ways to do permissions in a script, you don't have to tell me. ;)
+
 sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 sudo add-apt-repository "deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) main"
 
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
@@ -25,6 +27,8 @@ sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty" >> /etc/a
 sudo apt-key adv --keyserver hkp://,keyserver.ubuntu.com:80 --recv 7F0CEB10
 echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 
+wget -O- https://toolbelt.heroku.com/apt/release.key | sudo apt-key add -
+echo "deb http://toolbelt.heroku.com/ubuntu ./" | sudo tee /etc/apt/sources.list.d/heroku.list
 
 # Another thing I need to do in this is to generate an ssl key
 PPAS=('pipelight/stable'
@@ -52,17 +56,16 @@ done
 sudo apt-get -y update
 
 HOMEDIR='~/'
-DOTFILES=$HOMEDIR'dotfiles'
-CONFIGFILES=$HOMEDIR'config'
-BACKUP=$DOTFILES"/backup_dotfiles"
+DOTFILES=$HOMEDIR'dotfiles/'
+CONFIGFILES=$HOMEDIR'config/'
+BACKUP=$DOTFILES"backup_dotfiles/"
 
 # git clone git@github.com:gmmeyer/awesome-dangerzone.git /home/greg/.config/awesome
 git clone git@github.com:gmmeyer/dotfiles.git $DOTFILES
 
-cd $DOTFILES
-git submodule init
-git submodule update
-cd $HOMEDIR
+git -C $DOTFILES submodule init
+git -C $DOTFILES submodule update
+
 ln -s $DOTFILES"awesome-dangerzone" $CONFIGFILES"awesome"
 ln -s $DOTFILES"terminator" $CONFIGFILES"terminator"
 
@@ -102,23 +105,42 @@ done
 # I could just save the apps via dpkg and then reinstall them via the same
 sudo apt-get install -y --install-recommends pipelight-multi nvidia-331-updates
 
-# Check this for misnamed stuff. I know there's a few.
-# Also, I should alphabetize these to make it easier to maintain the list
-sudo apt-get install -y google-chrome-stable  python python3 ruby \
-  emacs24-nox zsh sublime-text-installer awesome awesome-extra \
-  xfce4-terminal google-chrome-beta xubuntu-desktop network-manager skype \
-  pidgin pidgin-plugin-pack pidgin-skype blueman xfce4-volumed \
-  xfce4-power-manager dropbox terminator spotify-client r-base \
-  r-recommended nodejs mongodb-org oracle-java8-installer \
-  rxvt-unicode synaptic redis-server nginx keychain
+sudo apt-get install -y \
+  awesome awesome-extra \
+  blueman \
+  dropbox \
+  emacs24-nox \
+  google-chrome-stable google-chrome-beta \
+  heroku-toolbelt \
+  keychain \
+  mongodb-org \
+  network-manager \
+  nginx \
+  nodejs \
+  oracle-java8-installer \
+  pidgin pidgin-plugin-pack pidgin-skype \
+  python python3 \
+  r-base r-recommended \
+  redis-server \
+  ruby \
+  rxvt-unicode \
+  skype \
+  spotify-client \
+  sublime-text-installer \
+  synaptic \
+  terminator \
+  tmux \
+  vim \
+  xfce4-terminal xfce4-volumed xfce4-power-manager xubuntu-desktop \
+  zsh
 
 sudo pipelight-plugin --update
 sudo pipelight-plugin --enable silverlight
 sudo pipelight-plugin --enable flash
 
-curl -L http://install.ohmyz.sh | sh
-wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-curl -sSL https://get.rvm.io | bash -s stable
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+curl -sSL https://get.rvm.io | bash -s stable --autolibs --rails
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 curl https://raw.githubusercontent.com/creationix/nvm/v0.17.2/install.sh | bash
 
@@ -128,3 +150,5 @@ sudo apt-get -y autoremove
 sudo apt-get -y autoclean
 
 echo "All Done!"
+env zsh
+.  ~/.zshrc
