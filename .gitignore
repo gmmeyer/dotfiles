@@ -1,15 +1,14 @@
 backup_dotfiles
-
 notes
 
+# Emacs
+###########
 auto-save-list
-
 *~
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
 *.elc
-auto-save-list
 tramp
 .\#*
 
@@ -35,6 +34,9 @@ tramp
 
 # Atom #
 ####################
+atom/.node-gyp
+atom/packages
+atom/nohup.out
 compile-cache
 atom/storage
 
