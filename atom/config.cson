@@ -1,0 +1,23 @@
+'exception-reporting':
+  'userId': '912ac179-0652-5904-d847-bcb8c6059f83'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '986ea0be6f12380a2af9ce05c8afe860e9e5366c'
+'core':
+  'disabledPackages': [
+    'atom-color-highlight'
+    'file-icons'
+  ]
+  'themes': [
+    'seti-ui'
+    'seti-monokai'
+  ]
+  'ignoredNames': [
+    '*.pyc'
+    '.pyc'
+  ]
+'editor':
+  'fontFamily': 'DejaVu Sans Mono'
+  'fontSize': 15
+  'invisibles': {}
