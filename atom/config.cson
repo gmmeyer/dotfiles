@@ -5,17 +5,16 @@
 'metrics':
   'userId': '986ea0be6f12380a2af9ce05c8afe860e9e5366c'
 'core':
-  'disabledPackages': [
-    'atom-color-highlight'
-    'file-icons'
-  ]
   'themes': [
     'seti-ui'
-    'seti-monokai'
+    'seti-syntax'
   ]
   'ignoredNames': [
     '*.pyc'
     '.pyc'
+  ]
+  'disabledPackages': [
+    'file-icons'
   ]
 'editor':
   'fontFamily': 'DejaVu Sans Mono'
