@@ -27,5 +27,4 @@
   '_analyticsUserId': '212b73e6-1807-4563-aec2-c53c698b5ad8'
 'tabs-to-spaces':
   'onSave': 'untabify'
-'atom-color-highlight': {}
 'django-templates': {}

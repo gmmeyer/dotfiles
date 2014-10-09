@@ -1,0 +1,2 @@
+DOTFILES_DIRS="$HOME/dotfiles"
+EXCLUDES="TODO.md README.md"
