@@ -1,13 +1,32 @@
-URxvt*loginShell:                       true
-URxvt.perl-ext-common: default,clipboard
+! login shells are cool
+URxvt*loginShell: true
+
+! this sets the perl extensions for the keyboard
+URxvt.perl-ext-common: default,clipboard,font-size
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 
-URxvt*font:                             xft:UbuntuMono:style=Regular:size=10
-URxvt.iso14755: False
+! enables the keybindings for the font size extention
+! incglobal/decglobal will do this globally
+! I do not want that, but I could enable it
+URxvt.keysym.C-S-Up:   perl:font-size:increase
+URxvt.keysym.C-S-Down: perl:font-size:decrease
+
+
+! I should try to get djvusans mono to work
+URxvt*font: xft:UbuntuMono:size=8
+
+! this will set the scrollbar on the right, not the left
+URxvt*scrollBar_right: true
+
+! This disables the keybindings necessary for ctrl-shift to work
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
 Xft.hinting: true 
 Xft.hintstyle: hintfull 
 Xft.antialias: rgba 
 Xft.rgba: rgb
+
 
 ! special
 *.foreground:   #babdb6
