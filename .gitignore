@@ -1,7 +1,11 @@
 backup_dotfiles
 notes
 
-# Emacs
+# Vim #
+#########
+.netrwhist
+
+# Emacs #
 ###########
 auto-save-list
 *~
