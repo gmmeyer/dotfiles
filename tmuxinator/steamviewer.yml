@@ -1,0 +1,9 @@
+# ~/.tmuxinator/steamviewer.yml
+
+name: steamviewer
+root: ~/dev/streamviewer
+
+windows:
+  - workspace:
+  - server: ./manage.py runserver 8011
+  - grunt: grunt && grunt watch

@@ -1,0 +1,9 @@
+# ~/.tmuxinator/fass-devsite.yml
+
+name: fass-devsite
+root: ~/dev/fass-devsite
+
+windows:
+  - workspace: 
+  - server: ./manage.py runserver 8013
+  - grunt: grunt && grunt watch

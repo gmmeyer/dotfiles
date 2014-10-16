@@ -1,0 +1,8 @@
+# ~/.tmuxinator/steambuilder.yml
+
+name: steambuilder
+root: ~/dev/streambuilder
+
+windows:
+  - workspace:
+  - server: ./manage.py runserver 8000

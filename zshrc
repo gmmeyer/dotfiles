@@ -11,8 +11,8 @@ alias chrome='google-chrome-stable'
 alias irb='pry'
 
 # editor aliases.
-alias emacs='emacs24-nox'
-alias e='emacs24-nox'
+alias emacs='emacs -nw'
+alias e='emacs -nw'
 alias st='subl'
 alias stt='subl .'
 alias at='atom'
@@ -44,6 +44,9 @@ eval `keychain --eval --agents ssh -Q --quiet id_rsa`
 
 # last-working-dir github
 source $ZSH/oh-my-zsh.sh
+
+# tmuxinator
+source ~/.zsh/tmuxinator.zsh
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/bin:$PATH
