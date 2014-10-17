@@ -37,7 +37,11 @@ ZSH_THEME="awesomepanda"
 
 CASE_SENSITIVE="true"
 
-plugins=(bundler colored-man git lein nvm pip rails zsh_reload)
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=true
+ZSH_TMUX_AUTOCONNECT=true
+
+plugins=(bundler colored-man git lein nvm pip rails tmux zsh_reload)
 
 # autoloads keychain for ssh
 eval `keychain --eval --agents ssh -Q --quiet id_rsa`
