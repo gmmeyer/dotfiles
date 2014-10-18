@@ -11,7 +11,7 @@
 
 ; load the railscast theme
 ; (load-file "~/.emacs-lisp/themes/railscasts-theme.el")
-; (load-theme 'railscasts t)
+(load-theme 'railscasts t)
 
 ; load themes
 (defun monokai-init ()
@@ -22,7 +22,7 @@
   (load-theme 'warm-night t)
 )
 
-(add-hook 'after-init-hook 'warm-night-init)
+; (add-hook 'after-init-hook 'monokai-init)
 
 ; set up the package manager
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
