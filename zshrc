@@ -1,11 +1,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+
+# full color terminal
 export TERM=xterm-256color
 
 autoload -U bashcompinit && bashcompinit
 autoload -U compinit && compinit
 
-alias chrome='google-chrome-stable'
+setopt HIST_IGNORE_DUPS
 
 # prefer pry to irb
 alias irb='pry'
@@ -41,7 +43,7 @@ ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_AUTOCONNECT=true
 
-plugins=(bundler colored-man git lein nvm pip rails tmux zsh_reload)
+plugins=(bundler colored-man git lein nvm pip rvm rails tmux)
 
 # autoloads keychain for ssh
 eval `keychain --eval --agents ssh -Q --quiet id_rsa`
@@ -52,26 +54,29 @@ source $ZSH/oh-my-zsh.sh
 # tmuxinator
 source ~/.zsh/tmuxinator.zsh
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+typeset -U path
+path=(~/.rvm/bin
+      $path
+      /usr/local/heroku/bin
+      ~/.pyenv/bin
+      ~/bin
+      ~/.bin
+      /bin
+      /usr/local/bin
+      /usr/bin
+)
 
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash
 fi
 
-export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 [[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 
-export NVM_DIR="/home/greg/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 function gi() { curl -s https://www.gitignore.io/api/$@ ;}
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
+# Makes sure RVM is loaded correctly.
+# God I hate RVM.
+source ~/.rvm/environments/default
