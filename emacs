@@ -3,6 +3,16 @@
 (xterm-mouse-mode t)
 (defun track-mouse (e))
 
+; tab width
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq-default c-basic-indent 1)
+
+;(setq tab-width 2)
+;(defvaralias 'c-basic-offset 'tab-width)
+;(defvaralias 'cperl-indent-level 'tab-width)
+
+
 ; sets the load path correctly
 (setq load-path (cons "~/.emacs.d/" load-path))
 

@@ -1,6 +1,6 @@
-# ~/.tmuxinator/steambuilder.yml
+# ~/.tmuxinator/streambuilder.yml
 
-name: steambuilder
+name: streambuilder
 root: ~/dev/streambuilder
 
 windows:

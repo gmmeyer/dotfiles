@@ -20,6 +20,9 @@ alias stt='subl .'
 alias at='atom'
 alias att='atom .'
 
+alias js='node'
+alias nodejs='node'
+
 # emacs, not vim, as default
 export EDITOR='emacs'
 
@@ -43,7 +46,7 @@ ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_AUTOCONNECT=true
 
-plugins=(bundler colored-man git lein nvm pip rvm rails tmux)
+plugins=(bundler colored-man gem git lein nvm npm pip rails rbenv ruby tmux zsh_reload)
 
 # autoloads keychain for ssh
 eval `keychain --eval --agents ssh -Q --quiet id_rsa`
@@ -55,8 +58,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh/tmuxinator.zsh
 
 typeset -U path
-path=(~/.rvm/bin
-      $path
+path=(~/.rbenv/bin
       /usr/local/heroku/bin
       ~/.pyenv/bin
       ~/bin
@@ -64,12 +66,17 @@ path=(~/.rvm/bin
       /bin
       /usr/local/bin
       /usr/bin
+      $path
 )
 
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash
 fi
 
+export NVM_DIR="/home/greg/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
@@ -79,4 +86,4 @@ function gi() { curl -s https://www.gitignore.io/api/$@ ;}
 
 # Makes sure RVM is loaded correctly.
 # God I hate RVM.
-source ~/.rvm/environments/default
+# source ~/.rvm/environments/default

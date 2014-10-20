@@ -1,6 +1,6 @@
-# ~/.tmuxinator/steamviewer.yml
+# ~/.tmuxinator/streamviewer.yml
 
-name: steamviewer
+name: streamviewer
 root: ~/dev/streamviewer
 
 windows:
