@@ -21,12 +21,14 @@
     ]
   'editor':
     'fontFamily': 'DejaVu Sans Mono'
-    'fontSize': 15
-    'invisibles': {}
     'showIndentGuide': true
+    'fontSize': 15
+    'zoomFontWhenCtrlScrolling': false
+    'invisibles': {}
   'tree-view':
     'hideIgnoredNames': true
   'atom-beautify':
     '_analyticsUserId': '212b73e6-1807-4563-aec2-c53c698b5ad8'
+    'python_indent_size': 2
   'tabs-to-spaces':
     'onSave': 'untabify'

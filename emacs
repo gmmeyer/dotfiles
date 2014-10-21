@@ -8,7 +8,7 @@
 (setq-default tab-width 2)
 (setq-default c-basic-indent 1)
 
-;(setq tab-width 2)
+(setq tab-width 2)
 ;(defvaralias 'c-basic-offset 'tab-width)
 ;(defvaralias 'cperl-indent-level 'tab-width)
 
@@ -21,18 +21,19 @@
 
 ; load the railscast theme
 ; (load-file "~/.emacs-lisp/themes/railscasts-theme.el")
-(load-theme 'railscasts t)
+; (load-theme 'railscasts t)
 
 ; load themes
 (defun monokai-init ()
   (load-theme 'monokai t)
 )
+(add-hook 'after-init-hook 'monokai-init)
 
 (defun warm-night-init ()
   (load-theme 'warm-night t)
 )
+;(add-hook 'after-init-hook 'warm-night-init)
 
-; (add-hook 'after-init-hook 'monokai-init)
 
 ; set up the package manager
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
