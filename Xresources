@@ -1,3 +1,8 @@
+! sets up XTerm to ensure that it is labeled correctly
+*customization: -color
+XTerm*termName:  xterm-256color
+
+
 ! login shells are cool
 URxvt*loginShell: true
 
