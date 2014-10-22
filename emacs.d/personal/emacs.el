@@ -3,18 +3,22 @@
 (xterm-mouse-mode t)
 (defun track-mouse (e))
 
+(global-hl-line-mode 0)
+
 ;tab width
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
-(setq-default c-basic-indent 1)
+(setq-default c-basic-offset 2)
+(setq-default js-indent-level 2)
+(setq-default css-indent-offset 2)
+(setq-default sh-basic-offset 2)
+(setq-default js2-basic-offset 2)
 
-(setq tab-width 2)
-(defvaralias 'c-basic-offset 'tab-width)
-(defvaralias 'cperl-indent-level 'tab-width)
+;(setq tab-width 2)
+;(defvaralias 'js-indent-level 'tab-width)
+;(defvaralias 'c-basic-offset 'tab-width)
+;(defvaralias 'cperl-indent-level 'tab-width)
 
-(add-to-list 'custom-theme-load-path "~/.emacs-lisp/themes/raiscasts-theme.el")
-; (load-theme 'railscasts t)
-; (load-theme 'monokai t)
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
