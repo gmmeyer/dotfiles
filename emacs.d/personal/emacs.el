@@ -19,6 +19,8 @@
 (global-set-key (kbd "<mouse-4>") 'down-slightly)
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
+(load-theme 'monokai)
+
 ;(global-hl-line-mode 0)
 
 ;tab width
@@ -29,6 +31,8 @@
 (setq-default css-indent-offset 2)
 (setq-default sh-basic-offset 2)
 (setq-default js2-basic-offset 2)
+(setq-default python-indent 2)
+(setq-default python-indent-offset 2)
 
 ;(setq tab-width 2)
 ;(defvaralias 'js-indent-level 'tab-width)

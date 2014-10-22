@@ -8,5 +8,6 @@
 ;(setq prelude-theme 'monokai)
 
 (setq prelude-theme 'zenburn)
+;(load-theme 'monokai)
 
 (provide 'load-themes)
