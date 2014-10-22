@@ -3,7 +3,23 @@
 (xterm-mouse-mode t)
 (defun track-mouse (e))
 
-(global-hl-line-mode 0)
+
+; yay! I can scroll with my mouse wheel!
+(defun up-slightly ()
+  "Up slightly"
+  (interactive)
+  (scroll-up 1))
+
+(defun down-slightly ()
+  "Down slightly"
+  (interactive)
+  (scroll-down 1))
+
+
+(global-set-key (kbd "<mouse-4>") 'down-slightly)
+(global-set-key (kbd "<mouse-5>") 'up-slightly)
+
+;(global-hl-line-mode 0)
 
 ;tab width
 (setq-default indent-tabs-mode nil)
