@@ -4,6 +4,9 @@ export ZSH=$HOME/.oh-my-zsh
 # full color terminal
 export TERM=xterm-256color
 
+# I'll set this up later
+# emacs --daemon > /dev/null
+
 autoload -U bashcompinit && bashcompinit
 autoload -U compinit && compinit
 
@@ -13,8 +16,8 @@ setopt HIST_IGNORE_DUPS
 alias irb='pry'
 
 # editor aliases.
-alias emacs='emacs -nw'
-alias e='emacs -nw'
+alias emacs='emacsclient: -nw'
+alias e='emacsclient -nw'
 alias st='subl'
 alias stt='subl .'
 alias at='atom'
