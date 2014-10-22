@@ -8,8 +8,8 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 ! enables the keybindings for the font size extention
 ! incglobal/decglobal will do this globally
 ! I do not want that, but I could enable it
-URxvt.keysym.C-S-Up:   perl:font-size:increase
-URxvt.keysym.C-S-Down: perl:font-size:decrease
+! URxvt.keysym.C-S-Up:   perl:font-size:increase
+! URxvt.keysym.C-S-Down: perl:font-size:decrease
 
 
 ! I should try to get djvusans mono to work
