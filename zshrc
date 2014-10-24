@@ -15,9 +15,11 @@ setopt HIST_IGNORE_DUPS
 # prefer pry to irb
 alias irb='pry'
 
+export ALTERNATE_EDITOR=''
+
 # editor aliases.
-alias emacs='emacsclient: -nw'
-alias e='emacsclient -nw'
+alias emacs='emacsclient -c'
+alias e='emacsclient -c'
 alias st='subl'
 alias stt='subl .'
 alias at='atom'
