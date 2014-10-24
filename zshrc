@@ -29,7 +29,7 @@ alias js='node'
 alias nodejs='node'
 
 # emacs, not vim, as default
-export EDITOR='emacs'
+export EDITOR='emacsclient -c'
 
 # better apt-gets
 alias apt4='sudo apt-get update && sudo apt-get dist-upgrade &&

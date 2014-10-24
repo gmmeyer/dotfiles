@@ -10,7 +10,8 @@
   (interactive)
   (scroll-up 1))
 
-(defun down-slightly ()
+(defun
+ down-slightly ()
   "Down slightly"
   (interactive)
   (scroll-down 1))
@@ -19,9 +20,12 @@
 (global-set-key (kbd "<mouse-4>") 'down-slightly)
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
-(load-theme 'monokai)
+(disable-theme 'zenburn)
+(load-theme 'monokai t)
 
-;(global-hl-line-mode 0)
+;(load-theme 'monokai)
+
+(global-hl-line-mode 1)
 
 ;tab width
 (setq-default indent-tabs-mode nil)
