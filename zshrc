@@ -88,7 +88,3 @@ eval "$(pyenv virtualenv-init -)"
 [[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 
 function gi() { curl -s https://www.gitignore.io/api/$@ ;}
-
-# Makes sure RVM is loaded correctly.
-# God I hate RVM.
-# source ~/.rvm/environments/default
