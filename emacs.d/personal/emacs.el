@@ -16,6 +16,11 @@
   (interactive)
   (scroll-down 1))
 
+; tmux integration
+(require 'emamux)
+
+; this will help with the pain of writing python
+(global-aggressive-indent-mode)
 
 (global-set-key (kbd "<mouse-4>") 'down-slightly)
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
