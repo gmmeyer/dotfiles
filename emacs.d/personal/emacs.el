@@ -26,8 +26,9 @@
 (global-set-key (kbd "<mouse-4>") 'down-slightly)
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
-;;(disable-theme 'zenburn)
-(load-theme 'railscasts t)
+(disable-theme 'zenburn)
+(load-theme 'tomorrow-night-paradise t)
+;(load-theme 'railscasts t)
 
 ;;(load-theme 'monokai t)
 
