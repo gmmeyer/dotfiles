@@ -1,38 +1,38 @@
-; I like using the mouse in emacs
+;; I like using the mouse in emacs
 (require 'mouse)
 (xterm-mouse-mode t)
 (defun track-mouse (e))
 
 
-; yay! I can scroll with my mouse wheel!
+;; yay! I can scroll with my mouse wheel!
 (defun up-slightly ()
   "Up slightly"
   (interactive)
   (scroll-up 1))
 
 (defun
- down-slightly ()
+  down-slightly ()
   "Down slightly"
   (interactive)
   (scroll-down 1))
 
-; tmux integration
+;; tmux integration
 (require 'emamux)
 
-; this will help with the pain of writing python
+;; this will help with the pain of writing python
 (global-aggressive-indent-mode)
 
 (global-set-key (kbd "<mouse-4>") 'down-slightly)
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
-(disable-theme 'zenburn)
+;;(disable-theme 'zenburn)
 (load-theme 'monokai t)
 
-;(load-theme 'monokai)
+;;(load-theme 'monokai)
 
 (global-hl-line-mode 1)
 
-;tab width
+;;tab width
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq-default c-basic-offset 2)
@@ -43,10 +43,10 @@
 (setq-default python-indent 2)
 (setq-default python-indent-offset 2)
 
-;(setq tab-width 2)
-;(defvaralias 'js-indent-level 'tab-width)
-;(defvaralias 'c-basic-offset 'tab-width)
-;(defvaralias 'cperl-indent-level 'tab-width)
+;;(setq tab-width 2)
+;;(defvaralias 'js-indent-level 'tab-width)
+;;(defvaralias 'c-basic-offset 'tab-width)
+;;(defvaralias 'cperl-indent-level 'tab-width)
 
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
