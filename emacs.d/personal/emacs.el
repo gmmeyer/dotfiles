@@ -20,15 +20,16 @@
 (require 'emamux)
 
 ;; this will help with the pain of writing python
-(global-aggressive-indent-mode)
+;; nevermind
+;; (global-aggressive-indent-mode)
 
 (global-set-key (kbd "<mouse-4>") 'down-slightly)
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
 ;;(disable-theme 'zenburn)
-(load-theme 'monokai t)
+(load-theme 'railscasts t)
 
-;;(load-theme 'monokai)
+;;(load-theme 'monokai t)
 
 (global-hl-line-mode 1)
 
