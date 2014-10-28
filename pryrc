@@ -6,3 +6,5 @@ Pry.config.exception_handler = proc do |output, exception, _|
     break if bt =~ /^\(pry\)/
   end
 end
+
+Pry.config.color = true
