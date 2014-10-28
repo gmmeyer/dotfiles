@@ -27,10 +27,10 @@
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
 (disable-theme 'zenburn)
-(load-theme 'tomorrow-night-paradise t)
+;(load-theme 'tomorrow-night-paradise t)
 ;(load-theme 'railscasts t)
 
-;;(load-theme 'monokai t)
+(load-theme 'monokai t)
 
 (global-hl-line-mode 1)
 
