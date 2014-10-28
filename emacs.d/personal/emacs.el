@@ -1,3 +1,7 @@
+;;; This is just my general config file.
+;;; I am mostly going to put my config in this file,
+;;; though I will also use some other breakout files.
+
 ;; I like using the mouse in emacs
 (require 'mouse)
 (xterm-mouse-mode t)
