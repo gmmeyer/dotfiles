@@ -18,7 +18,7 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 
 
 ! I should try to get djvusans mono to work
-URxvt*font: xft:Ubuntu\ Mono\ derivative\ Powerline:pixelsize=15
+URxvt*font: xft:Ubuntu\ Mono\ derivative\ Powerline:pixelsize=16
 ! URxvt*font: xft:DejaVu\ Sans\ Mono\ for\ Powerline:pixelsize=14,style=book
 
 ! this will set the scrollbar on the right, not the left
@@ -28,10 +28,10 @@ URxvt*scrollBar_right: true
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-Xft.autohint: 0
+Xft.autohint: false
 Xft.dpi: 96
-Xft.hinting: true 
-Xft.hintstyle: hintfull
+Xft.hinting: true
+Xft.hintstyle: hintslight
 Xft.antialias: true
 Xft.rgba: rgb
 
