@@ -1,6 +1,6 @@
 ;;; This is just my general config file.
 ;;; I am mostly going to put my config in this file,
-;;; though I will also use some other breakout files.
+;;;0;95;0c though I will also use some other breakout files.
 
 ;; I like using the mouse in emacs
 (require 'mouse)
@@ -31,12 +31,12 @@
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
 (disable-theme 'zenburn)
-;(load-theme 'tomorrow-night-paradise t)
+(load-theme 'tomorrow-night-paradise t)
 ;(load-theme 'railscasts t)
 
-(load-theme 'monokai t)
+;(load-theme 'monokai t)
 
-(global-hl-line-mode 1)
+(global-hl-line-mode 0)
 
 ;;tab width
 (setq-default indent-tabs-mode nil)
