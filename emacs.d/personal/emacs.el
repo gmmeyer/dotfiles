@@ -1,11 +1,14 @@
 ;;; This is just my general config file.
 ;;; I am mostly going to put my config in this file,
-;;;0;95;0c though I will also use some other breakout files.
+;;; though I will also use some other breakout files.
 
 ;; I like using the mouse in emacs
 (require 'mouse)
 (xterm-mouse-mode t)
 (defun track-mouse (e))
+
+(show-paren-mode t)
+(setq show-paren-style 'expression)
 
 
 ;; yay! I can scroll with my mouse wheel!
@@ -23,6 +26,8 @@
 ;; tmux integration
 (require 'emamux)
 
+(require 'powerline)
+
 ;; this will help with the pain of writing python
 ;; nevermind
 ;; (global-aggressive-indent-mode)
@@ -31,7 +36,13 @@
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
 (disable-theme 'zenburn)
-(load-theme 'tomorrow-night-paradise t)
+;(load-theme 'tomorrow-night-paradise t)
+(require 'moe-theme)
+(moe-dark)
+(powerline-moe-theme)
+
+(moe-theme-set-color 'w/b)
+
 ;(load-theme 'railscasts t)
 
 ;(load-theme 'monokai t)
