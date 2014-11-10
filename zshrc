@@ -66,6 +66,7 @@ typeset -U path
 path=(~/.rbenv/bin
       /usr/local/heroku/bin
       ~/.pyenv/bin
+      ~/.cabal/bin
       ~/bin
       ~/.bin
       /bin
