@@ -1,0 +1,10 @@
+# ~/.tmuxinator/flow-iot-site.yml
+
+name: flow-iot-site
+root: ~/dev/flow-iot-site
+
+windows:
+  - workspace: 
+  - editor: 
+  - server:
+  - grunt:
