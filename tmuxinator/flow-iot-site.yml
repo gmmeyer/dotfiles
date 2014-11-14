@@ -6,5 +6,4 @@ root: ~/dev/flow-iot-site
 windows:
   - workspace: 
   - editor: 
-  - server:
-  - grunt:
+  - server: node keystone
