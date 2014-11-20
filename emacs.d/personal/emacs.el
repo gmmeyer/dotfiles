@@ -35,13 +35,13 @@
 (global-set-key (kbd "<mouse-4>") 'down-slightly)
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
-(disable-theme 'zenburn)
+;(disable-theme 'zenburn)
 ;(load-theme 'tomorrow-night-paradise t)
-(require 'moe-theme)
-(moe-dark)
-(powerline-moe-theme)
+;(require 'moe-theme)
+;(moe-dark)
+;(powerline-moe-theme)
 
-(moe-theme-set-color 'w/b)
+;(moe-theme-set-color 'w/b)
 
 ;(load-theme 'railscasts t)
 
@@ -59,6 +59,11 @@
 (setq-default js2-basic-offset 2)
 (setq-default python-indent 2)
 (setq-default python-indent-offset 2)
+
+(setq cssm-indent-level 2)
+(setq cssm-newline-before-closing-bracket t)
+(setq cssm-indent-function #'cssm-c-style-indenter)
+(setq cssm-mirror-mode nil)
 
 ;;(setq tab-width 2)
 ;;(defvaralias 'js-indent-level 'tab-width)
