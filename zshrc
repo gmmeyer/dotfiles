@@ -51,16 +51,18 @@ ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_AUTOCONNECT=true
 
-plugins=(bundler colored-man gem git lein nvm npm pip rails rbenv ruby tmux zsh_reload)
+# tmux
+
+plugins=(bundler colored-man gem git lein nvm npm pip rails rbenv ruby zsh_reload)
 
 # autoloads keychain for ssh
-eval `keychain --eval --agents ssh -Q --quiet id_rsa`
+# eval `keychain --eval --agents ssh -Q --quiet id_rsa`
 
 # last-working-dir github
 source $ZSH/oh-my-zsh.sh
 
 # tmuxinator
-source ~/.zsh/tmuxinator.zsh
+# source ~/.zsh/tmuxinator.zsh
 
 typeset -U path
 path=(~/.rbenv/bin
@@ -79,7 +81,7 @@ if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash
 fi
 
-export NVM_DIR="/home/greg/.nvm"
+export NVM_DIR=$HOME"/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 eval "$(rbenv init -)"
