@@ -18,8 +18,8 @@ alias irb='pry'
 export ALTERNATE_EDITOR=''
 
 # editor aliases.
-alias emacs='emacsclient -c'
-alias e='emacsclient -c'
+alias emacs='emacsclient -t'
+alias e='emacsclient -t'
 alias st='subl'
 alias stt='subl .'
 alias at='atom'
@@ -53,7 +53,7 @@ ZSH_TMUX_AUTOCONNECT=true
 
 # tmux
 
-plugins=(bundler colored-man gem git lein nvm npm pip rails rbenv ruby zsh_reload)
+plugins=(bundler colored-man gem git lein nvm npm pip rails rbenv pyenv ruby zsh_reload)
 
 # autoloads keychain for ssh
 # eval `keychain --eval --agents ssh -Q --quiet id_rsa`
@@ -65,17 +65,21 @@ source $ZSH/oh-my-zsh.sh
 # source ~/.zsh/tmuxinator.zsh
 
 typeset -U path
-path=(~/.rbenv/bin
+path=(/usr/local/opt/pyenv/shims 
+      /usr/local/opt/rbenv/shims
+      ~/.rbenv/bin
+      /usr/local/opt/rbenv/bin
       /usr/local/heroku/bin
+      /usr/local/opt/pyenv/bin
       ~/.pyenv/bin
       ~/.cabal/bin
       ~/bin
       ~/.bin
       /bin
       /usr/local/bin
+      /usr/local/sbin
       /usr/bin
-      $path
-)
+      $path)
 
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash

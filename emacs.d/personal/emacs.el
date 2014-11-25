@@ -7,9 +7,10 @@
 (xterm-mouse-mode t)
 (defun track-mouse (e))
 
+(menu-bar-mode)
+
 (show-paren-mode t)
 (setq show-paren-style 'expression)
-
 
 ;; yay! I can scroll with my mouse wheel!
 (defun up-slightly ()
@@ -35,13 +36,13 @@
 (global-set-key (kbd "<mouse-4>") 'down-slightly)
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
-;(disable-theme 'zenburn)
+(disable-theme 'zenburn)
 ;(load-theme 'tomorrow-night-paradise t)
-;(require 'moe-theme)
-;(moe-dark)
-;(powerline-moe-theme)
+(require 'moe-theme)
+(moe-dark)
+(powerline-moe-theme)
 
-;(moe-theme-set-color 'w/b)
+(moe-theme-set-color 'w/b)
 
 ;(load-theme 'railscasts t)
 
