@@ -9,7 +9,7 @@
 [credential]
 	helper = cache --timeout=3600
 [core]
-  editor = emacsclient -c
+  editor = emacsclient -t
   autocrlf = false
   safecrlf = true
 	excludesfile = /home/greg/.gitignore_global
