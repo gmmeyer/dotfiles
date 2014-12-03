@@ -53,7 +53,10 @@ ZSH_TMUX_AUTOCONNECT=true
 
 # tmux
 
-plugins=(bundler colored-man gem git lein nvm npm pip rails rbenv pyenv ruby zsh_reload)
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
+
+plugins=(bundler colored-man gem git lein nvm npm pip
+         rails rbenv pyenv ruby zsh_reload)
 
 # autoloads keychain for ssh
 # eval `keychain --eval --agents ssh -Q --quiet id_rsa`
@@ -65,7 +68,7 @@ source $ZSH/oh-my-zsh.sh
 # source ~/.zsh/tmuxinator.zsh
 
 typeset -U path
-path=(/usr/local/opt/pyenv/shims 
+path=(/usr/local/opt/pyenv/shims
       /usr/local/opt/rbenv/shims
       ~/.rbenv/bin
       /usr/local/opt/rbenv/bin
