@@ -55,11 +55,13 @@ ZSH_TMUX_AUTOCONNECT=true
 
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 
-plugins=(bundler colored-man gem git lein nvm npm pip
-         rails rbenv pyenv ruby zsh_reload)
+plugins=(bundler colored-man gem git 
+		 lein nvm npm pip pyenv
+         rails rbenv ruby tmux 
+		 zsh_reload)
 
 # autoloads keychain for ssh
-# eval `keychain --eval --agents ssh -Q --quiet id_rsa`
+eval `keychain --eval --agents ssh -Q --quiet id_rsa`
 
 # last-working-dir github
 source $ZSH/oh-my-zsh.sh
