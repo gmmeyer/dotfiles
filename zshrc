@@ -83,8 +83,13 @@ path=(/usr/local/opt/pyenv/shims
       /bin
       /usr/local/bin
       /usr/local/sbin
+      ~/.linuxbrew/bin
+      ~/.linuxbrew/sbin
       /usr/bin
       $path)
+
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash
