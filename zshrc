@@ -90,7 +90,9 @@ path=(/usr/local/opt/pyenv/shims
 
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-export PKG_CONFIG_LIBDIR='/usr/lib/x86_64-linux-gnu/pkgconfig'
+export PKG_CONFIG_PATH='/usr/lib/x86_64-linux-gnu/pkgconfig'
+export PKG_CONFIG_LIBDIR='/usr/lib/pkgconfig'
+
 
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash
