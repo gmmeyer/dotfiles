@@ -26,8 +26,9 @@
 
 ;; tmux integration
 (require 'emamux)
-
 (require 'powerline)
+
+(menu-bar-mode -1)
 
 ;; this will help with the pain of writing python
 ;; nevermind
