@@ -55,10 +55,10 @@ ZSH_TMUX_AUTOCONNECT=true
 
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 
-plugins=(bundler colored-man gem git 
-		 lein nvm npm pip pyenv
-         rails rbenv ruby tmux 
-		 zsh_reload)
+plugins=(bundler colored-man gem git
+         lein nvm npm pip pyenv
+         rails rbenv ruby tmux tmuxinator
+         zsh_reload)
 
 # autoloads keychain for ssh
 eval `keychain --eval --agents ssh -Q --quiet id_rsa`
@@ -90,6 +90,7 @@ path=(/usr/local/opt/pyenv/shims
 
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+export PKG_CONFIG_LIBDIR='/usr/lib/x86_64-linux-gnu/pkgconfig'
 
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash
