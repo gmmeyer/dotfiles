@@ -16,13 +16,8 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 ! URxvt.keysym.C-S-Up:   perl:font-size:increase
 ! URxvt.keysym.C-S-Down: perl:font-size:decrease
 
-
 ! I should try to get djvusans mono to work
-URxvt*font: xft:DejaVu Sans Mono for Powerline:pixelsize=14
-! URxvt*boldFont: xft:DejaVu Sans Mono for Powerline:pixelsize=14
-! URxvt*italicFont: xft:DejaVu Sans Mono for Powerline:pixelsize=14:style=italic
-! URxvt*boldItalicFont: xft:DejaVu Sans Mono for Powerline:pixelsize=14:style=italic
-! URxvt*font: xft:DejaVu Sans Mono for Powerline:pixelsize=14,style=book
+URxvt*font: xft:Ubuntu\ Mono\ derivative\ Powerline:pixelsize=16
 
 ! this will set the scrollbar on the right, not the left
 URxvt*scrollBar_right: true
