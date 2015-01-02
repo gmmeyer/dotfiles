@@ -32,3 +32,4 @@
     'python_indent_size': 2
   'tabs-to-spaces':
     'onSave': 'untabify'
+  'linter': {}

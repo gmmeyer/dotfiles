@@ -92,7 +92,7 @@
                              handlebars-mode magit clojure-mode
                              pastels-on-dark-theme websocket pony-mode
                              org go-mode powerline minitest rspec-mode
-                             ruby-block ruby-end ruby-additional
+                             ruby-block
                              ctags-update go-autocomplete virtualenv))
 
 (dolist (p my-packages)
