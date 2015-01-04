@@ -4,41 +4,42 @@ echo "updating misc packages"
 
 set -e
 
-#cd ~/.nvm
+# This needs to have some case statements
+# in it to ensure that these things exist
 
-echo "Update NVM"
+echo "\033[1;31mUpdate NVM\e[0m"
 
 git -C ~/.nvm fetch --tags
-TAG=$(git -C ~/.nvm describe --tags `git rev-list --tags --max-count=1`)
+TAG=$(git -C ~/.nvm describe --tags `git -C ~/.nvm rev-list --tags --max-count=1`)
 echo "Checking out tag $TAG..."
 git -C ~/.nvm checkout "$TAG"
 
 source ~/.nvm/nvm.sh
 
-echo "Update ZSH"
+echo "\033[1;31mUpdate Oh My ZSH\e[0m"
 
 . ~/.oh-my-zsh/tools/upgrade.sh
 
-echo "Update rbenv"
+echo "\033[1;31mUpdate rbenv\e[0m"
 
 rbenv update
 
-echo "Update pyenv"
+echo "\033[1;31mUpdate pyenv\e[0m"
 pyenv update
 
-echo "Update gems"
+echo "\033[1;31mUpdate gems\e[0m"
 
 gem update --system
 gem update
 
-echo "Update linuxbrew"
+echo "\033[1;31mUpdate linuxbrew\e[0m"
 brew update
 brew upgrade
 
-echo "Update npm"
+echo "\033[1;31mUpdate npm\e[0m"
 npm cache clean
 npm update -g
 npm update -g npm@next
 
-echo "Update Atom packages"
+echo "\033[1;31mUpdate Atom packages\e[0m"
 apm upgrade
