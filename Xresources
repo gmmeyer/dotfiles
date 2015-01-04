@@ -20,17 +20,20 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt*font: xft:Ubuntu\ Mono\ derivative\ Powerline:pixelsize=16
 
 ! this will set the scrollbar on the right, not the left
-URxvt*scrollBar_right: true
+! URxvt*scrollBar_right: true
+URxvt*scrollBar: false
 
 ! This disables the keybindings necessary for ctrl-shift to work
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-!Xft.autohint: false
-Xft.dpi: 100
-Xft.hinting: true
+Xft.autohint: 0
+Xft.dpi: 96
+! 146
+Xft.lcdfilter: lcddefault
+Xft.hinting: 1
 Xft.hintstyle: hintfull
-Xft.antialias: rgba
+Xft.antialias: 1
 Xft.rgba: rgb
 
 
