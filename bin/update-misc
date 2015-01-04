@@ -1,0 +1,44 @@
+#!/bin/zsh
+
+echo "updating misc packages"
+
+set -e
+
+#cd ~/.nvm
+
+echo "Update NVM"
+
+git -C ~/.nvm fetch --tags
+TAG=$(git -C ~/.nvm describe --tags `git rev-list --tags --max-count=1`)
+echo "Checking out tag $TAG..."
+git -C ~/.nvm checkout "$TAG"
+
+source ~/.nvm/nvm.sh
+
+echo "Update ZSH"
+
+. ~/.oh-my-zsh/tools/upgrade.sh
+
+echo "Update rbenv"
+
+rbenv update
+
+echo "Update pyenv"
+pyenv update
+
+echo "Update gems"
+
+gem update --system
+gem update
+
+echo "Update linuxbrew"
+brew update
+brew upgrade
+
+echo "Update npm"
+npm cache clean
+npm update -g
+npm update -g npm@next
+
+echo "Update Atom packages"
+apm upgrade

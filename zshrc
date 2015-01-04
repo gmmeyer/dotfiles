@@ -31,12 +31,6 @@ alias nodejs='node'
 # emacs, not vim, as default
 export EDITOR='emacsclient -c'
 
-# better apt-gets
-alias apt4='sudo apt-get update && sudo apt-get dist-upgrade &&
-            sudo apt-get autoremove && sudo apt-get autoclean'
-alias apt6='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade &&
-            sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean'
-
 # rails aliases
 alias be='bundle exec'
 
