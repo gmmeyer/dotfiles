@@ -51,7 +51,7 @@ export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 plugins=(bundler colored-man gem git git-prompt
          heroku lein nvm npm pip pyenv
          rake rails rbenv ruby tmux tmuxinator
-         z zsh_reload)
+         zsh_reload)
 
 # autoloads keychain for ssh
 eval `keychain --eval --agents ssh -Q --quiet id_rsa`
@@ -86,9 +86,8 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 export PKG_CONFIG_PATH='/usr/lib/x86_64-linux-gnu/pkgconfig'
 export PKG_CONFIG_LIBDIR='/usr/lib/pkgconfig'
 
-
-if [ -f ~/.config/exercism/exercism_completion.bash ]; then
-  . ~/.config/exercism/exercism_completion.bash
+if [ -f ~/.zsh/bash_completion/exercism_completion.bash ]; then
+    . ~/.zsh/bash_completion/exercism_completion.bash
 fi
 
 export NVM_DIR=$HOME"/.nvm"
