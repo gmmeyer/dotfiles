@@ -26,10 +26,9 @@ alias at='atom'
 alias att='atom .'
 
 alias js='node'
-alias nodejs='node'
 
 # emacs, not vim, as default
-export EDITOR='emacsclient -c'
+export EDITOR='emacsclient -t'
 
 # rails aliases
 alias be='bundle exec'
@@ -49,10 +48,10 @@ ZSH_TMUX_AUTOCONNECT=true
 
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 
-plugins=(bundler colored-man gem git heroku
-         lein nvm npm pip pyenv
+plugins=(bundler colored-man gem git git-prompt
+         heroku lein nvm npm pip pyenv
          rake rails rbenv ruby tmux tmuxinator
-         zsh_reload)
+         z zsh_reload)
 
 # autoloads keychain for ssh
 eval `keychain --eval --agents ssh -Q --quiet id_rsa`
