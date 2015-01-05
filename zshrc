@@ -1,66 +1,61 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# Source antigen
+source ~/.zsh/antigen.zsh
+source ~/.zsh/aliases.zsh
+
 
 # full color terminal
 export TERM=xterm-256color
 
-# I'll set this up later
-# emacs --daemon > /dev/null
-
 autoload -U bashcompinit && bashcompinit
-autoload -U compinit && compinit
 
 setopt HIST_IGNORE_DUPS
 
-# prefer pry to irb
-alias irb='pry'
-
 export ALTERNATE_EDITOR=''
-
-# editor aliases.
-alias emacs='emacsclient -t'
-alias e='emacsclient -t'
-alias st='subl'
-alias stt='subl .'
-alias at='atom'
-alias att='atom .'
-
-alias js='node'
 
 # emacs, not vim, as default
 export EDITOR='emacsclient -t'
 
-# rails aliases
-alias be='bundle exec'
-
-# reload zsh
-alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
-
-ZSH_THEME="awesomepanda"
-
 CASE_SENSITIVE="true"
 
+# tmux
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_AUTOCONNECT=true
 
-# tmux
-
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 
-plugins=(bundler colored-man gem git git-prompt
-         heroku lein nvm npm pip pyenv
-         rake rails rbenv ruby tmux tmuxinator
-         z zsh_reload)
+antigen use oh-my-zsh
+
+antigen theme robbyrussell/oh-my-zsh themes/awesomepanda
+
+antigen bundles <<EOBUNDLES
+
+  bundler
+  colored-man
+  #command-not-found
+  gem
+  git
+  git-prompt
+  heroku
+  lein
+  nvm
+  npm
+  pip
+  pyenv
+  rake
+  rbenv
+  ruby
+  tmux
+  tmuxinator
+  z
+  zsh_reload
+
+EOBUNDLES
+
+antigen bundle robbyrussell/oh-my-zsh plugins/rails
 
 # autoloads keychain for ssh
 eval `keychain --eval --agents ssh -Q --quiet id_rsa`
-
-# last-working-dir github
-source $ZSH/oh-my-zsh.sh
-
-# tmuxinator
-# source ~/.zsh/tmuxinator.zsh
 
 typeset -U path
 path=(/usr/local/opt/pyenv/shims
@@ -87,8 +82,8 @@ export PKG_CONFIG_PATH='/usr/lib/x86_64-linux-gnu/pkgconfig'
 export PKG_CONFIG_LIBDIR='/usr/lib/pkgconfig'
 
 
-if [ -f ~/.config/exercism/exercism_completion.bash ]; then
-  . ~/.config/exercism/exercism_completion.bash
+if [ -f ~/.zsh/bash_completion/exercism_completion.bash ]; then
+  . ~/.zsh/bash_completion/exercism_completion.bash
 fi
 
 export NVM_DIR=$HOME"/.nvm"
