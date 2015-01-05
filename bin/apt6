@@ -2,7 +2,7 @@
 
 set -e
 
-echo "updating packages"
+echo "\033[1;31updating packages\e[0m"
 
 sudo apt-get update
 sudo apt-get upgrade
@@ -11,4 +11,4 @@ sudo apt-get autoremove
 sudo apt-get autoclean
 sudo apt-get clean
 
-echo "all done"
+echo "\033[1;31all done\e[0m"
