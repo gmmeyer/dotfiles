@@ -90,6 +90,10 @@ if [ -f ~/.zsh/bash_completion/exercism_completion.bash ]; then
     . ~/.zsh/bash_completion/exercism_completion.bash
 fi
 
+if [ -f ~/.zsh/private.zsh ]; then
+    source ~/.zsh/private.zsh
+fi
+
 export NVM_DIR=$HOME"/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
