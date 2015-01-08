@@ -1,4 +1,4 @@
-'global':
+'*':
   'exception-reporting':
     'userId': '912ac179-0652-5904-d847-bcb8c6059f83'
   'welcome':
@@ -6,10 +6,6 @@
   'metrics':
     'userId': '986ea0be6f12380a2af9ce05c8afe860e9e5366c'
   'core':
-    'themes': [
-      'seti-ui'
-      'seti-monokai'
-    ]
     'ignoredNames': [
       '*.pyc'
       '.pyc'
@@ -20,16 +16,18 @@
       'Zen'
       'vim-mode'
     ]
+    'themes': [
+      'seti-ui'
+      'seti-monokai'
+    ]
   'editor':
     'fontFamily': 'DejaVu Sans Mono for Powerline'
-    'showIndentGuide': true
     'fontSize': 15
-    'invisibles': {}
+    'showIndentGuide': true
   'tree-view':
     'hideIgnoredNames': true
   'atom-beautify':
     '_analyticsUserId': '212b73e6-1807-4563-aec2-c53c698b5ad8'
-    'python_indent_size': 2
   'tabs-to-spaces':
     'onSave': 'untabify'
   'linter': {}
