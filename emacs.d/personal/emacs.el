@@ -25,6 +25,9 @@
 ;; tmux integration
 (require 'emamux)
 
+;; do not clean whitespace on save
+(setq prelude-clean-whitespace-on-save nil)
+
 (global-set-key (kbd "<mouse-4>") 'down-slightly)
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
