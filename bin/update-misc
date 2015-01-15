@@ -7,6 +7,11 @@ set -e
 # This needs to have some case statements
 # in it to ensure that these things exist
 
+echo "\033[1;31mUpdate Prelude\e[0m"
+
+git -C ~/.emacs.d checkout master
+git -C ~/.emacs.d pull
+
 echo "\033[1;31mUpdate NVM\e[0m"
 
 git -C ~/.nvm fetch --tags
