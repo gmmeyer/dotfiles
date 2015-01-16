@@ -12,7 +12,7 @@
   editor = emacsclient -t
   autocrlf = false
   safecrlf = true
-	excludesfile = /home/greg/.gitignore_global
+	excludesfile = ~/.gitignore_global
 
 [alias]
   co = checkout
