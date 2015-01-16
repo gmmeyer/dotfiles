@@ -1,0 +1,9 @@
+# ~/.tmuxinator/flow-hubsite.yml
+
+name: flow-hubsite
+root: ~/dev/flow-hubsite
+
+windows:
+  - workspace: 
+  - editor: 
+  - server: 

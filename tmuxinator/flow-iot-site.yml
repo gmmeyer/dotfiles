@@ -5,5 +5,5 @@ root: ~/dev/flow-iot-site
 
 windows:
   - workspace: 
-  - editor: e .
+  - editor: 
   - server: ./dev_start_reload_db.sh

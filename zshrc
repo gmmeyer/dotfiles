@@ -26,16 +26,9 @@ alias at='atom'
 alias att='atom .'
 
 alias js='node'
-alias nodejs='node'
 
 # emacs, not vim, as default
-export EDITOR='emacsclient -c'
-
-# better apt-gets
-alias apt4='sudo apt-get update && sudo apt-get dist-upgrade &&
-            sudo apt-get autoremove && sudo apt-get autoclean'
-alias apt6='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade &&
-            sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean'
+export EDITOR='emacsclient -t'
 
 # rails aliases
 alias be='bundle exec'
@@ -55,12 +48,13 @@ ZSH_TMUX_AUTOCONNECT=true
 
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 
-plugins=(bundler brew colored-man gem git git-prompt lein nvm npm pip pyenv
-          rails rbenv ruby tmux tmuxinator zsh_reload)
-
+plugins=(bundler brew colored-man gem git git-prompt
+         heroku lein nvm npm pip pyenv
+         rake rails rbenv ruby tmux tmuxinator
+         zsh_reload)
 
 # autoloads keychain for ssh
-# eval `keychain --eval --agents ssh -Q --quiet id_rsa`
+#eval `keychain --eval --agents ssh -Q --quiet id_rsa`
 
 # last-working-dir github
 source $ZSH/oh-my-zsh.sh
@@ -82,11 +76,22 @@ path=(/usr/local/opt/pyenv/shims
       /bin
       /usr/local/bin
       /usr/local/sbin
+      ~/.linuxbrew/bin
+      ~/.linuxbrew/sbin
       /usr/bin
       $path)
 
-if [ -f ~/.config/exercism/exercism_completion.bash ]; then
-  . ~/.config/exercism/exercism_completion.bash
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+export PKG_CONFIG_PATH='/usr/lib/x86_64-linux-gnu/pkgconfig'
+export PKG_CONFIG_LIBDIR='/usr/lib/pkgconfig'
+
+if [ -f ~/.zsh/bash_completion/exercism_completion.bash ]; then
+    . ~/.zsh/bash_completion/exercism_completion.bash
+fi
+
+if [ -f ~/.zsh/private.zsh ]; then
+    source ~/.zsh/private.zsh
 fi
 
 export NVM_DIR=$HOME"/.nvm"

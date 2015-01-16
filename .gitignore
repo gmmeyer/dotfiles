@@ -1,6 +1,8 @@
 backup_dotfiles
 notes
 
+zsh/private.zsh
+
 # Vim #
 #########
 .netrwhist
