@@ -20,6 +20,7 @@
 (setq-default web-mode-markup-indent-offset 2)
 (setq-default web-mode-css-indent-offset 2)
 (setq-default web-mode-code-indent-offset 2)
+(setq-default lua-indent-level 2)
 
 (setq cssm-indent-level 2)
 (setq cssm-newline-before-closing-bracket t)
