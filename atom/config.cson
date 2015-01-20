@@ -15,6 +15,7 @@
       "easy-motion"
       "Zen"
       "vim-mode"
+      "atom-color-highlight"
     ]
     themes: [
       "seti-ui"
@@ -24,6 +25,7 @@
     fontFamily: "DejaVu Sans Mono for Powerline"
     fontSize: 15
     showIndentGuide: true
+    invisibles: {}
   "tree-view":
     hideIgnoredNames: true
   "atom-beautify":
