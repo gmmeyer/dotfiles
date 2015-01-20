@@ -25,6 +25,9 @@
 ;; tmux integration
 (require 'emamux)
 
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
+
 ;; do not clean whitespace on save
 ;; (setq prelude-clean-whitespace-on-save nil)
 

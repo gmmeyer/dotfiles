@@ -10,7 +10,8 @@
 
 (defvar my-packages '(emamux auto-complete less-css-mode moe-theme
                              multi-web-mode markdown-mode textmate web-mode
-                             handlebars-mode magit clojure-mode
+                             ;;handlebars-mode
+                             magit clojure-mode
                              pastels-on-dark-theme websocket pony-mode
                              org go-mode powerline minitest rspec-mode
                              ruby-block
