@@ -10,6 +10,7 @@
       "*.pyc"
       ".pyc"
     ]
+    followSymlinks: true
     disabledPackages: [
       "file-icons"
       "easy-motion"
