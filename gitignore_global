@@ -5,7 +5,7 @@
 *.fuse_hidden*
 
 # pyenv, since I'm the only one who uses it
-# .python-version
+.python-version
 
 # Databases
 *.sqlite3
