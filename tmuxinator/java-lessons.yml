@@ -1,0 +1,9 @@
+# ~/.tmuxinator/java-lessons.yml
+
+name: java-lessons
+root: ~/java/
+
+windows:
+  - workspace:
+  - editor:
+  - testing:

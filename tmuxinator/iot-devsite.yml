@@ -1,0 +1,13 @@
+# ~/.tmuxinator/iot-devsite.yml
+
+name: iot-devsite
+root: ~/dev/iot-devsite
+
+windows:
+  - workspace: 
+  - editor: e . 
+  - server:
+      layout: even-horizontal
+      panes:
+        - ./manage.py runserver localhost:8014
+        - npm run watch
