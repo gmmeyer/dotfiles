@@ -86,6 +86,7 @@ path=(/usr/local/opt/pyenv/shims
 classpath=(~/java/javassist/
            ~/java/swt/
            ~/java/TIJ4-code/
+           ~/java/practice/
           )
 
 CLASSPATH=$classpath
@@ -99,11 +100,11 @@ export PKG_CONFIG_PATH='/usr/lib/x86_64-linux-gnu/pkgconfig'
 export PKG_CONFIG_LIBDIR='/usr/lib/pkgconfig'
 
 if [ -f ~/.opam/opam-init/init.zsh ]; then
-. /home/greg/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+    source /home/greg/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 fi
 
 if [ -f ~/.zsh/bash_completion/exercism_completion.bash ]; then
-    . ~/.zsh/bash_completion/exercism_completion.bash
+    source ~/.zsh/bash_completion/exercism_completion.bash
 fi
 
 if [ -f ~/.zsh/private.zsh ]; then

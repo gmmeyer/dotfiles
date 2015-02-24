@@ -34,3 +34,4 @@
   "tabs-to-spaces":
     onSave: "untabify"
   linter: {}
+  "autocomplete-plus": {}
