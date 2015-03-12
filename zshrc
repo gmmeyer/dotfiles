@@ -64,6 +64,8 @@ source $ZSH/oh-my-zsh.sh
 # tmuxinator
 # source ~/.zsh/tmuxinator.zsh
 
+export GOPATH="~/.go"
+
 typeset -U path
 path=(/usr/local/opt/pyenv/shims
       /usr/local/opt/rbenv/shims
@@ -81,6 +83,7 @@ path=(/usr/local/opt/pyenv/shims
       ~/.linuxbrew/bin
       ~/.linuxbrew/sbin
       /usr/bin
+      $GOPATH/bin
       $path)
 
 classpath=(~/java/javassist/
@@ -121,3 +124,10 @@ eval "$(pyenv virtualenv-init -)"
 [[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 
 function gi() { curl -s https://www.gitignore.io/api/$@ ;}
+
+# GVM
+[[ -s "/home/greg/.gvm/scripts/gvm" ]] && source "/home/greg/.gvm/scripts/gvm"
+
+if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
+    source ~/.nix-profile/etc/profile.d/nix.sh
+fi

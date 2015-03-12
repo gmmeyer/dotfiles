@@ -1,0 +1,9 @@
+# ~/.tmuxinator/node-client-example.yml
+
+name: node-client-example
+root: ~/dev/node-client-example
+
+windows:
+  - workspace:
+  - editor:
+  - server:

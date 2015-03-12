@@ -1,0 +1,8 @@
+# ~/.tmuxinator/arduino.yml
+
+name: arduino
+root: ~/dev/arduino
+
+windows:
+  - workspace:
+  - editor:
