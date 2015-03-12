@@ -42,8 +42,9 @@ brew update
 brew upgrade
 
 echo "\033[1;31mUpdate npm\e[0m"
-npm update -g
-npm update -g npm@next
+npm-update-global
+# npm update -g
+# npm update -g npm@next
 
 echo "\033[1;31mUpdate Atom packages\e[0m"
 apm upgrade
