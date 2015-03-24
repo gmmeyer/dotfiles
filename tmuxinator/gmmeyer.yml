@@ -1,8 +1,9 @@
 # ~/.tmuxinator/gmmeyer.yml
 
 name: gmmeyer
-root: ~/development/gmmeyer.github.io/
+root: ~/development/gmmeyer/
 
 windows:
-  - workspace: 
-  - editor: e .
+  - workspace:
+  - editor:
+  - server:

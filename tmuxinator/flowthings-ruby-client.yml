@@ -1,0 +1,9 @@
+# ~/.tmuxinator/flowthings-ruby-client.yml
+
+name: flowthings-ruby-client
+root: ~/dev/ruby-client
+
+windows:
+  - workspace:
+  - editor:
+  - test:
