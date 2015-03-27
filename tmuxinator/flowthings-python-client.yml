@@ -1,0 +1,9 @@
+# ~/.tmuxinator/flowthings-python-client.yml
+
+name: flowthings-python-client
+root: ~/dev/python-client
+
+windows:
+  - workspace:
+  - editor:
+  - server:
