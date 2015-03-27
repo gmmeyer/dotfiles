@@ -20,7 +20,7 @@
     ]
     themes: [
       "seti-ui"
-      "seti-monokai"
+      "railscast-theme"
     ]
   editor:
     fontFamily: "DejaVu Sans Mono for Powerline"

@@ -4,16 +4,17 @@
 ;;(require 'powerline)
 ;;(powerline-default-theme)
 
-(disable-theme 'zenburn)
-(require 'moe-theme)
+;; (disable-theme 'zenburn)
+;; (require 'moe-theme)
 
-(moe-dark)
+;; (moe-dark)
 ;;(powerline-moe-theme)
 
-(moe-theme-set-color 'w/b)
+;; (moe-theme-set-color 'w/b)
 
 (global-hl-line-mode 0)
 
 (menu-bar-mode -1)
+;;(load-theme 'railscasts)
 
 (provide 'appearance.el)
