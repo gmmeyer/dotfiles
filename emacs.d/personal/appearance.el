@@ -4,13 +4,14 @@
 ;;(require 'powerline)
 ;;(powerline-default-theme)
 
-;; (disable-theme 'zenburn)
-;; (require 'moe-theme)
+(disable-theme 'zenburn)
+(require 'moe-theme)
 
-;; (moe-dark)
+(moe-dark)
+
+(moe-theme-set-color 'w/b)
+
 ;;(powerline-moe-theme)
-
-;; (moe-theme-set-color 'w/b)
 
 (global-hl-line-mode 0)
 
