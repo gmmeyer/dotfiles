@@ -20,13 +20,13 @@
     ]
     themes: [
       "seti-ui"
-      "railscast-theme"
+      "seti-monokai"
     ]
   editor:
     fontFamily: "DejaVu Sans Mono for Powerline"
-    fontSize: 15
     showIndentGuide: true
     invisibles: {}
+    fontSize: 15
   "tree-view":
     hideIgnoredNames: true
   "atom-beautify":
