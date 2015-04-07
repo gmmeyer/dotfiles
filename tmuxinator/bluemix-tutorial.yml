@@ -1,0 +1,9 @@
+# ~/.tmuxinator/bluemix-tutorial.yml
+
+name: bluemix-tutorial
+root: ~/dev/flow-bluemix-tutorial/
+
+windows:
+  - workspace:
+  - editor:
+  - server:
