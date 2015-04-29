@@ -1,5 +1,4 @@
 #!/bin/zsh
- 
 set -e
 
 outdated="$(npm -g outdated --parseable --depth=0 | cut -d: -f3)"
