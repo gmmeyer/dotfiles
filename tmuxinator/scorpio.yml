@@ -1,0 +1,9 @@
+# ~/.tmuxinator/scorpio.yml
+
+name: scorpio
+root: ~/dev/scorpio/
+
+windows:
+  - workspace:
+  - editor:
+  - server: ./run.sh

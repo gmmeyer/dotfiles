@@ -1,0 +1,9 @@
+# ~/.tmuxinator/scorpio-monitoring.yml
+
+name: scorpio-monitoring
+root: ~/dev/scorpio-monitoring/
+
+windows:
+  - workspace:
+  - editor:
+  - server:
