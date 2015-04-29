@@ -48,7 +48,7 @@ ZSH_TMUX_AUTOCONNECT=true
 
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 
-# export _JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 plugins=(bundler colored-man gem git git-prompt
          heroku lein nvm npm pip pyenv
@@ -82,6 +82,7 @@ path=(/usr/local/opt/pyenv/shims
       /usr/local/sbin
       ~/.linuxbrew/bin
       ~/.linuxbrew/sbin
+      ~/android-studio/bin/
       /usr/bin
       $GOPATH/bin
       $path)
@@ -99,8 +100,8 @@ export PATH=$PATH:$GOPATH/bin
 
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-export PKG_CONFIG_PATH='/usr/lib/x86_64-linux-gnu/pkgconfig'
-export PKG_CONFIG_LIBDIR='/usr/lib/pkgconfig'
+export PKG_CONFIG_PATH='~/.linuxbrew/lib/pkgconfig/:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/share/pkgconfig'
+export PKG_CONFIG_LIBDIR='~/.linuxbrew/lib/pkgconfig/:/usr/lib/pkgconfig'
 
 if [ -f ~/.opam/opam-init/init.zsh ]; then
     source /home/greg/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
