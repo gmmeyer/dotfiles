@@ -9,6 +9,8 @@
 
 (moe-dark)
 
+(blink-cursor-mode 0)
+
 (moe-theme-set-color 'w/b)
 
 ;;(powerline-moe-theme)

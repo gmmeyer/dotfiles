@@ -1,3 +1,21 @@
-if [ -f ~/.zshrc ]; then
-    source ~/.zshrc
-fi
+#
+# Executes commands at login post-zshrc.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Execute code that does not affect the current session in the background.
+
+# if [ -f ~/.zshrc ]; then
+#     source ~/.zshrc
+# fi
+
+
+{
+  # Compile the completion dump to increase startup speed.
+  zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
+  if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
+      zcompile "$zcompdump"
+  fi
+} &!

@@ -1,0 +1,21 @@
+[Added Associations]
+image/jpeg=eog.desktop;firefox.desktop;shutter.desktop;display.im6.desktop;gimp.desktop;xfi.desktop;ristretto.desktop;feh.desktop;shotwell-viewer.desktop
+x-scheme-handler/trash=exo-file-manager.desktop
+x-scheme-handler/mailto=exo-mail-reader.desktop
+x-scheme-handler/http=exo-web-browser.desktop
+x-scheme-handler/https=exo-web-browser.desktop
+inode/directory=Thunar-folder-handler.desktop
+
+[Default Applications]
+application/x-bittorrent=deluge.desktop;
+application/x-directory=Thunar-folder-handler.desktop
+application/octet-stream=Thunar-folder-handler.desktop
+text/html=google-chrome.desktop
+torrent=deluge.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/magnet=deluge.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+inode/directory=Thunar-folder-handler.desktop
+
