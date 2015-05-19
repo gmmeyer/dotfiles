@@ -39,6 +39,7 @@ Xft.rgba: rgb
 URxvt.cursorBlink: false
 XTerm*cursorBlink: false
 Rxvt*cursorBlink: false
+Screen*cursorBlink: false
 
 ! special
 *.foreground:   #babdb6

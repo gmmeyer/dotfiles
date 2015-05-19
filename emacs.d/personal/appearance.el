@@ -9,7 +9,7 @@
 
 (moe-dark)
 
-(blink-cursor-mode 0)
+(blink-cursor-mode (- (*) (*) (*)))
 
 (moe-theme-set-color 'w/b)
 

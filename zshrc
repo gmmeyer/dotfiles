@@ -1,6 +1,3 @@
-# Path to your oh-my-zsh installation.
-# export ZSH=$HOME/.oh-my-zsh
-
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
@@ -40,15 +37,11 @@ alias be='bundle exec'
 # reload zsh
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
-ZSH_THEME="awesomepanda"
-
 CASE_SENSITIVE="true"
 
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_AUTOCONNECT=true
-
-# tmux
 
 source ~/.zsh/tmux.zsh
 
@@ -56,17 +49,8 @@ export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# plugins=(bundler colored-man gem git
-#          nvm npm pyenv
-#          rake rails rbenv
-#          ruby tmux tmuxinator
-#          zsh_reload)
-
 # autoloads keychain for ssh
 eval `keychain --eval --agents ssh -Q --quiet id_rsa`
-
-# last-working-dir github
-# source $ZSH/oh-my-zsh.sh
 
 # tmuxinator
 # source ~/.zsh/tmuxinator.zsh

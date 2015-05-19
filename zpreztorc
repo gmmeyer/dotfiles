@@ -6,10 +6,9 @@ zstyle ':prezto:load' zmodule 'attr' 'stat'
 # Set the Zsh functions to load (man zshcontrib).
 zstyle ':prezto:load' zfunction 'zargs' 'zmv'
 
-
+#  'environment' \
 
 zstyle ':prezto:load' pmodule \
-  'environment' \
   'editor' \
   'history' \
   'history-substring-search' \
@@ -24,24 +23,5 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'prompt'
 
-# 'tmux' \
-
-  # 'python' \
-#Auto set the tab and window titles.
-# zstyle ':prezto:module:terminal' auto-title 'yes'
-
-# Set the window title format.
-# zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
-
-# Set the tab title format.
-# zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
-
-# Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:tmux:auto-start' local 'yes'
-
-# # Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:tmux:auto-start' remote 'yes'
-
-# zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
 
 zstyle ':prezto:module:prompt' theme 'sorin'
