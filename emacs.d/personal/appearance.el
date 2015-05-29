@@ -9,6 +9,8 @@
 
 (moe-dark)
 
+(setq-default visible-cursor nil)
+
 (blink-cursor-mode (- (*) (*) (*)))
 
 (moe-theme-set-color 'w/b)

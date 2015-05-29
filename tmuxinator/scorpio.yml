@@ -6,4 +6,4 @@ root: ~/dev/scorpio/
 windows:
   - workspace:
   - editor:
-  - server: ./run.sh
+  - server: ./tunnels.sh&& ./run.sh

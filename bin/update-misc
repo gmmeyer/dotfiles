@@ -21,9 +21,9 @@ git -C ~/.nvm checkout "$TAG"
 
 source ~/.nvm/nvm.sh
 
-# echo "\033[1;31mUpdate Oh My ZSH\e[0m"
+echo "\033[1;31mUpdate Oh My ZSH\e[0m"
 
-# . ~/.oh-my-zsh/tools/upgrade.sh
+. ~/.oh-my-zsh/tools/upgrade.sh
 
 echo "\033[1;31mUpdate Prezto\e[0m"
 

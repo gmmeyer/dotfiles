@@ -1,37 +1,19 @@
 "*":
   "exception-reporting":
-    userId: "912ac179-0652-5904-d847-bcb8c6059f83"
+    userId: "31b9246d-8284-36bd-571e-b1f30061e0a3"
   welcome:
     showOnStartup: false
-  metrics:
-    userId: "986ea0be6f12380a2af9ce05c8afe860e9e5366c"
   core:
-    ignoredNames: [
-      "*.pyc"
-      ".pyc"
-    ]
-    followSymlinks: true
-    disabledPackages: [
-      "file-icons"
-      "easy-motion"
-      "Zen"
-      "vim-mode"
-      "atom-color-highlight"
-    ]
-    themes: [
-      "seti-ui"
-      "seti-monokai"
-    ]
+    {}
   editor:
-    fontFamily: "DejaVu Sans Mono for Powerline"
-    showIndentGuide: true
-    invisibles: {}
+    invisibles:
+      {}
+    softWrap: true
+    zoomFontWhenCtrlScrolling: false
     fontSize: 18
-  "tree-view":
-    hideIgnoredNames: true
-  "atom-beautify":
-    _analyticsUserId: "212b73e6-1807-4563-aec2-c53c698b5ad8"
-  "tabs-to-spaces":
-    onSave: "untabify"
-  linter: {}
-  "autocomplete-plus": {}
+  linter:
+    {}
+  "isotope-ui":
+    fontFamily: "System Default"
+  "one-dark-ui":
+    layoutMode: "Spacious"

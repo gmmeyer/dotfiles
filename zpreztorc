@@ -4,7 +4,7 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' zmodule 'attr' 'stat'
 
 # Set the Zsh functions to load (man zshcontrib).
-zstyle ':prezto:load' zfunction 'zargs' 'zmv'
+zstyle ':prezto:load' zfunction 'zargs' 'zmv' 'zrecompile'
 
 #  'environment' \
 
@@ -22,6 +22,5 @@ zstyle ':prezto:load' pmodule \
   'node' \
   'syntax-highlighting' \
   'prompt'
-
 
 zstyle ':prezto:module:prompt' theme 'sorin'
