@@ -6,21 +6,32 @@ zstyle ':prezto:load' zmodule 'attr' 'stat'
 # Set the Zsh functions to load (man zshcontrib).
 zstyle ':prezto:load' zfunction 'zargs' 'zmv' 'zrecompile'
 
-#  'environment' \
-
 zstyle ':prezto:load' pmodule \
-  'editor' \
-  'history' \
-  'history-substring-search' \
-  'directory' \
-  'spectrum' \
-  'utility' \
-  'completion' \
-  'ruby' \
-  'rails' \
-  'git' \
-  'node' \
-  'syntax-highlighting' \
-  'prompt'
+       'helper' \
+       'spectrum' \
+       'utility' \
+       'environment' \
+       'editor' \
+       'history' \
+       'history-substring-search' \
+       'git' \
+       'completion' \
+       'ruby' \
+       'node' \
+       'syntax-highlighting' \
+       'prompt'
 
-zstyle ':prezto:module:prompt' theme 'sorin'
+#'rails' \
+#       'directory' \
+
+zstyle ':prezto:module:prompt' theme 'cloud'
+
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+       'main' \
+       'brackets' \
+       'pattern' \
+       'cursor' \
+       'root'
+
+zstyle ':prezto:module:editor' key-bindings 'emacs'
+zstyle ':prezto:module:editor' dot-expansion 'yes'

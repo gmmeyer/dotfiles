@@ -7,11 +7,6 @@
 
 # Execute code that does not affect the current session in the background.
 
-if [ -f ~/.zshrc ]; then
-    source ~/.zshrc
-fi
-
-
 {
   # Compile the completion dump to increase startup speed.
   zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
