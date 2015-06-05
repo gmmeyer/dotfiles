@@ -25,3 +25,5 @@ alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias gl='git pull'
 compdef _git gl=git-pull
 alias gll='git log --topo-order --pretty=format:"${_git_log_medium_format}"'
+
+alias clear="clear && printf '\e[3J'"
