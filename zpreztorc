@@ -24,14 +24,15 @@ zstyle ':prezto:load' pmodule \
 #'rails' \
 #       'directory' \
 
-zstyle ':prezto:module:prompt' theme 'cloud'
+zstyle ':prezto:module:prompt' theme 'sorin'
 
 zstyle ':prezto:module:syntax-highlighting' highlighters \
        'main' \
        'brackets' \
        'pattern' \
-       'cursor' \
        'root'
+
+#        'cursor' \
 
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
