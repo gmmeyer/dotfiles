@@ -15,7 +15,9 @@ eval "$(pyenv virtualenv-init -)"
 # source $ZSH/oh-my-zsh.sh
 
 # autoloads keychain for ssh
-eval `keychain --eval --agents ssh -Q --quiet id_rsa`
+if command -v foo >/dev/null 2>&1; then
+    eval `keychain --eval --agents ssh -Q --quiet id_rsa`
+fi
 
 # gitignore!
 function gi() { curl -s https://www.gitignore.io/api/$@ ;}
