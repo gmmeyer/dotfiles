@@ -4,15 +4,16 @@
   welcome:
     showOnStartup: false
   core:
-    {}
+    themes: [
+      "one-dark-ui"
+      "zenburn"
+    ]
   editor:
-    invisibles:
-      {}
+    invisibles: {}
     softWrap: true
     zoomFontWhenCtrlScrolling: false
     fontSize: 18
-  linter:
-    {}
+  linter: {}
   "isotope-ui":
     fontFamily: "System Default"
   "one-dark-ui":

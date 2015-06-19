@@ -46,8 +46,8 @@ echo "\033[1;31mUpdate linuxbrew\e[0m"
 brew update
 brew upgrade --all
 
-echo "\033[1;31mUpdate npm\e[0m"
-npm-update-global
+# echo "\033[1;31mUpdate npm\e[0m"
+# npm-update-global
 # npm update -g
 # npm update -g npm@next
 

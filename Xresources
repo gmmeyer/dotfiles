@@ -36,11 +36,6 @@ Xft.hintstyle: hintfull
 Xft.antialias: 1
 Xft.rgba: rgb
 
-! URxvt.cursorBlink: false
-! XTerm*cursorBlink: false
-! Rxvt*cursorBlink: false
-! Screen*cursorBlink: false
-
 ! special
 *.foreground:   #babdb6
 *.background:   #222222
