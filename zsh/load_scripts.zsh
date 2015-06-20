@@ -43,3 +43,7 @@ fi
 if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
     source ~/.nix-profile/etc/profile.d/nix.sh
 fi
+
+if command -v npm > /dev/null 2>&1; then
+    . <(npm completion)
+fi

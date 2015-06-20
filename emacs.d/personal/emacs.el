@@ -6,6 +6,7 @@
 (require 'mouse)
 (xterm-mouse-mode t)
 (defun track-mouse (e))
+(setq mouse-sel-mode t)
 
 (show-paren-mode t)
 (setq show-paren-style 'expression)
