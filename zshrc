@@ -8,6 +8,10 @@ fi
 source ~/.zsh/environment.zsh
 source ~/.zsh/aliases.zsh
 
+if [[ `uname` == 'Darwin' ]]; then
+    source ~/.zsh/osx.zsh
+fi
+
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"

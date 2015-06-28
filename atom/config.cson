@@ -8,13 +8,16 @@
       "one-dark-ui"
       "zenburn"
     ]
+    disabledPackages: [
+      "atom-color-highlight"
+    ]
   editor:
-    invisibles:
-      {}
+    invisibles: {}
     softWrap: true
     zoomFontWhenCtrlScrolling: false
-  linter:
-    {}
+    showIndentGuide: true
+    confirmCheckoutHeadRevision: false
+  linter: {}
   "isotope-ui":
     fontFamily: "System Default"
   "one-dark-ui":

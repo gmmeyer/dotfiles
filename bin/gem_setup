@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+eval "$(rbenv init -)"
+
 echo "\033[1;31minstalling gems\e[0m"
 
 gem install binding_of_caller awesome_print byebug ejs factory_girl factory_girl_rails font-awesome-rails jekyll jekyll-coffeescript jekyll-gist jekyll-paginate jekyll-sass-converter jekyll-watch opal pg pry pry-byebug rspec rspec-rails sass goldiloader slack-api nyny rethinkdb rails tmuxinator

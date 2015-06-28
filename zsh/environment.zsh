@@ -25,6 +25,7 @@ export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+# for oh my zsh, if I wanna go back
 plugins=(bundler colored-man gem git
          nvm npm pyenv
          rake rails rbenv
@@ -46,8 +47,8 @@ export PATH=$PATH:$GOPATH/bin
 
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-export PKG_CONFIG_PATH='~/.linuxbrew/lib/pkgconfig/:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/share/pkgconfig'
-export PKG_CONFIG_LIBDIR='~/.linuxbrew/lib/pkgconfig/:/usr/lib/pkgconfig'
+export PKG_CONFIG_PATH='~/.linuxbrew/lib/pkgconfig/:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/share/pkgconfig:/usr/local/include:/opt/X11/lib/pkgconfig:/usr/local/lib/pkgconfig:'$PKG_CONFIG_PATH
+export PKG_CONFIG_LIBDIR='~/.linuxbrew/lib/pkgconfig/:/usr/lib/pkgconfig:/usr/local/lib/pkgconfig:'$PKG_CONFIG_LIBDIR
 
 export GOPATH="~/.go"
 export PYENV_ROOT="$HOME/.pyenv"
