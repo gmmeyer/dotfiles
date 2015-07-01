@@ -9,7 +9,9 @@
 # source ~/.zsh/tmuxinator.zsh
 
 # tmux
-source ~/.zsh/tmux.zsh
+if [ -f ~/.zsh/tmux.zsh ]; then
+  source ~/.zsh/tmux.zsh
+fi
 
 if [ -f ~/.opam/opam-init/init.zsh ]; then
     source /home/greg/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

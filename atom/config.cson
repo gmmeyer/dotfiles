@@ -4,10 +4,6 @@
   welcome:
     showOnStartup: false
   core:
-    themes: [
-      "one-dark-ui"
-      "zenburn"
-    ]
     disabledPackages: [
       "atom-color-highlight"
     ]
