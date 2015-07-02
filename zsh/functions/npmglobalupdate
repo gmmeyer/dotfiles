@@ -1,0 +1,7 @@
+local outdated
+
+outdated="$(npm -g outdated --parseable --depth=0 | cut -d: -f3)"
+
+for package in $outdated; do
+  npm -g install "$package"
+done

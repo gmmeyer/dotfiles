@@ -1,0 +1,27 @@
+local packages
+
+packages=(
+  bower
+  browserify
+  bytewiser
+  cylon cylon-firmata cylon-gpio cylon-i2c
+  eslint express-generator expressworks
+  flowthings foreman
+  generator-angular generator-angular-fullstack
+  generator-karma generator-express
+  generator-keystone generator-keystone-react
+  generator-react-express generator-webapp generator-yeogurt
+  grunt grunt-cli grunt-contrib-jshint grunt-jscs grunt-lintspaces
+  gulp
+  handlebars
+  jscs jshint keystone
+  mean-cli mocha
+  node-gyp nodemon node-slack-cli
+  #npm-check-updates
+  spawn-sync stream-adventure
+  yo strongloop
+)
+
+for package in $packages; do
+  npm install -g $package
+done
