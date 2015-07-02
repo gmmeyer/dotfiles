@@ -23,4 +23,3 @@ export NVM_DIR=$HOME"/.nvm"
 
 source ~/.zsh/environment/path.zsh
 source ~/.zsh/environment/misc.zsh
-source ~/.zsh/functions.zsh
