@@ -18,3 +18,7 @@
     fontFamily: "System Default"
   "one-dark-ui":
     layoutMode: "Spacious"
+  "atom-beautify":
+    _analyticsUserId: "9a0f465f-d10a-4431-8608-ae4610e56c00"
+  tabs:
+    usePreviewTabs: true
