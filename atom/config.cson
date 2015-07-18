@@ -7,6 +7,7 @@
     disabledPackages: [
       "atom-color-highlight"
     ]
+    excludeVcsIgnoredPaths: false
   editor:
     invisibles: {}
     softWrap: true
@@ -23,3 +24,4 @@
   tabs:
     usePreviewTabs: true
   "atom-css-comb": {}
+  "tree-view": {}
