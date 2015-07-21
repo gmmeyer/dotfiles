@@ -14,11 +14,14 @@
     zoomFontWhenCtrlScrolling: false
     showIndentGuide: true
     confirmCheckoutHeadRevision: false
+    fontFamily: "Ubuntu Mono"
+    fontSize: 20
   linter: {}
   "isotope-ui":
     fontFamily: "System Default"
   "one-dark-ui":
     layoutMode: "Spacious"
+    fontSize: 14
   "atom-beautify":
     _analyticsUserId: "9a0f465f-d10a-4431-8608-ae4610e56c00"
   tabs:
