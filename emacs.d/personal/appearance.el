@@ -15,9 +15,13 @@
 
 (moe-theme-set-color 'w/b)
 
-;;(powerline-moe-theme)
+(require 'powerline)
+(powerline-moe-theme)
 
 (global-hl-line-mode 0)
+
+(show-paren-mode t)
+(setq show-paren-style 'expression)
 
 (menu-bar-mode -1)
 ;;(load-theme 'railscasts)
