@@ -1,2 +1,2 @@
-DOTFILES_DIRS="$HOME/dotfiles"
+DOTFILES_DIRS="$HOME/dotfiles $HOME/private-dotfiles $HOME/private"
 EXCLUDES="TODO.md README.md"
