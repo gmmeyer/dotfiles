@@ -6,7 +6,7 @@ root: ~/dev/flow-iot-site
 windows:
   - workspace:
   - editor:
-  - server: ./dev_start_reload_db.sh
+  - server:
       layout: even-horizontal
       panes:
         - npm run start_reload_db
