@@ -17,13 +17,13 @@
 ;; moe theme stuff
 
 ;; powerline > mode line
-(require 'powerline)
+;; (require 'powerline)
 
 (require 'moe-theme)
 
 (setq moe-theme-highlight-buffer-id t)
 
-(powerline-moe-theme)
+;; (powerline-moe-theme)
 
 ;; markdown title resizing
 (setq moe-theme-resize-markdown-title '(2.0 1.7 1.5 1.3 1.0 1.0))
