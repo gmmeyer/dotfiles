@@ -15,13 +15,11 @@
 
 (setq-default js2-include-browser-externs t)
 
-
 (with-eval-after-load 'flycheck
   (setq-default flycheck-disabled-checkers
                 (append flycheck-disabled-checkers
                         '(javascript-jshint)
                         '(javascript-jscs))))
-
 
 (provide 'codeprefs)
 ;;; codeprefs.el ends here
