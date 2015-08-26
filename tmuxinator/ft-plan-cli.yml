@@ -1,0 +1,9 @@
+# ~/.tmuxinator/ft-plan-cli.yml
+
+name: ft-plan-cli
+root: ~/dev/ft-plan-cli
+
+windows:
+  - workspace:
+  - editor:
+  - server:
