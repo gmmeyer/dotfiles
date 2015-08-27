@@ -1,0 +1,9 @@
+# ~/.tmuxinator/go-plan-cli.yml
+
+name: go-plan-cli
+root: ~/dev/go-plan-cli
+
+windows:
+  - workspace:
+  - editor:
+  - server:
