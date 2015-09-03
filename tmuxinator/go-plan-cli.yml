@@ -1,7 +1,7 @@
 # ~/.tmuxinator/go-plan-cli.yml
 
 name: go-plan-cli
-root: ~/gocode/src/github.com/flowdotnet/go-plan-cli
+root: ~/gocode/src/github.com/flowdotnet/ft
 
 windows:
   - workspace:

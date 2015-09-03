@@ -1,0 +1,13 @@
+# ~/.tmuxinator/iot-pumpkin.yml
+
+name: iot-pumpkin
+root: ~/dev/iot-pumpkin
+
+windows:
+  - workspace:
+  - editor:
+  - server:
+      layout: even-horizontal
+      panes:
+        -
+        - npm run build && npm run watch
