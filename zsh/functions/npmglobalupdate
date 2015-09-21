@@ -3,5 +3,8 @@ local outdated
 outdated="$(npm -g outdated --parseable --depth=0 | cut -d: -f3)"
 
 for package in $outdated; do
-  npm -g install "$package"
+  re="npm\@[0-9\.]"
+  if [[ ! "$package" =~ $re ]]; then
+    npm -g install "$package"
+  fi
 done

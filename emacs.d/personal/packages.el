@@ -14,6 +14,9 @@
 
 (defvar my-packages '(emamux auto-complete less-css-mode moe-theme
                              multi-web-mode markdown-mode textmate web-mode
+                             go-mode go-autocomplete go-eldoc
+                             go-projectile gotest
+                             fzf
                              ;;handlebars-mode
                              magit clojure-mode
                              pastels-on-dark-theme websocket pony-mode
