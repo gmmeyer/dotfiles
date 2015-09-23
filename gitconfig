@@ -1,27 +1,28 @@
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  grep = auto
+	diff = auto
+	status = auto
+	branch = auto
+	grep = auto
 [user]
-  name = Greg Meyer
-  email = gregory.matthew.meyer@gmail.com
+	name = Greg Meyer
+	email = gregory.matthew.meyer@gmail.com
 [credential]
 	helper = cache --timeout=3600
 [core]
-  editor = emacsclient -t
-  autocrlf = false
-  safecrlf = true
+	editor = emacsclient -t
+	autocrlf = false
+	safecrlf = true
 	excludesfile = ~/.gitignore_global
-
+[branch]
+	autosetuprebase = always
 [alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 [push]
-	default = upstream
+	default = current
