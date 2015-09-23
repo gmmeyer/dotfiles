@@ -1,0 +1,9 @@
+# ~/.tmuxinator/bikeapp.yml
+
+name: bikeapp
+root: ~/dev/bikeapp
+
+windows:
+  - workspace:
+  - editor:
+  - server:
