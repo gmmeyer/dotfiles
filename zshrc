@@ -28,5 +28,3 @@ function gi() { curl -s https://www.gitignore.io/api/$@ ;}
 
 # all of these insist on being last, so they are.
 source ~/.zsh/load_scripts.zsh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

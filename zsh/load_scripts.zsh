@@ -40,10 +40,6 @@ fi
 # GVM
 if [ -f "$HOME/.gvm/scripts/gvm" ]; then
     source "$HOME/.gvm/scripts/gvm"
-    # if [ -n `gvm list | grep go1.5` ] && [ -z `gvm list | grep "=> go1.5"`]; then
-    #     echo 'hihi'
-    #     gvm use go1.5 >/dev/null 2>&1;
-    # fi
 fi
 
 # if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
@@ -55,3 +51,5 @@ if command -v npm > /dev/null 2>&1; then
 fi
 
 source ~/.zsh/functions.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

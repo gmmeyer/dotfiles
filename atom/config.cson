@@ -16,8 +16,7 @@
     confirmCheckoutHeadRevision: false
     fontFamily: "Ubuntu Mono"
     fontSize: 20
-  linter:
-    showErrorPanel: false
+  linter: {}
   "isotope-ui":
     fontFamily: "System Default"
   "one-dark-ui":
