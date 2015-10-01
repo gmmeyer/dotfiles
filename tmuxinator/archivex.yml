@@ -1,7 +1,7 @@
 # ~/.tmuxinator/archivex.yml
 
 name: archivex
-root: ~/gocode/src/github.com/gmmeyer/archivex
+root: <%= ENV["GOPATH"] %>//src/github.com/gmmeyer/archivex
 
 windows:
   - workspace:
