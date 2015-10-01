@@ -5,11 +5,11 @@ if [[ -f "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-source ~/.zsh/environment.zsh
-source ~/.zsh/aliases.zsh
+source $HOME/.zsh/environment.zsh
+source $HOME/.zsh/aliases.zsh
 
 if [[ `uname` == 'Darwin' ]]; then
-    source ~/.zsh/osx.zsh
+    source $HOME/.zsh/osx.zsh
 fi
 
 eval "$(rbenv init -)"
@@ -27,4 +27,4 @@ eval "$(pyenv virtualenv-init -)"
 function gi() { curl -s https://www.gitignore.io/api/$@ ;}
 
 # all of these insist on being last, so they are.
-source ~/.zsh/load_scripts.zsh
+source $HOME/.zsh/load_scripts.zsh

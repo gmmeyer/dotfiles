@@ -6,27 +6,27 @@
 # So, here they are.
 
 # tmuxinator
-# source ~/.zsh/tmuxinator.zsh
+# source $HOME/.zsh/tmuxinator.zsh
 
 # tmux
-if [ -f ~/.zsh/tmux.zsh ]; then
-  source ~/.zsh/tmux.zsh
+if [ -f $HOME/.zsh/tmux.zsh ]; then
+  source $HOME/.zsh/tmux.zsh
 fi
 
-if [ -f ~/.opam/opam-init/init.zsh ]; then
+if [ -f $HOME/.opam/opam-init/init.zsh ]; then
     source /home/greg/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 fi
 
-if [ -f ~/.zsh/bash_completion/exercism_completion.bash ]; then
-    source ~/.zsh/bash_completion/exercism_completion.bash
+if [ -f $HOME/.zsh/bash_completion/exercism_completion.bash ]; then
+    source $HOME/.zsh/bash_completion/exercism_completion.bash
 fi
 
-if [ -f ~/.zsh/private.zsh ]; then
-    source ~/.zsh/private.zsh
+if [ -f $HOME/.zsh/private.zsh ]; then
+    source $HOME/.zsh/private.zsh
 fi
 
-# if [ -f ~/.zsh/git/git.plugin.zsh ]; then
-#     source ~/.zsh/git/git.plugin.zsh
+# if [ -f $HOME/.zsh/git/git.plugin.zsh ]; then
+#     source $HOME/.zsh/git/git.plugin.zsh
 # fi
 
 if [ -f "$NVM_DIR/nvm.sh" ]; then
@@ -42,14 +42,14 @@ if [ -f "$HOME/.gvm/scripts/gvm" ]; then
     source "$HOME/.gvm/scripts/gvm"
 fi
 
-# if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
-#     source ~/.nix-profile/etc/profile.d/nix.sh
+# if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
+#     source $HOME/.nix-profile/etc/profile.d/nix.sh
 # fi
 
 if command -v npm > /dev/null 2>&1; then
     . <(npm completion)
 fi
 
-source ~/.zsh/functions.zsh
+source $HOME/.zsh/functions.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh

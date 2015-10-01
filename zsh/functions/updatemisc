@@ -5,29 +5,29 @@ echo "updating misc packages"
 
 echo "\033[1;31mUpdate Prelude\e[0m"
 
-if [ -d ~/.emacs.d ] && [ -d ~/.emacs.d/.git ]; then
-  git -C ~/.emacs.d checkout master
-  git -C ~/.emacs.d pull
+if [ -d $HOME/.emacs.d ] && [ -d $HOME/.emacs.d/.git ]; then
+  git -C $HOME/.emacs.d checkout master
+  git -C $HOME/.emacs.d pull
 else
   curl -L https://git.io/epre | sh
 fi
 
 echo "\033[1;31mUpdate NVM\e[0m"
 
-if [ -d ~/.nvm ] && [ -d ~/.nvm/.git ]; then
-  git -C ~/.nvm fetch --tags
-  TAG=$(git -C ~/.nvm describe --tags `git -C ~/.nvm rev-list --tags --max-count=1`)
+if [ -d $HOME/.nvm ] && [ -d $HOME/.nvm/.git ]; then
+  git -C $HOME/.nvm fetch --tags
+  TAG=$(git -C $HOME/.nvm describe --tags `git -C $HOME/.nvm rev-list --tags --max-count=1`)
   echo "Checking out tag $TAG..."
-  git -C ~/.nvm checkout "$TAG"
-  source ~/.nvm/nvm.sh
+  git -C $HOME/.nvm checkout "$TAG"
+  source $HOME/.nvm/nvm.sh
 else
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
 fi
 
 
-if [ -d ~/.zprezto ] && [ -d ~/.zprezto/.git ]; then
+if [ -d $HOME/.zprezto ] && [ -d $HOME/.zprezto/.git ]; then
   echo "\033[1;31mUpdate Prezto\e[0m"
-  git -C ~/.zprezto pull && git -C ~/.zprezto submodule update --init --recursive
+  git -C $HOME/.zprezto pull && git -C $HOME/.zprezto submodule update --init --recursive
 fi
 
 if type rbenv | grep -i function > /dev/null; then

@@ -21,7 +21,7 @@ export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 export PYENV_ROOT="$HOME/.pyenv"
 export NVM_DIR=$HOME"/.nvm"
 
-source ~/.zsh/environment/path.zsh
-source ~/.zsh/environment/misc.zsh
+source $HOME/.zsh/environment/path.zsh
+source $HOME/.zsh/environment/misc.zsh
 
-fpath=(~/.zsh/completion $fpath)
+fpath=($HOME/.zsh/completion $fpath)
