@@ -1,3 +1,8 @@
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+"" I like being able to use a mouse.
+set mouse=a
+
+set ttymouse=xterm

@@ -9,6 +9,9 @@ alias irb='pry'
 # editor aliases.
 alias emacs='emacsclient -t'
 alias e='emacsclient -t'
+
+alias vi='vim'
+
 alias st='subl'
 alias stt='subl .'
 alias at='atom'

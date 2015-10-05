@@ -14,8 +14,8 @@
     zoomFontWhenCtrlScrolling: false
     showIndentGuide: true
     confirmCheckoutHeadRevision: false
-    fontFamily: "Ubuntu Mono"
     fontSize: 20
+    fontFamily: "Sauce Code Powerline"
   linter: {}
   "isotope-ui":
     fontFamily: "System Default"
