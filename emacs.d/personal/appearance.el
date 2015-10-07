@@ -17,7 +17,7 @@
 ;; moe theme stuff
 
 ;; powerline > mode line
-(require 'powerline)
+;; (require 'powerline)
 
 (require 'moe-theme)
 
