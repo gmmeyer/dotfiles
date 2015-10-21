@@ -13,8 +13,6 @@
 	autocrlf = false
 	safecrlf = true
 	excludesfile = ~/.gitignore_global
-[branch]
-	autosetuprebase = always
 [alias]
 	co = checkout
 	ci = commit
