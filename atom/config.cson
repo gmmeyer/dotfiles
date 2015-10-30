@@ -14,7 +14,7 @@
     zoomFontWhenCtrlScrolling: false
     showIndentGuide: true
     confirmCheckoutHeadRevision: false
-    fontSize: 20
+    fontSize: 18
     fontFamily: "Sauce Code Powerline"
   linter: {}
   "isotope-ui":
