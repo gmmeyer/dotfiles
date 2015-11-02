@@ -16,3 +16,5 @@ function loadfunctions {
 }
 
 loadfunctions
+
+autoload -U regexp-replace

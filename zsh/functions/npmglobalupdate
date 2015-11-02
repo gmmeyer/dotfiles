@@ -2,9 +2,18 @@ local outdated
 
 outdated="$(npm -g outdated --parseable --depth=0 | cut -d: -f3)"
 
-for package in $outdated; do
-  re="npm\@[0-9\.]"
-  if [[ ! "$package" =~ $re ]]; then
-    npm -g install "$package"
+local re="^npm\@[0-9\.]+$"
+regexp-replace outdated "\;+" " "
+
+for package in ${(z)outdated}; do
+  regexp-replace package "\@[0-9\.]+$" ""
+  if [[ $package == ";" ]]; then
+     continue;
+  fi
+
+  if [[ $package == npm ]]; then
+    
+  else
+    npm -g update "$package"
   fi
 done

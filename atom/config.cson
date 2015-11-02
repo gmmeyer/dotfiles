@@ -6,6 +6,7 @@
   core:
     disabledPackages: [
       "atom-color-highlight"
+      "backbonejs-snippets"
     ]
     excludeVcsIgnoredPaths: false
   editor:
@@ -14,7 +15,7 @@
     zoomFontWhenCtrlScrolling: false
     showIndentGuide: true
     confirmCheckoutHeadRevision: false
-    fontSize: 18
+    fontSize: 17
     fontFamily: "Sauce Code Powerline"
   linter: {}
   "isotope-ui":
