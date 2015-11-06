@@ -5,7 +5,7 @@ root: ~/dev/iot-devsite
 
 windows:
   - workspace:
-  - editor: e .
+  - editor:
   - server:
       layout: even-horizontal
       panes:
