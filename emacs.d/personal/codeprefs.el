@@ -21,5 +21,11 @@
                         '(javascript-jshint)
                         '(javascript-jscs))))
 
+(add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
+
+(setq web-mode-engines-alist
+      '(("ctemplate"    . "\\.hbs\\'"))
+      )
+
 (provide 'codeprefs)
 ;;; codeprefs.el ends here
