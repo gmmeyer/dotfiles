@@ -9,5 +9,5 @@ windows:
   - server:
       layout: even-horizontal
       panes:
-        - npm run start_reload_db
+        - npm run start
         - npm run watch
