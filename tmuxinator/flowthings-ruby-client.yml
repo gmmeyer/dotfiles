@@ -1,7 +1,7 @@
 # ~/.tmuxinator/flowthings-ruby-client.yml
 
 name: flowthings-ruby-client
-root: ~/dev/ruby-client
+root: ~/dev/flowthings-ruby-client
 
 windows:
   - workspace:
