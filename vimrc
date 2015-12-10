@@ -11,7 +11,7 @@ endif
 
 let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
 
-let g:vim_bootstrap_langs = "javascript,ruby,haskell,python,c,html,lua,ocaml,go"
+let g:vim_bootstrap_langs = "javascript,ruby,haskell,lisp,python,c,html,lua,ocaml,go,erlang"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
 if !filereadable(neobundle_readme)
@@ -36,7 +36,11 @@ if !filereadable(neobundle_readme)
   
   
   
+  
+  
   silent !\curl -sSL https://raw.githubusercontent.com/avelino/vim-bootstrap/master/vim_template/langs/haskell/haskell.sh | bash -s stable
+  
+  
   
   
   
@@ -102,11 +106,15 @@ NeoBundle 'sherzberg/vim-bootstrap-updater'
 NeoBundle 'vim-scripts/c.vim'
 
 
-"" Python Bundle
-NeoBundle "davidhalter/jedi-vim"
 NeoBundle "scrooloose/syntastic"
 NeoBundle "majutsushi/tagbar"
-NeoBundle "Yggdroot/indentLine"
+
+NeoBundle 'xolox/vim-lua-ftplugin'
+NeoBundle 'xolox/vim-lua-inspect'
+
+
+"" Lisp Bundle
+NeoBundle 'vim-scripts/slimv.vim'
 
 
 "" Javascript Bundle
@@ -124,11 +132,11 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle "def-lkb/ocp-indent-vim"
 
 
+"" Python Bundle
+NeoBundle "davidhalter/jedi-vim"
 NeoBundle "scrooloose/syntastic"
 NeoBundle "majutsushi/tagbar"
-
-NeoBundle 'xolox/vim-lua-ftplugin'
-NeoBundle 'xolox/vim-lua-inspect'
+NeoBundle "Yggdroot/indentLine"
 
 
 NeoBundle "eagletmt/neco-ghc"
@@ -139,6 +147,9 @@ NeoBundle "pbrisbin/vim-syntax-shakespeare"
 "" Go Lang Bundle
 NeoBundle "majutsushi/tagbar"
 NeoBundle "fatih/vim-go"
+
+
+NeoBundle "jimenezrick/vimerl"
 
 
 "" Ruby Bundle
@@ -482,6 +493,26 @@ nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 
+" Tagbar
+nmap <silent> <F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+
+
+
+
+let g:javascript_enable_domhtmlcss = 1
+
+
+
+
+" Add Merlin to rtp
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
+" Set Merlin as Syntastic checker for OCaml
+let g:syntastic_ocaml_checkers = ['merlin']
+
+
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -507,24 +538,6 @@ let g:syntastic_python_flake8_post_args='--ignore=W391'
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
-
-" Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
-
-
-let g:javascript_enable_domhtmlcss = 1
-
-
-
-
-" Add Merlin to rtp
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-
-" Set Merlin as Syntastic checker for OCaml
-let g:syntastic_ocaml_checkers = ['merlin']
-
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
@@ -568,6 +581,10 @@ augroup FileType go
   au FileType go nmap <leader>rb <Plug>(go-build)
   au FileType go nmap <leader>gt <Plug>(go-test)
 augroup END
+
+
+let erlang_folding = 1
+let erlang_show_errors = 1
 
 
 let g:rubycomplete_buffer_loading = 1
