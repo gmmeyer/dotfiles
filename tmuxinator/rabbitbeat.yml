@@ -1,0 +1,9 @@
+# ~/.tmuxinator/rabbitbeat.yml
+
+name: rabbitbeat
+root: <%= ENV["GOPATH"] %>/src/github.com/flowdotnet/rabbitbeat
+
+windows:
+  - workspace:
+  - editor:
+  - server:
