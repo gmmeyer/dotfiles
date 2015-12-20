@@ -57,16 +57,8 @@ pkg_config_path=($HOME/.linuxbrew/lib/pkgconfig
                         /usr/share/pkgconfig
                         /usr/lib/pkgconfig
                         /usr/lib
-                        # /usr/local/include
+                        /usr/local/include
                         /opt/X11/lib/pkgconfig
                         $pkg_config_path)
 
 export PKG_CONFIG_PATH=$HOME/.linuxbrew/lib/pkgconfig:$HOME/.linuxbrew/lib:/usr/local/lib/pkgconfig:/usr/local/lib:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/x86_64-linux-gnu:/usr/share:/usr/share/pkgconfig:/usr/lib/pkgconfig:/usr/lib:/opt/X11/lib/pkgconfig:/usr/X11/lib/pkgconfig:/usr/local/opt/zlib/lib/pkgconfig:$PKG_CONFIG_PATH
-                 #$pkg_config_path)
-                 # /usr/local/include
-
-
-# pkg_config_libdir=($HOME/.linuxbrew/lib/pkgconfig
-#                    /usr/local/lib/pkgconfig
-#                    /usr/lib/pkgconfig
-#                    $pkg_config_libdir)
