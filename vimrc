@@ -11,7 +11,7 @@ endif
 
 let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
 
-let g:vim_bootstrap_langs = "javascript,ruby,haskell,lisp,python,c,html,lua,ocaml,go,erlang"
+let g:vim_bootstrap_langs = "javascript,ruby,haskell,lisp,elixir,python,c,php,html,lua,ocaml,perl,go,erlang"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
 if !filereadable(neobundle_readme)
@@ -38,7 +38,13 @@ if !filereadable(neobundle_readme)
   
   
   
+  
+  
+  
+  
   silent !\curl -sSL https://raw.githubusercontent.com/avelino/vim-bootstrap/master/vim_template/langs/haskell/haskell.sh | bash -s stable
+  
+  
   
   
   
@@ -103,7 +109,14 @@ NeoBundle 'sherzberg/vim-bootstrap-updater'
 
 "" Custom bundles
 
+NeoBundle 'vim-perl/vim-perl'
+NeoBundle 'c9s/perlomni.vim'
+
+
 NeoBundle 'vim-scripts/c.vim'
+
+
+NeoBundle "jimenezrick/vimerl"
 
 
 NeoBundle "scrooloose/syntastic"
@@ -144,12 +157,17 @@ NeoBundle "dag/vim2hs"
 NeoBundle "pbrisbin/vim-syntax-shakespeare"
 
 
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'carlosgaldino/elixir-snippets'
+
+
 "" Go Lang Bundle
 NeoBundle "majutsushi/tagbar"
 NeoBundle "fatih/vim-go"
 
 
-NeoBundle "jimenezrick/vimerl"
+"" PHP Bundle
+NeoBundle 'arnaud-lb/vim-php-namespace'
 
 
 "" Ruby Bundle
@@ -488,9 +506,15 @@ noremap ,o :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=lin
 
 "" Custom configs
 
+
+
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
+
+
+let erlang_folding = 1
+let erlang_show_errors = 1
 
 
 " Tagbar
@@ -554,6 +578,11 @@ autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc
 nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
+
+" Tagbar
+nmap <silent> <F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [  'p:package', 'i:imports:1', 'c:constants', 'v:variables',
@@ -583,8 +612,6 @@ augroup FileType go
 augroup END
 
 
-let erlang_folding = 1
-let erlang_show_errors = 1
 
 
 let g:rubycomplete_buffer_loading = 1

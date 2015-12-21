@@ -29,6 +29,7 @@ path=(/usr/local/opt/pyenv/shims
       /usr/local/opt/pyenv/bin
       $HOME/.pyenv/bin
       $HOME/.cabal/bin
+      $HOME/.opam/system/bin
       $HOME/bin
       $HOME/.bin
       /bin
@@ -37,7 +38,7 @@ path=(/usr/local/opt/pyenv/shims
       $HOME/.linuxbrew/bin
       $HOME/.linuxbrew/sbin
       /usr/bin
-      $HOME/android-studio/bin/
+      $HOME/android-studio/bin
       $GOPATH/bin
       $path)
 
