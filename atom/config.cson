@@ -10,6 +10,7 @@
       "metrics"
     ]
     excludeVcsIgnoredPaths: false
+    audioBeep: false
   editor:
     invisibles: {}
     softWrap: true
