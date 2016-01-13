@@ -50,6 +50,10 @@ if command -v npm > /dev/null 2>&1; then
     . <(npm completion)
 fi
 
+if command -v pm2 > /dev/null 2>&1; then
+    source "$HOME/.zsh/pm2_completion.zsh"
+fi
+
 source $HOME/.zsh/functions.zsh
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
