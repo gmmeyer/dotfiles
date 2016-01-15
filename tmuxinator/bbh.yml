@@ -1,0 +1,8 @@
+# ~/.tmuxinator/bbh.yml
+
+name: bbh
+root: ~/dev/bbh
+
+windows:
+  - workspace:
+  - editor:
