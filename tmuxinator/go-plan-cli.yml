@@ -6,4 +6,4 @@ root: <%= ENV["GOPATH"] %>/src/github.com/flowdotnet/ft
 windows:
   - workspace:
   - editor:
-  - server:
+  - test:
