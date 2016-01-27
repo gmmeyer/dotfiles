@@ -18,14 +18,24 @@
                              go-projectile gotest
                              fzf
                              ;;handlebars-mode
+                             moe-theme
+                             powerline
                              magit clojure-mode
                              pastels-on-dark-theme websocket pony-mode
                              org go-mode powerline minitest rspec-mode
+                             emamux
                              ruby-block
                              ctags-update go-autocomplete virtualenv))
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+(defun install-packages ()
+  (dolist (p my-packages)
+    (when (not (package-installed-p p))
+      (package-install p))))
+
+(install-packages)
+
+(require 'paradox)
+
+(paradox-enable)
 
 (provide 'packages.el)
