@@ -1,0 +1,9 @@
+# ~/.tmuxinator/range-bridge.yml
+
+name: range-bridge
+root: <%= ENV["GOPATH"] %>/src/github.com/flowthings/range-bridge
+
+windows:
+  - workspace:
+  - editor:
+  - test:
