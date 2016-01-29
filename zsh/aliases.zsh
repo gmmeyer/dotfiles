@@ -7,8 +7,15 @@
 alias irb='pry'
 
 # editor aliases.
-alias emacs='emacsclient -t'
 alias e='emacsclient -t'
+alias emacs='emacsclient -t'
+
+# emacs standalone
+if [[ `uname` == 'Darwin' ]]; then
+    alias es='/usr/local/bin/emacs'
+    alias emacss='/usr/local/bin/emacs'
+fi
+
 
 alias vi='vim'
 
