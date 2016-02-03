@@ -1,33 +1,33 @@
 "*":
-  "exception-reporting":
-    userId: "31b9246d-8284-36bd-571e-b1f30061e0a3"
-  welcome:
-    showOnStartup: false
+  "atom-beautify":
+    _analyticsUserId: "9a0f465f-d10a-4431-8608-ae4610e56c00"
+  "atom-css-comb": {}
   core:
+    audioBeep: false
     disabledPackages: [
       "atom-color-highlight"
       "backbonejs-snippets"
       "metrics"
     ]
     excludeVcsIgnoredPaths: false
-    audioBeep: false
   editor:
+    confirmCheckoutHeadRevision: false
+    fontFamily: "Sauce Code Powerline"
+    fontSize: 17
     invisibles: {}
+    showIndentGuide: true
     softWrap: true
     zoomFontWhenCtrlScrolling: false
-    showIndentGuide: true
-    confirmCheckoutHeadRevision: false
-    fontSize: 17
-    fontFamily: "Sauce Code Powerline"
-  linter: {}
+  "exception-reporting":
+    userId: "31b9246d-8284-36bd-571e-b1f30061e0a3"
   "isotope-ui":
     fontFamily: "System Default"
+  linter: {}
   "one-dark-ui":
-    layoutMode: "Spacious"
     fontSize: 14
-  "atom-beautify":
-    _analyticsUserId: "9a0f465f-d10a-4431-8608-ae4610e56c00"
+    layoutMode: "Spacious"
   tabs:
     usePreviewTabs: true
-  "atom-css-comb": {}
   "tree-view": {}
+  welcome:
+    showOnStartup: false
