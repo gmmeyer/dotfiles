@@ -9,7 +9,6 @@
       "backbonejs-snippets"
       "metrics"
     ]
-    excludeVcsIgnoredPaths: false
   editor:
     confirmCheckoutHeadRevision: false
     fontFamily: "Sauce Code Powerline"
