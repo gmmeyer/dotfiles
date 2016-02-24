@@ -9,5 +9,5 @@ windows:
   - server:
       layout: even-horizontal
       panes:
-        - node app
+        - nodemon app
         - gulp

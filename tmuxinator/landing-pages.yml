@@ -10,4 +10,4 @@ windows:
       layout: even-horizontal
       panes:
         - npm run start
-        - # npm run watc
+        - gulp
