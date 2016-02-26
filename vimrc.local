@@ -7,7 +7,15 @@ set mouse=a
 
 set ttymouse=xterm
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundle 'vim-airline/vim-airline'
-  NeoBundle 'vim-airline/vim-airline-themes'
-call neobundle#end()
+"" call neobundle#begin(expand('~/.vim/bundle/'))
+""  NeoBundle 'vim-airline/vim-airline'
+""  NeoBundle 'vim-airline/vim-airline-themes'
+"" call neobundle#end()
+colorscheme molokai
+
+let g:airline_theme = 'dark'
+
+let g:airline_powerline_fonts=1
+
+let g:airline_left_sep=''  
+let g:airline_right_sep='' 

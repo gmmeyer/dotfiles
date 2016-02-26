@@ -1,0 +1,3 @@
+Bundle 'spf13/vim-colors'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
