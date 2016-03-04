@@ -1,7 +1,7 @@
 # ~/.tmuxinator/go-plan-cli.yml
 
 name: go-plan-cli
-root: <%= ENV["GOPATH"] %>/src/github.com/flowdotnet/ft
+root: <%= ENV["GOPATH"] %>/src/github.com/flowthings/ft-plan-cli
 
 windows:
   - workspace:
