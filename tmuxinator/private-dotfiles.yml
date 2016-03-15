@@ -1,0 +1,8 @@
+# ~/.tmuxinator/private-dotfiles.yml
+
+name: private-dotfiles
+root: ~/private-dotfiles
+
+windows:
+  - workspace:
+  - editor:
