@@ -12,20 +12,27 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(emamux auto-complete less-css-mode moe-theme
-                             multi-web-mode markdown-mode textmate web-mode
-                             go-mode go-autocomplete go-eldoc
-                             go-projectile gotest
-                             fzf
-                             ;;handlebars-mode
-                             moe-theme
-                             powerline
-                             magit clojure-mode
-                             pastels-on-dark-theme websocket pony-mode
-                             org go-mode powerline minitest rspec-mode
+(defvar my-packages '(emamux auto-complete
+                             caml clojure-mode company company-anaconda
+                             company-go ctags-update
                              emamux
-                             ruby-block
-                             ctags-update go-autocomplete virtualenv))
+                             moe-theme multi-web-mode markdown-mode
+                             f fzf
+                             go-autocomplete go-eldoc go-mode go-projectile
+                             gotest
+                             ;;handlebars-mode
+                             json-reformat
+                             less-css-mode
+                             magit markdown-mode minitest moe-theme multi-term
+                             org
+                             pastels-on-dark-theme paradox pkg-info pony-mode
+                             powerline
+                             rspec-mode ruby-block
+                             smart-mode-line
+                             textmate tuareg
+                             virtualenv
+                             websocket web-mode with-editor
+                             zenburn-theme))
 
 (defun install-packages ()
   (dolist (p my-packages)
