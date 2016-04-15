@@ -1,9 +1,0 @@
-# ~/.tmuxinator/archivex.yml
-
-name: archivex
-root: <%= ENV["GOPATH"] %>//src/github.com/gmmeyer/archivex
-
-windows:
-  - workspace:
-  - editor:
-  - server:

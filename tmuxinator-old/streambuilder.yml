@@ -1,8 +1,0 @@
-# ~/.tmuxinator/streambuilder.yml
-
-name: streambuilder
-root: ~/dev/streambuilder
-
-windows:
-  - workspace:
-  - server: ./manage.py runserver 8000

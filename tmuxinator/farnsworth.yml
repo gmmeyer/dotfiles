@@ -1,8 +1,0 @@
-# ~/.tmuxinator/farnsworth.yml
-
-name: farnsworth
-root: ~/dev/farnsworth
-
-windows:
-  - workspace:
-  - editor:

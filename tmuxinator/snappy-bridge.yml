@@ -1,9 +1,0 @@
-# ~/.tmuxinator/snappy-bridge.yml
-
-name: snappy-bridge
-root: <%= ENV["GOPATH"] %>/src/github.com/flowthings/snappy-bridge
-
-windows:
-  - workspace:
-  - editor:
-  - test:

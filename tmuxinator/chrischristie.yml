@@ -1,9 +1,0 @@
-# ~/.tmuxinator/chrischristie.yml
-
-name: chrischristie
-root: ~/development/chrischristie/
-
-windows:
-  - workspace:
-  - editor:
-  - server:

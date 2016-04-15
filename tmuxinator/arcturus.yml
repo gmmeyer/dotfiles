@@ -1,8 +1,0 @@
-# ~/.tmuxinator/arcturus.yml
-
-name: arcturus
-root: ~/dev/arcturus
-
-windows:
-  - workspace: 
-  - editor: 

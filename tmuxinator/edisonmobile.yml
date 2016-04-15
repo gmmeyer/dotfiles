@@ -1,8 +1,0 @@
-# ~/.tmuxinator/edisonmobile.yml
-
-name: edisonmobile
-root: ~/dev/edisonmobile
-
-windows:
-  - workspace:
-  - editor:

@@ -1,9 +1,0 @@
-# ~/.tmuxinator/clojure-websockets.yml
-
-name: clojure-websockets
-root: ~/dev/clojure-websockets
-
-windows:
-  - workspace:
-  - editor:
-  - server:

@@ -1,9 +1,0 @@
-# ~/.tmuxinator/streamviewer.yml
-
-name: streamviewer
-root: ~/dev/streamviewer
-
-windows:
-  - workspace:
-  - server: ./manage.py runserver 8011
-  - grunt: grunt && grunt watch

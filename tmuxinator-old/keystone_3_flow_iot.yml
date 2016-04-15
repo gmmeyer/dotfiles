@@ -1,9 +1,0 @@
-# ~/.tmuxinator/keystone_3_flow_iot.yml
-
-name: keystone_3_flow_iot
-root: ~/dev/keystone-3-flow-iot
-
-windows:
-  - workspace: 
-  - editor: 
-  - server: ./dev_start_reload_db.sh

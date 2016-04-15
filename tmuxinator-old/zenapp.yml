@@ -1,9 +1,0 @@
-# ~/.tmuxinator/zenapp.yml
-
-name: zenapp
-root: ~/development/zenapp/
-
-windows:
-  - workspace:
-  - editor:
-  - server:

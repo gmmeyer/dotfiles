@@ -1,9 +1,0 @@
-# ~/.tmuxinator/go-agent.yml
-
-name: go-agent
-root: <%= ENV["GOPATH"] %>/src/github.com/flowdotnet/go-agent
-
-windows:
-  - workspace:
-  - editor:
-  - test:

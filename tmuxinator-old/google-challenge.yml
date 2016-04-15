@@ -1,8 +1,0 @@
-# ~/.tmuxinator/google-challenge.yml
-
-name: google-challenge
-root: ~/development/google-challenge
-
-windows:
-  - workspace:
-  - editor:

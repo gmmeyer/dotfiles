@@ -1,9 +1,0 @@
-# ~/.tmuxinator/flowthings-node-client.yml
-
-name: flowthings-node-client
-root: ~/dev/flowthings-node-client
-
-windows:
-  - workspace: 
-  - editor: 
-  - server: 

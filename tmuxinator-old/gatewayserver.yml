@@ -1,9 +1,0 @@
-# ~/.tmuxinator/gatewayserver.yml
-
-name: gatewayserver
-root: <%= ENV["GOPATH"] %>/src/github.com/flowdotnet/gatewayserver
-
-windows:
-  - workspace:
-  - editor:
-  - server:

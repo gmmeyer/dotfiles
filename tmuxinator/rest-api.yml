@@ -1,9 +1,0 @@
-# ~/.tmuxinator/rest-api.yml
-
-name: rest-api
-root: ~/dev/rest-api
-
-windows:
-  - workspace:
-  - editor:
-  - server:

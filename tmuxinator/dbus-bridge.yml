@@ -1,9 +1,0 @@
-# ~/.tmuxinator/dbus-bridge.yml
-
-name: dbus-bridge
-root: <%= ENV["GOPATH"] %>/src/github.com/flowdotnet/dbus-bridge
-
-windows:
-  - workspace:
-  - editor:
-  - test:

@@ -1,9 +1,0 @@
-# ~/.tmuxinator/projectile-motion.yml
-
-name: projectile-motion
-root: ~/dev/projectile-motion
-
-windows:
-  - workspace:
-  - editor:
-  - server: nodemon app

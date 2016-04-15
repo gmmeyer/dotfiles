@@ -1,9 +1,0 @@
-# ~/.tmuxinator/track-gui-tutorial.yml
-
-name: track-gui-tutorial
-root: ~/dev/track-gui-tutorial
-
-windows:
-  - workspace: 
-  - editor: 
-  - server: 

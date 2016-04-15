@@ -1,8 +1,0 @@
-# ~/.tmuxinator/starter-packs.yml
-
-name: starter-packs
-root: ~/dev/starter-packs
-
-windows:
-  - workspace:
-  - editor:
