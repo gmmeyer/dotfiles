@@ -1,4 +1,4 @@
-;;; codeprefs --- Summary0;95;0c
+;;; codeprefs --- Summary
 
 ;;; Commentary:
 
@@ -22,9 +22,13 @@
                         '(javascript-jscs))))
 
 (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mako\\'" . web-mode))
+
+(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
 
 (setq web-mode-engines-alist
-      '(("ctemplate"    . "\\.hbs\\'"))
+      '(("ctemplate"    . "\\.hbs\\'")
+        ("mako"    . "\\.mako\\'"))
       )
 
 (provide 'codeprefs)
