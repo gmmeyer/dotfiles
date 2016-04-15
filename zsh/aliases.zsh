@@ -16,6 +16,8 @@ if [[ `uname` == 'Darwin' ]]; then
     alias emacss='/usr/local/bin/emacs'
 fi
 
+alias mux='tmuxinator'
+
 
 alias vi='vim'
 
