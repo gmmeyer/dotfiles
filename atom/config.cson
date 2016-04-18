@@ -1,6 +1,8 @@
 "*":
   "atom-beautify":
     _analyticsUserId: "9a0f465f-d10a-4431-8608-ae4610e56c00"
+    general:
+      _analyticsUserId: "94d7cf34-1da7-49a0-9c79-46c591c9dbef"
   "atom-css-comb": {}
   core:
     audioBeep: false
