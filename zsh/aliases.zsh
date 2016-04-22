@@ -7,8 +7,13 @@
 alias irb='pry'
 
 # editor aliases.
-alias e='emacsclient -t'
-alias emacs='emacsclient -t'
+if [[ "$TERM" == 'rxvt' || "$TERM"=='rxvt-256color' ]]; then
+    alias e='TERM=rxvt-256color emacsclient -t'
+    alias emacs='TERM=rxvt-256color emacsclient -t'
+else
+  alias e='emacsclient -t'
+  alias emacs='emacsclient -t'
+fi
 
 # emacs standalone
 if [[ `uname` == 'Darwin' ]]; then
