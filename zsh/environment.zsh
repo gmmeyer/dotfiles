@@ -3,7 +3,8 @@
 #
 
 # full color terminal
-export TERM=rxvt-256color
+# we don't want this on some terminals!
+# export TERM=xterm-256color
 
 autoload -U bashcompinit && bashcompinit
 autoload -U compinit && compinit

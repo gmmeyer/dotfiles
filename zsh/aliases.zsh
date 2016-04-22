@@ -7,7 +7,7 @@
 alias irb='pry'
 
 # editor aliases.
-if [[ "$TERM" == 'rxvt' || "$TERM"=='rxvt-256color' ]]; then
+if [[ "$TERM" == 'rxvt' || "$TERM" == 'rxvt-256color' ]]; then
     alias e='TERM=rxvt-256color emacsclient -t'
     alias emacs='TERM=rxvt-256color emacsclient -t'
 else
