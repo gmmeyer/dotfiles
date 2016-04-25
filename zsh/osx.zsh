@@ -27,3 +27,10 @@ bindkey -s "^[Om" "-"
 bindkey -s "^[Oj" "*"
 bindkey -s "^[Oo" "/"
 bindkey -s "^[OX" "="
+
+#
+# Browser
+#
+export BROWSER='open'
+
+export TERM='xterm-256color'

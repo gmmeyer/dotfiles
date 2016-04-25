@@ -15,6 +15,14 @@ setopt HIST_IGNORE_DUPS
 export EDITOR='emacsclient -t'
 export ALTERNATE_EDITOR=''
 
+export EDITOR='emacsclient -t'
+export VISUAL='emacsclient -t'
+export PAGER='less'
+
+if [[ -z "$LANG" ]]; then
+  export LANG='en_US.UTF-8'
+fi
+
 export CASE_SENSITIVE="true"
 
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
