@@ -6,23 +6,24 @@
 # prefer pry to irb
 alias irb='pry'
 
-# editor aliases.
-if [[ "$TERM" == 'rxvt' || "$TERM" == 'rxvt-256color' ]]; then
-    alias e='TERM=rxvt-256color emacsclient -t'
-    alias emacs='TERM=rxvt-256color emacsclient -t'
-else
-  alias e='emacsclient -t'
-  alias emacs='emacsclient -t'
-fi
+alias e='emacsclient -t'
+alias emacs='emacsclient -t'
+# alias e='TERM=rxvt-256color emacsclient -t'
+# alias emacs='TERM=rxvt-256color emacsclient -t'
+
+
+# # editor aliases.
+# if [[ "$TERM" == 'rxvt' || "$TERM" == 'rxvt-256color' ]]; then
+# else
+# fi
 
 # emacs standalone
 if [[ `uname` == 'Darwin' ]]; then
-    alias es='/usr/local/bin/emacs'
+    alias e='/usr/local/bin/emacs'
     alias emacss='/usr/local/bin/emacs'
 fi
 
 alias mux='tmuxinator'
-
 
 alias vi='vim'
 

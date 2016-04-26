@@ -4,7 +4,13 @@
 
 # full color terminal
 # we don't want this on some terminals!
-# export TERM=xterm-256color
+export TERM=xterm-256color
+# export TERM=rxvt-256color
+if [[ "$TERM" == 'rxvt' || "$TERM" == 'rxvt-256color' ]]; then
+  export TERM=rxvt-256color
+else
+  export TERM=$TERM
+fi
 
 autoload -U bashcompinit && bashcompinit
 autoload -U compinit && compinit
