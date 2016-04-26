@@ -5,10 +5,13 @@ XTerm*termName:  xterm-256color
 
 ! login shells are cool
 URxvt*loginShell: true
+URxvt*termName: rxvt
 
 ! this sets the perl extensions for the keyboard
 URxvt.perl-ext-common: default,clipboard,font-size
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+URxvt.insecure: true
 
 ! enables the keybindings for the font size extention
 ! incglobal/decglobal will do this globally
@@ -17,7 +20,7 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 ! URxvt.keysym.C-S-Down: perl:font-size:decrease
 
 ! I should try to get djvusans mono to work
-URxvt*font: xft:Ubuntu\ Mono\ derivative\ Powerline:pixelsize=16
+URxvt*font: xft:Ubuntu\ Mono\ derivative\ Powerline:pixelsize=20
 
 ! this will set the scrollbar on the right, not the left
 ! URxvt*scrollBar_right: true
@@ -28,8 +31,8 @@ URxvt.iso14755: false
 URxvt.iso14755_52: false
 
 Xft.autohint: 0
-Xft.dpi: 96
-! 146
+
+Xft.dpi: 146
 Xft.lcdfilter: lcddefault
 Xft.hinting: 1
 Xft.hintstyle: hintfull
@@ -94,134 +97,138 @@ Xft.rgba: rgb
 ! URxvt.keysym.S-Left:          \033[1;2D
 
 
-! URxvt*termName:                       string
-! URxvt*geometry:                       240x84
-! URxvt*chdir:                          string
-! URxvt*reverseVideo:                   boolean
-! URxvt*loginShell:                     true
-! URxvt*jumpScroll:                     boolean
-! URxvt*skipScroll:                     boolean
-! URxvt*pastableTabs:                   boolean
-! URxvt*scrollstyle:                    mode
-! URxvt*scrollBar:                      boolean
-! URxvt*scrollBar_right:                boolean
-! URxvt*scrollBar_floating:             boolean
-! URxvt*scrollBar_align:                mode
-! URxvt*thickness:                      number
-! URxvt*scrollTtyOutput:                boolean
-! URxvt*scrollTtyKeypress:              boolean
-! URxvt*scrollWithBuffer:               boolean
-! URxvt*inheritPixmap:                  boolean
-! URxvt*transparent:                    true
-! URxvt*tintColor:                      color
-! URxvt*shading:                        number
-! URxvt*blurRadius:                     HxV
-! URxvt*fading:                         number
-! URxvt*fadeColor:                      color
-! URxvt*utmpInhibit:                    boolean
-! URxvt*urgentOnBell:                   boolean
-! URxvt*visualBell:                     boolean
-! URxvt*mapAlert:                       boolean
-! URxvt*meta8:                          boolean
-! URxvt*mouseWheelScrollPage:           boolean
-! URxvt*tripleclickwords:               boolean
-! URxvt*insecure:                       boolean
-! URxvt*cursorUnderline:                boolean
-! URxvt*cursorBlink:                    boolean
-! URxvt*pointerBlank:                   boolean
-! URxvt*background:                     black
-! URxvt*foreground:                     white
-! URxvt*color0:                         color
-! URxvt*color1:                         color
-! URxvt*color2:                         color
-! URxvt*color3:                         color
-! URxvt*color4:                         color
-! URxvt*color5:                         color
-! URxvt*color6:                         color
-! URxvt*color7:                         color
-! URxvt*color8:                         color
-! URxvt*color9:                         color
-! URxvt*color10:                        color
-! URxvt*color11:                        color
-! URxvt*color12:                        color
-! URxvt*color13:                        color
-! URxvt*color14:                        color
-! URxvt*color15:                        color
-! URxvt*colorBD:                        color
-! URxvt*colorIT:                        color
-! URxvt*colorUL:                        color
-! URxvt*colorRV:                        color
-! URxvt*underlineColor:                 color
-! URxvt*scrollColor:                    color
-! URxvt*troughColor:                    color
-! URxvt*highlightColor:                 color
-! URxvt*highlightTextColor:             color
-! URxvt*cursorColor:                    color
-! URxvt*cursorColor2:                   color
-! URxvt*pointerColor:                   color
-! URxvt*pointerColor2:                  color
-! URxvt*borderColor:                    color
-! URxvt*path:                           search path
-! URxvt*backgroundPixmap:               file[;geom]
-! URxvt*iconFile:                       file
-! URxvt*font:                           9x15:size=15
-! URxvt*boldFont:                       fontname
-! URxvt*italicFont:                     fontname
-! URxvt*boldItalicFont:                 fontname
-! URxvt*intensityStyles:                boolean
-! URxvt*inputMethod:                    name
-! URxvt*preeditType:                    style
-! URxvt*imLocale:                       string
-! URxvt*imFont:                         fontname
-! URxvt*title:                          string
-! URxvt*iconName:                       string
-! URxvt*saveLines:                      number
-! URxvt*buffered:                       boolean
-! URxvt*visual:                         number
-! URxvt*transient-for:                  windowid
-! URxvt*override-redirect:              boolean
-! URxvt*hold:                           boolean
-! URxvt*externalBorder:                 number
-! URxvt*internalBorder:                 number
-! URxvt*borderLess:                     boolean
-! URxvt*lineSpace:                      number
-! URxvt*letterSpace:                    number
-! URxvt*skipBuiltinGlyphs:              boolean
-! URxvt*pointerBlankDelay:              number
-! URxvt*backspacekey:                   string
-! URxvt*deletekey:                      string
-! URxvt*print-pipe:                     string
-! URxvt*modifier:                       modifier
-! URxvt*cutchars:                       string
-! URxvt*answerbackString:               string
-! URxvt*secondaryScreen:                boolean
-! URxvt*secondaryScroll:                boolean
-! URxvt*perl-lib:                       string
-! URxvt*perl-eval:                      perl-eval
-! URxvt*perl-ext-common:                string
-! URxvt*perl-ext:                       string
-! URxvt*iso14755:                       boolean
-! URxvt*iso14755_52:                    boolean
-! URxvt*xrm:                            string
-! URxvt*keysym.sym:                     keysym
-! URxvt*background.border:              boolean
-! URxvt*background.expr:                string
-! URxvt*background.interval:            seconds
-! URxvt*bell-command:                   string
-! URxvt*matcher.button:                 string
-! URxvt*matcher.launcher:               string
-! URxvt*matcher.launcher.*:             string
-! URxvt*matcher.pattern.*:              string
-! URxvt*matcher.rend.*:                 string
-! URxvt*remote-clipboard.fetch:         string
-! URxvt*remote-clipboard.store:         string
-! URxvt*searchable-scrollback:          string
-! URxvt*selection-autotransform.*:      string
-! URxvt*selection-pastebin.cmd:         string
-! URxvt*selection-pastebin.url:         string
-! URxvt*selection.pattern-0:            string
-! URxvt*tab-bg:                         colour
-! URxvt*tab-fg:                         colour
-! URxvt*tabbar-bg:                      colour
-! URxvt*tabbar-fg:                      colour
-! URxvt*url-launcher:                   string
+! termName:                       string
+! geometry:                       geometry
+! chdir:                          string
+! reverseVideo:                   boolean
+! loginShell:                     boolean
+! multiClickTime:                 number
+! jumpScroll:                     boolean
+! skipScroll:                     boolean
+! pastableTabs:                   boolean
+! scrollstyle:                    mode
+! scrollBar:                      boolean
+! scrollBar_right:                boolean
+! scrollBar_floating:             boolean
+! scrollBar_align:                mode
+! thickness:                      number
+! scrollTtyOutput:                boolean
+! scrollTtyKeypress:              boolean
+! scrollWithBuffer:               boolean
+! inheritPixmap:                  boolean
+! transparent:                    boolean
+! tintColor:                      color
+! shading:                        number
+! blurRadius:                     HxV
+! fading:                         number
+! fadeColor:                      color
+! utmpInhibit:                    boolean
+! urgentOnBell:                   boolean
+! visualBell:                     boolean
+! mapAlert:                       boolean
+! meta8:                          boolean
+! mouseWheelScrollPage:           boolean
+! tripleclickwords:               boolean
+! insecure:                       boolean
+! cursorUnderline:                boolean
+! cursorBlink:                    boolean
+! pointerBlank:                   boolean
+! background:                     color
+! foreground:                     color
+! color0:                         color
+! color1:                         color
+! color2:                         color
+! color3:                         color
+! color4:                         color
+! color5:                         color
+! color6:                         color
+! color7:                         color
+! color8:                         color
+! color9:                         color
+! color10:                        color
+! color11:                        color
+! color12:                        color
+! color13:                        color
+! color14:                        color
+! color15:                        color
+! colorBD:                        color
+! colorIT:                        color
+! colorUL:                        color
+! colorRV:                        color
+! underlineColor:                 color
+! scrollColor:                    color
+! troughColor:                    color
+! highlightColor:                 color
+! highlightTextColor:             color
+! cursorColor:                    color
+! cursorColor2:                   color
+! pointerColor:                   color
+! pointerColor2:                  color
+! borderColor:                    color
+! path:                           search path
+! backgroundPixmap:               file[;geom]
+! iconFile:                       file
+! font:                           fontname
+! boldFont:                       fontname
+! italicFont:                     fontname
+! boldItalicFont:                 fontname
+! intensityStyles:                boolean
+! inputMethod:                    name
+! preeditType:                    style
+! imLocale:                       string
+! imFont:                         fontname
+! title:                          string
+! iconName:                       string
+! saveLines:                      number
+! buffered:                       boolean
+! depth:                          number
+! visual:                         number
+! transient-for:                  windowid
+! override-redirect:              boolean
+! hold:                           boolean
+! externalBorder:                 number
+! internalBorder:                 number
+! borderLess:                     boolean
+! lineSpace:                      number
+! letterSpace:                    number
+! skipBuiltinGlyphs:              boolean
+! pointerBlankDelay:              number
+! backspacekey:                   string
+! deletekey:                      string
+! print-pipe:                     string
+! modifier:                       modifier
+! cutchars:                       string
+! answerbackString:               string
+! secondaryScreen:                boolean
+! secondaryScroll:                boolean
+! perl-lib:                       string
+! perl-eval:                      perl-eval
+! perl-ext-common:                string
+! perl-ext:                       string
+! iso14755:                       boolean
+! iso14755_52:                    boolean
+! xrm:                            string
+! keysym.sym:                     keysym
+! background.border:              boolean
+! background.expr:                string
+! background.interval:            seconds
+! bell-command:                   string
+! kuake.hotkey:                   string
+! matcher.button:                 string
+! matcher.launcher:               string
+! matcher.launcher.*:             string
+! matcher.pattern.*:              string
+! matcher.rend.*:                 string
+! remote-clipboard.fetch:         string
+! remote-clipboard.store:         string
+! searchable-scrollback:          string
+! selection-autotransform.*:      string
+! selection-pastebin.cmd:         string
+! selection-pastebin.url:         string
+! selection.pattern-0:            string
+! tab-bg:                         colour
+! tab-fg:                         colour
+! tabbar-bg:                      colour
+! tabbar-fg:                      colour
+! url-launcher:                   string
+
