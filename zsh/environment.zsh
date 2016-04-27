@@ -12,6 +12,8 @@ else
   export TERM=$TERM
 fi
 
+HOMEBREW_NO_ANALYTICS=1
+
 autoload -U bashcompinit && bashcompinit
 autoload -U compinit && compinit
 
