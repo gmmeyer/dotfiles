@@ -22,13 +22,15 @@ typeset -gxU PKG_CONFIG_LIBDIR pkg_config_libdir
 fpath=($HOME/.zsh/functions
        $fpath)
 
-path=(/usr/local/opt/pyenv/shims
-      /usr/local/opt/rbenv/shims
+path=($HOME/.pyenv/shims
+      $HOME/.rbenv/shims
       $HOME/.rbenv/bin
+      $HOME/.pyenv/bin
+      /usr/local/opt/pyenv/shims
+      /usr/local/opt/rbenv/shims
       /usr/local/opt/rbenv/bin
       /usr/local/heroku/bin
       /usr/local/opt/pyenv/bin
-      $HOME/.pyenv/bin
       $HOME/.cabal/bin
       $HOME/.opam/system/bin
       $HOME/bin
@@ -45,26 +47,26 @@ path=(/usr/local/opt/pyenv/shims
       $path)
 
 manpath=(/usr/local/share/man
-                $HOME/.linuxbrew/share/man
-                $manpath)
+         $HOME/.linuxbrew/share/man
+         $manpath)
 
 infopath=(/usr/local/share/info
-                 $HOME/.linuxbrew/share/info
-                 $infopath)
+          $HOME/.linuxbrew/share/info
+          $infopath)
 
 pkg_config_path=($HOME/.linuxbrew/lib/pkgconfig
-                        $HOME/.linuxbrew/lib
-                        /usr/local/lib/pkgconfig
-                        /usr/local/lib
-                        /usr/lib/x86_64-linux-gnu/pkgconfig
-                        /usr/lib/x86_64-linux-gnu
-                        /usr/share
-                        /usr/share/pkgconfig
-                        /usr/lib/pkgconfig
-                        /usr/lib
-                        /usr/local/include
-                        /opt/X11/lib/pkgconfig
-                        $pkg_config_path)
+                 $HOME/.linuxbrew/lib
+                 /usr/local/lib/pkgconfig
+                 /usr/local/lib
+                 /usr/lib/x86_64-linux-gnu/pkgconfig
+                 /usr/lib/x86_64-linux-gnu
+                 /usr/share
+                 /usr/share/pkgconfig
+                 /usr/lib/pkgconfig
+                 /usr/lib
+                 /usr/local/include
+                 /opt/X11/lib/pkgconfig
+                 $pkg_config_path)
 
 export PKG_CONFIG_PATH=$HOME/.linuxbrew/lib/pkgconfig:$HOME/.linuxbrew/lib:/usr/local/lib/pkgconfig:/usr/local/lib:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/x86_64-linux-gnu:/usr/share:/usr/share/pkgconfig:/usr/lib/pkgconfig:/usr/lib:/opt/X11/lib/pkgconfig:/usr/X11/lib/pkgconfig:/usr/local/opt/zlib/lib/pkgconfig:$PKG_CONFIG_PATH
 
