@@ -1,2 +1,3 @@
 DOTFILES_DIRS="$HOME/dotfiles $HOME/private-dotfiles $HOME/private $HOME/.dotfiles"
 EXCLUDES="*.md"
+COPY_ALWAYS="ssh/id_*"
