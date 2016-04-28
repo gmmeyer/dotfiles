@@ -40,13 +40,6 @@ if type pyenv | grep -i function > /dev/null; then
     pyenv update
 fi
 
-if [ $(which gem) ]; then
-    echo "\033[1;31mUpdate gems\e[0m"
-
-    gem update --system
-    gem update
-fi
-
 if [ $(which brew) ]; then
     if [[ `uname` == 'Darwin' ]]; then
         echo "\033[1;31mUpdate homebrew\e[0m"

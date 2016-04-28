@@ -1,0 +1,6 @@
+if [ $(which gem) ]; then
+    echo "\033[1;31mUpdate gems\e[0m"
+
+    gem update --system
+    gem update
+fi
