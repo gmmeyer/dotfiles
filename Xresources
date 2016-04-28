@@ -20,7 +20,7 @@ URxvt.insecure: true
 ! URxvt.keysym.C-S-Down: perl:font-size:decrease
 
 ! I should try to get djvusans mono to work
-URxvt*font: xft:Ubuntu\ Mono\ derivative\ Powerline:pixelsize=20
+URxvt*font: xft:Ubuntu\ Mono\ derivative\ Powerline:pixelsize=22
 
 ! this will set the scrollbar on the right, not the left
 ! URxvt*scrollBar_right: true
