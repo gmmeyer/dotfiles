@@ -3,10 +3,8 @@ local packages
 packages=(
   bower
   browserify
-  bytewiser
-  cylon cylon-firmata cylon-gpio cylon-i2c
   eslint express-generator expressworks
-  flowthings foreman
+  foreman
   generator-angular generator-angular-fullstack
   generator-karma generator-express
   generator-keystone generator-keystone-react
@@ -22,6 +20,8 @@ packages=(
   yo strongloop
 )
 
+echo "Installing NPM Packages"
 for package in $packages; do
+  echo "\033[1;31mInstalling $package\e[0m"
   npm install -g $package
 done

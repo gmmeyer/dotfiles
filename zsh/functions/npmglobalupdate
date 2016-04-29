@@ -12,8 +12,9 @@ for package in ${(z)outdated}; do
   fi
 
   if [[ $package == npm ]]; then
-    
+
   else
+    echo "\033[1;31mUpdating $package\e[0m"
     npm -g update "$package"
   fi
 done
