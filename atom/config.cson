@@ -14,7 +14,7 @@
   editor:
     confirmCheckoutHeadRevision: false
     fontFamily: "Sauce Code Powerline"
-    fontSize: 17
+    fontSize: 18
     invisibles: {}
     showIndentGuide: true
     softWrap: true
