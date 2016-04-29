@@ -24,12 +24,12 @@ eval "$(pyenv virtualenv-init -)"
 # gitignore!
 function gi() { curl -s https://www.gitignore.io/api/$@ ;}
 
-# all of these insist on being last, so they are.
-source $HOME/.zsh/load_scripts.zsh
-
 if [[ -f "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+# all of these insist on being last, so they are.
+source $HOME/.zsh/load_scripts.zsh
 
 export NVM_DIR="/home/greg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
