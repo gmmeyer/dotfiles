@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 # export ZSH=$HOME/.oh-my-zsh
 
-source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/environment.zsh
 
 if [[ `uname` == 'Darwin' ]]; then
@@ -30,6 +29,8 @@ fi
 
 # all of these insist on being last, so they are.
 source $HOME/.zsh/load_scripts.zsh
+
+source $HOME/.zsh/aliases.zsh
 
 export NVM_DIR="/home/greg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
