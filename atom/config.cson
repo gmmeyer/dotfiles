@@ -14,7 +14,7 @@
   editor:
     confirmCheckoutHeadRevision: false
     fontFamily: "Sauce Code Powerline"
-    fontSize: 18
+    fontSize: 17
     invisibles: {}
     showIndentGuide: true
     softWrap: true
@@ -23,7 +23,8 @@
     userId: "31b9246d-8284-36bd-571e-b1f30061e0a3"
   "isotope-ui":
     fontFamily: "System Default"
-  linter: {}
+  linter:
+    showErrorPanel: false
   "one-dark-ui":
     fontSize: 14
     layoutMode: "Spacious"

@@ -19,7 +19,7 @@ alias emacs='emacsclient -t'
 
 # emacs standalone
 if [[ `uname` == 'Darwin' ]]; then
-    alias e='/usr/local/bin/emacs'
+    alias es='/usr/local/bin/emacs'
     alias emacss='/usr/local/bin/emacs'
 fi
 
