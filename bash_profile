@@ -1,8 +1,9 @@
 # Load the default .profile
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" 
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 # emacs, not vim, as default
-export EDITOR='emacs -nw'
+# export EDITOR='emacs -nw'
+# export EDITOR='vi'
 
 # prefer pry to irb
 alias irb='pry'
@@ -28,7 +29,7 @@ alias e='emacs -nw'
 alias be='bundle exec'
 
 # better apt-gets
-alias apt4='sudo apt-get update && sudo apt-get dist-upgrade && 
+alias apt4='sudo apt-get update && sudo apt-get dist-upgrade &&
             sudo apt-get autoremove && sudo apt-get autoclean'
 
 #PS1='greg@\W: '

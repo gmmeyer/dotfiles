@@ -28,6 +28,7 @@
 
 (setq web-mode-engines-alist
       '(("ctemplate"    . "\\.hbs\\'")
+        ("ctemplate"    . "\\.handlebars\\'")
         ("mako"    . "\\.mako\\'"))
       )
 

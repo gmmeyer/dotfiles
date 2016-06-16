@@ -5,7 +5,8 @@
 	grep = auto
 [user]
 	name = Greg Meyer
-	email = gregory.matthew.meyer@gmail.com
+	#email = gregory.matthew.meyer@gmail.com
+    email = greg.meyer@datadoghq.com
 [credential]
 	helper = cache --timeout=3600
 [core]

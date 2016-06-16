@@ -31,6 +31,3 @@ fi
 source $HOME/.zsh/load_scripts.zsh
 
 source $HOME/.zsh/aliases.zsh
-
-export NVM_DIR="/home/greg/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

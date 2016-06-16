@@ -54,5 +54,6 @@ fi
 
 if [ $(which atom) ]; then
     echo "\033[1;31mUpdate Atom packages\e[0m"
-    apm upgrade
+    apm update -c false
+    apm upgrade -c false
 fi

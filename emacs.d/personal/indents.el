@@ -2,12 +2,12 @@
 
 ;;tab width
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
-(setq-default c-basic-offset 2)
-(setq-default js-indent-level 2)
-(setq-default css-indent-offset 2)
-(setq-default sh-basic-offset 2)
-(setq-default js2-basic-offset 2)
+(setq-default tab-width 4)
+(setq-default c-basic-offset 4)
+(setq-default js-indent-level 4)
+(setq-default css-indent-offset 4)
+(setq-default sh-basic-offset 4)
+(setq-default js2-basic-offset 4)
 
 ;;(setq tab-width 2)
 ;;(defvaralias 'js-indent-level 'tab-width)

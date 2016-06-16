@@ -14,7 +14,7 @@ if [ -f $HOME/.zsh/tmux.zsh ]; then
 fi
 
 if [ -f $HOME/.opam/opam-init/init.zsh ]; then
-    source /home/greg/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+    source $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 fi
 
 if [ -f $HOME/.zsh/bash_completion/exercism_completion.bash ]; then
@@ -29,6 +29,7 @@ fi
 #     source $HOME/.zsh/git/git.plugin.zsh
 # fi
 
+export NVM_DIR="$HOME/.nvm"
 if [ -f "$NVM_DIR/nvm.sh" ]; then
     source "$NVM_DIR/nvm.sh" # This loads nvm
 fi
@@ -54,4 +55,6 @@ if command -v pm2 > /dev/null 2>&1; then
     source "$HOME/.zsh/pm2_completion.zsh"
 fi
 
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+if [ -f $HOME/.fzf.zsh ]; then
+  source $HOME/.fzf.zsh
+fi
