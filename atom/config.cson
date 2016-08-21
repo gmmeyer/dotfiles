@@ -20,11 +20,14 @@
     zoomFontWhenCtrlScrolling: false
   "exception-reporting":
     userId: "31b9246d-8284-36bd-571e-b1f30061e0a3"
+  "go-debug":
+    panelInitialVisible: false
   "isotope-ui":
     fontFamily: "System Default"
-  linter: {}
+  linter:
+    errorPanelHeight: 253
   "one-dark-ui":
-    fontSize: 13
+    fontSize: 12
     layoutMode: "Compact"
     tabSizing: "Even"
   "one-light-ui":
