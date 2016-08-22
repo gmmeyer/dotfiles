@@ -21,10 +21,6 @@ if [ -f $HOME/.zsh/bash_completion/exercism_completion.bash ]; then
     source $HOME/.zsh/bash_completion/exercism_completion.bash
 fi
 
-if [ -f $HOME/.zsh/private.zsh ]; then
-    source $HOME/.zsh/private.zsh
-fi
-
 # if [ -f $HOME/.zsh/git/git.plugin.zsh ]; then
 #     source $HOME/.zsh/git/git.plugin.zsh
 # fi
@@ -57,4 +53,8 @@ fi
 
 if [ -f $HOME/.fzf.zsh ]; then
   source $HOME/.fzf.zsh
+fi
+
+if [ -f $HOME/.zsh/private.zsh ]; then
+    source $HOME/.zsh/private.zsh
 fi
