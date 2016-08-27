@@ -2,8 +2,13 @@
 # Environment Variable Settings
 #
 
-source $HOME/.zsh/environment/path.zsh
-source $HOME/.zsh/environment/misc.zsh
+# source $HOME/.zsh/environment/path.zsh
+# source $HOME/.zsh/environment/misc.zsh
+
+ENV_SCRIPTS=$(find $HOME/.zsh/environment -type f -name *.zsh)
+for f in $ENV_SCRIPTS; do
+    source $f
+done
 
 # full color terminal
 # we don't want this on some terminals!
