@@ -13,12 +13,12 @@ if [ -f $HOME/.zsh/tmux.zsh ]; then
     source $HOME/.zsh/tmux.zsh
 fi
 
-SCRIPTS=$(find  $HOME/.zsh/scripts -type f -name *.zsh)
-for f in $SCRIPTS; do
-    source $f
-done
+# SCRIPTS=$(find  $HOME/.zsh/scripts  \( -type f -or -type l \) -name \*.zsh)
+# for f in $SCRIPTS; do
+#   source $f
+# done
 
-source ./scripts/tmuxinator.zsh
+source $HOME/.zsh/scripts/tmuxinator.zsh
 
 if [ -f $HOME/.opam/opam-init/init.zsh ]; then
     source $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
