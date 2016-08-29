@@ -29,3 +29,5 @@ fi
 
 # all of these insist on being last, so they are.
 source $HOME/.zsh/load_scripts.zsh
+
+source $HOME/.zsh/aliases.zsh
