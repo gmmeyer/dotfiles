@@ -11,6 +11,11 @@
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(paradox-github-token t)
+ '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
+ '(safe-local-variable-values
+   (quote
+    ((projectile-project-name . dogweb)
+     (whitespace-line-column . 100))))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
    (quote
