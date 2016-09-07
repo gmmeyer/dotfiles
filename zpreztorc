@@ -12,7 +12,6 @@ zstyle ':prezto:load' pmodule \
        'utility' \
        'environment' \
        'editor' \
-       'history' \
        'history-substring-search' \
        'git' \
        'completion' \
@@ -21,10 +20,13 @@ zstyle ':prezto:load' pmodule \
        'syntax-highlighting' \
        'prompt'
 
+#       'history' \
 #'rails' \
 #       'directory' \
 
 zstyle ':prezto:module:prompt' theme 'greg'
+
+zstyle ':prezto:module:history-substring-search' color 'yes'
 
 zstyle ':prezto:module:syntax-highlighting' highlighters \
        'main' \

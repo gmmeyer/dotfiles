@@ -4,6 +4,7 @@
 
 source $HOME/.zsh/environment/path.zsh
 source $HOME/.zsh/environment/misc.zsh
+source $HOME/.zsh/environment/history.zsh
 
 # ENV_SCRIPTS=$(find $HOME/.zsh/environment \( -type f -or -type l \) -name \*.zsh)
 # for f in $ENV_SCRIPTS; do
