@@ -28,10 +28,6 @@ if [ -f $HOME/.zsh/bash_completion/exercism_completion.bash ]; then
     source $HOME/.zsh/bash_completion/exercism_completion.bash
 fi
 
-# if [ -f $HOME/.zsh/git/git.plugin.zsh ]; then
-#     source $HOME/.zsh/git/git.plugin.zsh
-# fi
-
 export NVM_DIR="$HOME/.nvm"
 if [ -f "$NVM_DIR/nvm.sh" ]; then
     source "$NVM_DIR/nvm.sh" # This loads nvm
