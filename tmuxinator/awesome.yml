@@ -1,7 +1,7 @@
 # ~/.tmuxinator/awesome.yml
 
 name: awesome
-root: ~/configfiles/awesome-dangerzone
+root: ~/dotfiles/tag-awesome/config/awesome
 
 windows:
   - workspace:
