@@ -13,8 +13,8 @@ zstyle ':prezto:load' pmodule \
        'environment' \
        'editor' \
        'history-substring-search' \
-       'git' \
        'completion' \
+       'git' \
        'ruby' \
        'node' \
        'syntax-highlighting' \

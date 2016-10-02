@@ -1,0 +1,2 @@
+DOTFILES_DIRS="$HOME/dotfiles $HOME/private-dotfiles $HOME/private $HOME/.dotfiles"
+EXCLUDES="*.md tmuxinator-old* vim-bk*"
