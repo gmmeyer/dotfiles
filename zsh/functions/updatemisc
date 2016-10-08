@@ -49,7 +49,7 @@ if [ $(which brew) ]; then
 
 
     brew update
-    brew upgrade --all
+    brew upgrade
 fi
 
 if [ $(which atom) ]; then
