@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 eval "$(rbenv init -)"
 
 echo "\033[1;31minstalling gems\e[0m"
