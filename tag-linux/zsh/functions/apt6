@@ -1,7 +1,3 @@
-#!/bin/zsh
-
-set -e
-
 echo "\033[1;31mupdating packages\e[0m"
 
 sudo apt-get update || true

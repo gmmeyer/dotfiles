@@ -1,0 +1,9 @@
+echo "\033[1;31mupdating packages\e[0m"
+
+sudo apt-get update || true
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get autoremove
+sudo apt-get autoclean
+
+echo "\033[1;31mall done\e[0m"
