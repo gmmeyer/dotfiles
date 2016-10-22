@@ -1,0 +1,43 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "9a0f465f-d10a-4431-8608-ae4610e56c00"
+      analytics: false
+  "atom-css-comb": {}
+  core:
+    audioBeep: false
+    disabledPackages: [
+      "atom-color-highlight"
+      "backbonejs-snippets"
+      "metrics"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    confirmCheckoutHeadRevision: false
+    fontFamily: "Ubuntu Mono derivative Powerline"
+    fontSize: 16
+    invisibles: {}
+    showIndentGuide: true
+    softWrap: true
+    zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "31b9246d-8284-36bd-571e-b1f30061e0a3"
+  "go-debug":
+    panelInitialVisible: false
+  "go-plus":
+    panelDisplayMode: "closed"
+  "isotope-ui":
+    fontFamily: "System Default"
+  linter:
+    errorPanelHeight: 253
+  "one-dark-ui":
+    fontSize: 12
+    layoutMode: "Compact"
+    tabSizing: "Even"
+  "one-light-ui":
+    fontSize: 13
+  tabs:
+    usePreviewTabs: true
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
