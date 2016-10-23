@@ -31,7 +31,7 @@
   linter:
     errorPanelHeight: 253
   "one-dark-ui":
-    fontSize: 12
+    fontSize: 14
     layoutMode: "Compact"
     tabSizing: "Even"
   "one-light-ui":
