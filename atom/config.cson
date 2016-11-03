@@ -1,5 +1,10 @@
 "*":
   core:
     telemetryConsent: "no"
+  editor:
+    fontFamily: "Ubuntu Mono derivative Powerline"
+    fontSize: 11
   "exception-reporting":
     userId: "b06ca84d-2b40-c7cd-b99b-5b6bffbcc11d"
+  "go-plus":
+    panelDisplayMode: "closed"
