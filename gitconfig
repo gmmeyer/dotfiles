@@ -7,7 +7,7 @@
 	name = Greg Meyer
 	#email = gregory.matthew.meyer@gmail.com
     email = greg.meyer@datadoghq.com
-	signingkey = 7CC131A0
+	signingkey = 51C0CD23
 [credential]
 	helper = cache --timeout=3600
 [core]
@@ -30,6 +30,9 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[include]
+    path = ~/.host_gitconfig
+    path = ~/.secret_gitconfig
 [commit]
 	gpgsign = true
 [gpg]
