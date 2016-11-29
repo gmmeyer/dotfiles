@@ -24,6 +24,7 @@
 
 ### Linux ###
 *~
+.fuse_hidden*
 
 # KDE directory preferences
 .directory
