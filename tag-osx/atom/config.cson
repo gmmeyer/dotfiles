@@ -10,6 +10,7 @@
       "atom-color-highlight"
       "backbonejs-snippets"
       "metrics"
+      "go-plus"
     ]
     telemetryConsent: "no"
   editor:
