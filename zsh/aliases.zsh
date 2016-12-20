@@ -2,10 +2,6 @@
 # My Aliases
 #
 
-
-# prefer pry to irb
-alias irb='pry'
-
 alias e='emacsclient -t'
 alias emacs='emacsclient -t'
 # alias e='TERM=rxvt-256color emacsclient -t'

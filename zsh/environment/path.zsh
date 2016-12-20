@@ -31,7 +31,7 @@ path=($HOME/.pyenv/shims
       /usr/local/opt/rbenv/bin
       /usr/local/heroku/bin
       /usr/local/opt/pyenv/bin
-      /usr/local/m-cli/
+      /usr/local/m-cli
       $HOME/.cabal/bin
       $HOME/.opam/system/bin
       $HOME/bin
