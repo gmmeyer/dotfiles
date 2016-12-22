@@ -26,10 +26,6 @@ HOMEBREW_NO_ANALYTICS=1
 autoload -U bashcompinit && bashcompinit
 autoload -U compinit && compinit
 
-setopt HIST_IGNORE_DUPS
-setopt inc_append_history
-setopt share_history
-
 # emacs, not vim, as default
 export EDITOR='emacsclient -t'
 export ALTERNATE_EDITOR=''
