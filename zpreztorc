@@ -13,12 +13,13 @@ zstyle ':prezto:load' pmodule \
        'environment' \
        'editor' \
        'history-substring-search' \
-       'completion' \
        'git' \
+       'completion' \
        'ruby' \
        'node' \
        'syntax-highlighting' \
        'prompt'
+
 
 #       'history' \
 #'rails' \
