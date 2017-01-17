@@ -3,7 +3,7 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
-#   Greg Meyer
+#   Greg Meyer <gregory.matthew.meyer@gmail.com>
 #
 # Screenshots:
 #   http://i.imgur.com/nrGV6pg.png
@@ -50,7 +50,7 @@ function prompt_sorin_git_info {
     if [[ -s "$_prompt_sorin_precmd_async_data" ]]; then
       alias typeset='typeset -g'
       source "$_prompt_sorin_precmd_async_data"
-      PROMPT='${SSH_TTY:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%F{4}${_prompt_sorin_pwd}%(!. %B%F{1}#%f%b.)${git_info:+${(e)git_info[status]}}${editor_info[keymap]} '
+      PROMPT='${SSH_TTY:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%F{4}${_prompt_sorin_pwd} %(!. %B%F{1}#%f%b.)${git_info:+${(e)git_info[status]}}${editor_info[keymap]} '
       #RPROMPT+='${git_info:+${(e)git_info[status]}}'
       unalias typeset
     fi
@@ -133,7 +133,7 @@ function prompt_sorin_setup {
     'status' '$(coalesce "%b" "%p" "%c")%s%A%B%S%a%d%m%r%U%u'
 
   # Define prompts.
-  PROMPT='${SSH_TTY:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%F{4}${_prompt_sorin_pwd}%(!. %B%F{1}#%f%b.)${editor_info[keymap]} '
+  PROMPT='${SSH_TTY:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%F{4}${_prompt_sorin_pwd} %(!. %B%F{1}#%f%b.)${editor_info[keymap]} '
   RPROMPT=''
   SPROMPT='zsh: correct %F{1}%R%f to %F{2}%r%f [nyae]? '
 }
