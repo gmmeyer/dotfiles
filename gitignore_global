@@ -86,6 +86,24 @@ tramp
 # AUCTeX auto folder
 /auto/
 
-# stupid sublime text #
-#######################
+### SublimeText ###
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
+
+# these temp files are useless
 *.fuse_hidden*
+
+# Vim backup
+*.swp
+ 
+# IntelliJ IDEA project config
+.idea/
+*.iws
+*.ipr
+
+#sftp configuration file
+sftp-config.json

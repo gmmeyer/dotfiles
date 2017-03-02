@@ -10,6 +10,7 @@
       "atom-color-highlight"
       "backbonejs-snippets"
       "metrics"
+      "tablr"
     ]
     telemetryConsent: "no"
   editor:
@@ -30,12 +31,15 @@
     fontFamily: "System Default"
   linter:
     errorPanelHeight: 253
+    showErrorPanel: false
   "one-dark-ui":
     fontSize: 12
     layoutMode: "Compact"
     tabSizing: "Even"
   "one-light-ui":
     fontSize: 13
+  "seti-ui":
+    compactView: true
   tabs:
     usePreviewTabs: true
   "tree-view": {}
