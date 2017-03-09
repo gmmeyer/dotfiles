@@ -26,8 +26,8 @@
                              magit markdown-mode minitest moe-theme multi-term
                              org
                              pastels-on-dark-theme paradox pkg-info pony-mode
-                             powerline
-                             rspec-mode ruby-block
+                             powerline pyenv-mode pyenv-mode-auto
+                             rspec-mode ruby-block rbenv
                              smart-mode-line
                              textmate tuareg
                              virtualenv
