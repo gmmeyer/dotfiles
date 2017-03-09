@@ -32,6 +32,8 @@
 
 (setq prelude-flyspell nil)
 
+(rbenv-use-corresponding)
+
 ;; do not clean whitespace on save
 ;; (setq prelude-clean-whitespace-on-save nil)
 
