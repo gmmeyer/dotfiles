@@ -7,10 +7,10 @@ zstyle ':prezto:load' zmodule 'attr' 'stat'
 zstyle ':prezto:load' zfunction 'zargs' 'zmv' 'zrecompile'
 
 zstyle ':prezto:load' pmodule \
+       'environment' \
        'helper' \
        'spectrum' \
        'utility' \
-       'environment' \
        'editor' \
        'history-substring-search' \
        'git' \

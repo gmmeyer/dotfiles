@@ -27,6 +27,8 @@ if [[ -f "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+source $HOME/.zsh/env_2.zsh
+
 # all of these insist on being last, so they are.
 source $HOME/.zsh/load_scripts.zsh
 

@@ -11,6 +11,7 @@
       "backbonejs-snippets"
       "metrics"
       "tablr"
+      "spell-check"
     ]
     telemetryConsent: "no"
   editor:
@@ -29,9 +30,8 @@
     panelDisplayMode: "closed"
   "isotope-ui":
     fontFamily: "System Default"
-  linter:
-    errorPanelHeight: 253
-    showErrorPanel: false
+  linter: {}
+  "linter-ui-default": {}
   "one-dark-ui":
     fontSize: 12
     layoutMode: "Compact"
@@ -40,6 +40,7 @@
     fontSize: 13
   "seti-ui":
     compactView: true
+    font: "Default Atom Font"
   tabs:
     usePreviewTabs: true
   "tree-view": {}
