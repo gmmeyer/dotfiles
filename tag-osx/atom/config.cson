@@ -3,6 +3,11 @@
     general:
       _analyticsUserId: "9a0f465f-d10a-4431-8608-ae4610e56c00"
       analytics: false
+    js:
+      brace_style: "collapse-preserve-inline"
+      indent_size: 2
+    jsx:
+      indent_size: 2
   "atom-css-comb": {}
   core:
     audioBeep: false
@@ -30,8 +35,12 @@
     panelDisplayMode: "closed"
   "isotope-ui":
     fontFamily: "System Default"
-  linter: {}
-  "linter-ui-default": {}
+  linter:
+    disabledProviders: [
+      "Flake8"
+    ]
+  "linter-ui-default":
+    showPanel: true
   "one-dark-ui":
     fontSize: 12
     layoutMode: "Compact"
