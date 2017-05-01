@@ -41,6 +41,8 @@
     ]
   "linter-ui-default":
     showPanel: true
+  minimap:
+    disablePythonDocLinks: true
   "one-dark-ui":
     fontSize: 12
     layoutMode: "Compact"
