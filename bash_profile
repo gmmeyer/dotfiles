@@ -71,3 +71,6 @@ source "$HOME/.rvm/scripts/completion"
 export NVM_DIR="/home/greg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 if [ -e /home/greg/.nix-profile/etc/profile.d/nix.sh ]; then . /home/greg/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+alias ddscreen='python /Users/GregoryMeyer/dd-workspace/screenboards/gobwords/tech-tips/get-screenboard/ddscreen.py'
+export GET_SCREEN_CREDS='/Users/GregoryMeyer/dd-workspace/screenboards/gobwords/tech-tips/get-screenboard/settings.json'
