@@ -37,5 +37,7 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 
 #        'cursor' \
 
+zstyle ':prezto:module:ssh:load' identities 'datadog' 'github'
+
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'no'

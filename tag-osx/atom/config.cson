@@ -19,6 +19,10 @@
       "spell-check"
     ]
     telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "afterglow-monokai-syntax"
+    ]
   editor:
     confirmCheckoutHeadRevision: false
     fontFamily: "Ubuntu Mono derivative Powerline"
@@ -40,18 +44,18 @@
       "Flake8"
     ]
   "linter-ui-default":
+    panelHeight: 69
     showPanel: true
   minimap:
     disablePythonDocLinks: true
   "one-dark-ui":
     fontSize: 12
-    layoutMode: "Compact"
-    tabSizing: "Even"
   "one-light-ui":
     fontSize: 13
   "seti-ui":
     compactView: true
     font: "Default Atom Font"
+    themeColor: "Steel"
   tabs:
     usePreviewTabs: true
   "tree-view": {}
