@@ -123,3 +123,6 @@ export NVM_DIR="/home/greg/.nvm"
 [[ -s "/home/greg/.gvm/scripts/gvm" ]] && source "/home/greg/.gvm/scripts/gvm"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# added by travis gem
+[ -f /Users/gregmeyer/.travis/travis.sh ] && source /Users/gregmeyer/.travis/travis.sh
