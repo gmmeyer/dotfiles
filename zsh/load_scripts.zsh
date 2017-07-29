@@ -20,13 +20,9 @@ fi
 
 source $HOME/.zsh/scripts/tmuxinator.zsh
 
-if [ -f $HOME/.opam/opam-init/init.zsh ]; then
-    source $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-fi
-
-if [ -f $HOME/.zsh/bash_completion/exercism_completion.bash ]; then
-    source $HOME/.zsh/bash_completion/exercism_completion.bash
-fi
+# if [ -f $HOME/.opam/opam-init/init.zsh ]; then
+#     source $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# fi
 
 export NVM_DIR="$HOME/.nvm"
 if [ -f "$NVM_DIR/nvm.sh" ]; then
@@ -46,12 +42,11 @@ fi
 #     source $HOME/.nix-profile/etc/profile.d/nix.sh
 # fi
 
+# if I have the travis gem installed, use it!
+# [ -f /Users/gregmeyer/.travis/travis.sh ] && source /Users/gregmeyer/.travis/travis.sh
+
 if command -v npm > /dev/null 2>&1; then
     . <(npm completion)
-fi
-
-if command -v pm2 > /dev/null 2>&1; then
-    source "$HOME/.zsh/pm2_completion.zsh"
 fi
 
 if [ -f $HOME/.fzf.zsh ]; then

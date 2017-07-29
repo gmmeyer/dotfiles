@@ -21,12 +21,11 @@
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "afterglow-monokai-syntax"
+      "monokai"
     ]
   editor:
     confirmCheckoutHeadRevision: false
     fontFamily: "Ubuntu Mono derivative Powerline"
-    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     softWrap: true
@@ -36,7 +35,13 @@
   "go-debug":
     panelInitialVisible: false
   "go-plus":
+    panel:
+      currentHeight: "18.242343541944077vh"
     panelDisplayMode: "closed"
+  hyperclick:
+    darwinTriggerKeys: "altKey,metaKey"
+    linuxTriggerKeys: "ctrlKey,altKey"
+    win32TriggerKeys: "ctrlKey,altKey"
   "isotope-ui":
     fontFamily: "System Default"
   linter:
@@ -45,7 +50,6 @@
     ]
   "linter-ui-default":
     panelHeight: 69
-    showPanel: true
   minimap:
     disablePythonDocLinks: true
   "one-dark-ui":
