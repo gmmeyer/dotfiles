@@ -1,0 +1,9 @@
+# ~/.tmuxinator/randpaul.yml
+
+name: randpaul
+root: ~/development/randpaul/
+
+windows:
+  - workspace:
+  - editor:
+  - server:

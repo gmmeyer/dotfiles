@@ -1,0 +1,7 @@
+# ~/.tmuxinator/dev.yml
+
+name: dev
+root: ~/dev
+
+windows:
+  - workspace:

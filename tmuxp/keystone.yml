@@ -1,0 +1,8 @@
+# ~/.tmuxinator/keystone.yml
+
+name: keystone
+root: ~/dev/keystone
+
+windows:
+  - workspace: 
+  - editor: 

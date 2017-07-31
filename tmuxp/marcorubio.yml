@@ -1,0 +1,9 @@
+# ~/.tmuxinator/marcorubio.yml
+
+name: marcorubio
+root: ~/development/marcorubio/
+
+windows:
+  - workspace:
+  - editor:
+  - server:
