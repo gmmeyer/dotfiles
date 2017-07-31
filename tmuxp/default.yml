@@ -1,0 +1,7 @@
+# ~/.tmuxinator/default.yml
+
+name: default
+root: ~/
+
+windows:
+  - workspace:
