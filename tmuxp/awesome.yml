@@ -1,8 +1,0 @@
-# ~/.tmuxinator/awesome.yml
-
-name: awesome
-root: ~/dotfiles/tag-awesome/config/awesome
-
-windows:
-  - workspace:
-  - editor:

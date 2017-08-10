@@ -1,9 +1,0 @@
-# ~/.tmuxinator/exercism.yml
-
-name: exercism
-root: ~/exercism
-
-windows:
-  - workspace:
-  - editor:
-  - testing:
