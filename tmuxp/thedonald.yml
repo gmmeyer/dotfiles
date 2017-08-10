@@ -1,9 +1,0 @@
-# ~/.tmuxinator/thedonald.yml
-
-name: thedonald
-root: ~/development/thedonald/
-
-windows:
-  - workspace:
-  - editor:
-  - server:

@@ -1,9 +1,0 @@
-# ~/.tmuxinator/workspace.yml
-
-name: workspace
-root: ~/
-
-windows:
-  - workspace:
-  - editor:
-

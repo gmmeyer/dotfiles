@@ -1,7 +1,0 @@
-# ~/.tmuxinator/random.yml
-
-name: random
-root: ~/
-
-windows:
-  - workspace:

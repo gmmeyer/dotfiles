@@ -1,8 +1,0 @@
-# ~/.tmuxinator/configfiles.yml
-
-name: configfiles
-root: ~/configfiles
-
-windows:
-  - workspace:
-  - editor:
