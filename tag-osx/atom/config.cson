@@ -25,7 +25,8 @@
     ]
   editor:
     confirmCheckoutHeadRevision: false
-    fontFamily: "Ubuntu Mono derivative Powerline"
+    fontFamily: "Hack"
+    fontSize: 12
     invisibles: {}
     showIndentGuide: true
     softWrap: true
@@ -36,7 +37,7 @@
     panelInitialVisible: false
   "go-plus":
     panel:
-      currentHeight: "18.242343541944077vh"
+      currentHeight: "20.239680426098534vh"
     panelDisplayMode: "closed"
   hyperclick:
     darwinTriggerKeys: "altKey,metaKey"
@@ -50,6 +51,7 @@
     ]
   "linter-ui-default":
     panelHeight: 69
+    showPanel: true
   minimap:
     disablePythonDocLinks: true
   "one-dark-ui":
