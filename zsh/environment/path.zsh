@@ -20,6 +20,7 @@ typeset -gxU PKG_CONFIG_LIBDIR pkg_config_libdir
 # export GOPATH=$HOME/.go
 
 fpath=($HOME/.zsh/functions
+      /usr/local/share/zsh/functions
        $fpath)
 
 path=($HOME/.pyenv/shims

@@ -1,5 +1,7 @@
 git fetch --prune
 git fetch --prune --tags
+git tag -l | xargs git tag -d
+git fetch --tags
 git remote prune origin
 git prune
 git gc --prune=now

@@ -23,8 +23,11 @@ fi
 
 HOMEBREW_NO_ANALYTICS=1
 
-autoload -U bashcompinit && bashcompinit
-autoload -U compinit && compinit
+autoload -Uz bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+# autoload -Uz /usr/local/share/zsh/functions/compinit && compinit
+# autoload -Uz /usr/local/share/zsh/functions/bashcompinit && bashcompinit
+
 
 # emacs, not vim, as default
 export EDITOR='emacsclient -t'
