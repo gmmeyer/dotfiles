@@ -50,6 +50,8 @@ if [ $(which brew) ]; then
 
     brew update
     brew upgrade
+    brew cleanup
+    brew cask cleanup || true
 fi
 
 if [ $(which atom) ]; then
