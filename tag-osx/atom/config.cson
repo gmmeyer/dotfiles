@@ -51,7 +51,6 @@
     ]
   "linter-ui-default":
     panelHeight: 69
-    showPanel: true
   minimap:
     disablePythonDocLinks: true
   "one-dark-ui":
