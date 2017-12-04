@@ -5,4 +5,4 @@ root: ~/dotfiles
 
 windows:
   - dotfiles:
-  - private: cd private-dotfiles
+  - private: cd $HOME/private-dotfiles
