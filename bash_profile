@@ -62,12 +62,11 @@ fi
 
 PATH=$PATH:/opt/sublime_text # Add sublime to path
 
-Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]]
-source "$HOME/.rvm/scripts/rvm"
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-[[ -r "$HOME/.rvm/scripts/completion" ]]
-source "$HOME/.rvm/scripts/completion"
+[[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"
+
 export NVM_DIR="/home/greg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 if [ -e /home/greg/.nix-profile/etc/profile.d/nix.sh ]; then . /home/greg/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
