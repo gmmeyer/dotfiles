@@ -1,8 +1,12 @@
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_AUTOSTART_ONCE=true
-export ZSH_TMUX_AUTOCONNECT=true
-
-export _JAVA_AWT_WM_NONREPARENTING=1
+if [ -z "${ZSH_TMUX_AUTOSTART}" ]; then
+  export ZSH_TMUX_AUTOSTART=true
+fi
+if [ -z "${ZSH_TMUX_AUTOSTART_ONCE}" ]; then
+  export ZSH_TMUX_AUTOSTART_ONCE=true
+fi
+if [ -z "${ZSH_TMUX_AUTOCONNECT}" ]; then
+  export ZSH_TMUX_AUTOSTART=true
+fi
 
 # for oh my zsh, if I wanna go back
 plugins=(bundler colored-man gem git
