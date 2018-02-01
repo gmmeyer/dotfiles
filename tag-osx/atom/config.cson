@@ -9,6 +9,9 @@
     jsx:
       indent_size: 2
   "atom-css-comb": {}
+  "atom-ide-ui":
+    hyperclick:
+      darwinTriggerKeys: "altKey"
   core:
     audioBeep: false
     disabledPackages: [
@@ -17,6 +20,7 @@
       "metrics"
       "tablr"
       "spell-check"
+      "linter"
     ]
     telemetryConsent: "no"
     themes: [
