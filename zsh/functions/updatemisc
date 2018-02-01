@@ -47,12 +47,18 @@ if [ $(which brew) ]; then
         echo "\033[1;31mUpdate linuxbrew\e[0m"
     fi
 
-
     brew update
     brew upgrade
     brew cleanup
+    brew cask upgrade || true
     brew cask cleanup || true
 fi
+
+if type greg-private-update | grep -i function > /dev/null; then
+    echo "\033[1;31mUpdate private packages\e[0m"
+    greg-private-update
+fi
+
 
 if [ $(which atom) ]; then
     echo "\033[1;31mUpdate Atom packages\e[0m"
