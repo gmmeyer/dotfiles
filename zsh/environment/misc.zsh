@@ -8,12 +8,12 @@ if [ -z "${ZSH_TMUX_AUTOCONNECT}" ]; then
   export ZSH_TMUX_AUTOSTART=true
 fi
 
-# for oh my zsh, if I wanna go back
-plugins=(bundler colored-man gem git
-         nvm npm pyenv
-         rake rails rbenv
-         ruby tmux tmuxinator
-         zsh_reload)
+# # for oh my zsh, if I wanna go back
+# plugins=(bundler colored-man gem git
+#          nvm npm pyenv
+#          rake rails rbenv
+#          ruby tmux tmuxinator
+#          zsh_reload)
 
 ZSH_THEME="awesomepanda"
 

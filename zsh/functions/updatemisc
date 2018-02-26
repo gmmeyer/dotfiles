@@ -40,6 +40,11 @@ if type pyenv | grep -i function > /dev/null; then
     pyenv update
 fi
 
+if type gvm | grep -i function > /dev/null; then
+    echo "\033[1;31mUpdate gvm\e[0m"
+    gvm update
+fi
+
 if [ $(which brew) ]; then
     if [[ `uname` == 'Darwin' ]]; then
         echo "\033[1;31mUpdate homebrew\e[0m"
