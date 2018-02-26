@@ -1,1 +1,1 @@
-find ~/.emacs.d -name *.elc -delete
+find ~/.emacs.d -name '*.elc' -delete
