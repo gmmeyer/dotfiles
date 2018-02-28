@@ -24,6 +24,8 @@
 	type = cat-file -t
 	dump = cat-file -p
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+    cleanup = !git fetch --prune && git fetch --prune origin '+refs/tags/*:refs/tags/*' && git fetch --prune --tags && git remote prune origin && git prune
+    cleanup-all = !git cleanup && git gc --prune=now
 [push]
 	default = current
 [filter "lfs"]
