@@ -41,7 +41,7 @@ function load_scripts() {
   # fi
 
   if command -v gimme > /dev/null 2>&1; then
-      eval "$(gimme 1.10)" > /dev/null 2>&1
+      eval "$(gimme 1.9.4)" > /dev/null 2>&1
   fi
 
   # if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
@@ -58,6 +58,10 @@ function load_scripts() {
   if [ -f $HOME/.fzf.zsh ]; then
     source $HOME/.fzf.zsh
   fi
+
+  if command -v direnv > /dev/null 2>&1; then
+      eval "$(direnv hook zsh)"
+  fi
 }
 
 if [ -f $HOME/.zsh/private.zsh ]; then
@@ -65,4 +69,4 @@ if [ -f $HOME/.zsh/private.zsh ]; then
 fi
 
 # load scripts async
-load_scripts 
+load_scripts
