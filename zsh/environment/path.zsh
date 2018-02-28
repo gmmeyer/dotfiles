@@ -17,7 +17,7 @@ typeset -gxTU INFOPATH infopath
 typeset -gxU PKG_CONFIG_PATH pkg_config_path
 typeset -gxU PKG_CONFIG_LIBDIR pkg_config_libdir
 
-# export GOPATH=$HOME/.go
+export GOPATH=$HOME/.go
 
 fpath=($HOME/.zsh/functions
       /usr/local/share/zsh/functions
