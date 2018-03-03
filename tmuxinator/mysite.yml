@@ -1,9 +1,0 @@
-# ~/.tmuxinator/mysite.yml
-
-name: mysite
-root: ~/development/gmmeyer
-
-windows:
-  - workspace: 
-  - editor: e .
-  - server: rails server
