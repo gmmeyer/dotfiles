@@ -1,0 +1,15 @@
+# list all sessions
+sessions=($(tmux ls -F '#S'))
+
+# grab current session
+current_session=$(tmux display-message -p '#S')
+default_session="workspace"
+
+for session in $sessions; do
+  if [ $session != $current_session ] && [ $session != $default_session ]; then
+    tmux kill-session -t $session
+  fi
+done
+
+
+#tmux kill
