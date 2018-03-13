@@ -35,6 +35,10 @@ function load_scripts() {
       source /etc/zsh_command_not_found
   fi
 
+  if [ -f /usr/local/etc/profile.d/z.sh ]; then
+      source /usr/local/etc/profile.d/z.sh
+  fi
+
   # GVM
   # if [ -f "$HOME/.gvm/scripts/gvm" ]; then
   #     source "$HOME/.gvm/scripts/gvm"
