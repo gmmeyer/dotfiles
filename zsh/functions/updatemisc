@@ -12,17 +12,16 @@ else
   curl -L https://git.io/epre | sh
 fi
 
-echo "\033[1;31mUpdate NVM\e[0m"
-
-if [ -d $HOME/.nvm ] && [ -d $HOME/.nvm/.git ]; then
-    git -C $HOME/.nvm fetch --tags
-    TAG=$(git -C $HOME/.nvm describe --tags `git -C $HOME/.nvm rev-list --tags --max-count=1`)
-    echo "Checking out tag $TAG..."
-    git -C $HOME/.nvm checkout "$TAG"
-    source $HOME/.nvm/nvm.sh
-else
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
-fi
+# echo "\033[1;31mUpdate NVM\e[0m"
+# if [ -d $HOME/.nvm ] && [ -d $HOME/.nvm/.git ]; then
+#     git -C $HOME/.nvm fetch --tags
+#     TAG=$(git -C $HOME/.nvm describe --tags `git -C $HOME/.nvm rev-list --tags --max-count=1`)
+#     echo "Checking out tag $TAG..."
+#     git -C $HOME/.nvm checkout "$TAG"
+#     #source $HOME/.nvm/nvm.sh
+# else
+#   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
+# fi
 
 
 if [ -d $HOME/.zprezto ] && [ -d $HOME/.zprezto/.git ]; then

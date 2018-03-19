@@ -1,0 +1,32 @@
+# list all sessions
+local sessions=$(tmux ls -F '#S')
+local cmd=$1
+
+if [ ! "$cmd" ]; then
+  printf "this doesn't work without a command"
+  exit 1
+fi
+
+
+get_all_windows() {
+  local local_sessions=$1
+  echo $local_sessions | xargs -I session tmux list-windows -t session -F 'session:#I'
+}
+
+local windows=$(get_all_windows $sessions)
+
+
+get_all_panes() {
+  local local_windows=$1
+  echo $local_windows | xargs -I window tmux list-panes -t window -F 'window.#P'
+}
+
+local panes=$(get_all_panes $windows)
+
+execute_commands() {
+  local local_panes=$1
+  local local_cmd=$2
+  echo $local_panes | xargs -I pane tmux send-keys -t pane $local_cmd Enter
+}
+
+execute_commands $panes $cmd

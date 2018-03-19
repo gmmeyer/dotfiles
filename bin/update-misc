@@ -19,7 +19,7 @@ TAG=$(git -C ~/.nvm describe --tags `git -C ~/.nvm rev-list --tags --max-count=1
 echo "Checking out tag $TAG..."
 git -C ~/.nvm checkout "$TAG"
 
-source ~/.nvm/nvm.sh
+# source ~/.nvm/nvm.sh
 
 # echo "\033[1;31mUpdate Oh My ZSH\e[0m"
 
