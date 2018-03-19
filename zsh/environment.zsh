@@ -43,7 +43,6 @@ export CASE_SENSITIVE="true"
 
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 
-export PYENV_ROOT="$HOME/.pyenv"
-export NVM_DIR=$HOME"/.nvm"
+# export NVM_DIR=$HOME"/.nvm"
 
 fpath=($HOME/.zsh/completion $fpath)

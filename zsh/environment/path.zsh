@@ -27,6 +27,7 @@ path=($HOME/.pyenv/shims
       $HOME/.rbenv/shims
       $HOME/.rbenv/bin
       $HOME/.pyenv/bin
+      $HOME/.nodenv/bin
       /usr/local/opt/pyenv/shims
       /usr/local/opt/rbenv/shims
       /usr/local/opt/rbenv/bin

@@ -12,6 +12,7 @@
   "atom-ide-ui":
     hyperclick:
       darwinTriggerKeys: "altKey"
+    use: {}
   core:
     audioBeep: false
     disabledPackages: [
@@ -29,7 +30,7 @@
   editor:
     confirmCheckoutHeadRevision: false
     fontFamily: "Hack"
-    fontSize: 12
+    fontSize: 11
     invisibles: {}
     showIndentGuide: true
     softWrap: true
@@ -53,7 +54,7 @@
       "Flake8"
     ]
   "linter-ui-default":
-    panelHeight: 69
+    panelHeight: 300
   minimap:
     disablePythonDocLinks: true
   "one-dark-ui":
