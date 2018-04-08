@@ -1,0 +1,8 @@
+if [ $(which brew) ]; then
+    if [[ `uname` == 'Darwin' ]]; then
+        echo "\033[1;31mUpdating homebrew casks\e[0m"
+        brew update
+        brew cask reinstall `brew cask list`
+        brew cask cleanup
+    fi
+fi
