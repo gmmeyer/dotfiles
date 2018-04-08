@@ -1,3 +1,6 @@
+# -*- mode: shell-script -*-
+# vi: set ft=shell-script :
+
 if [ $(which brew) ]; then
     if [[ `uname` == 'Darwin' ]]; then
         echo "\033[1;31mUpdating homebrew casks\e[0m"

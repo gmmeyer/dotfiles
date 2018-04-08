@@ -1,3 +1,6 @@
+# -*- mode: shell-script -*-
+# vi: set ft=shell-script :
+
 local outdated
 
 outdated="$(npm -g outdated --parseable --depth=0 | cut -d: -f3)"

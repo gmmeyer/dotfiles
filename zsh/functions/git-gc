@@ -1,1 +1,4 @@
+# -*- mode: shell-script -*-
+# vi: set ft=shell-script :
+
 git gc --prune=now
