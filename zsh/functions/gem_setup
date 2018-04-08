@@ -1,3 +1,6 @@
+# -*- mode: shell-script -*-
+# vi: set ft=shell-script :
+
 eval "$(rbenv init -)"
 
 echo "\033[1;31minstalling gems\e[0m"

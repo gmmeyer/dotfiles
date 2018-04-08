@@ -1,2 +1,5 @@
+# -*- mode: shell-script -*-
+# vi: set ft=shell-script :
+
 git tag -l | xargs git tag -d
 git fetch --tags

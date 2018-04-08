@@ -1,3 +1,6 @@
+# -*- mode: shell-script -*-
+# vi: set ft=shell-script :
+
 #compdef git-buildpackage
 #description build Debian packages from a git repository
 

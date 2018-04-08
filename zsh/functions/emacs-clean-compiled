@@ -1,1 +1,4 @@
+# -*- mode: shell-script -*-
+# vi: set ft=shell-script :
+
 find ~/.emacs.d -name '*.elc' -delete
