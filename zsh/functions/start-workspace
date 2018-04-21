@@ -1,0 +1,39 @@
+# -*- mode: shell-script -*-
+# vi: set ft=shell-script :
+
+# list all sessions
+sessions=($(tmux ls -F '#S'))
+
+# grab current session
+current_session=$(tmux display-message -p '#S')
+bad_session="0"
+create_workspace="true"
+default_session="workspace"
+
+
+for session in $sessions; do
+  if [ "$session" = "$default_session" ]; then
+    echo "workspace is already created"
+    create_workspace="false"
+  fi
+done
+
+if [ $create_workspace = "true" ]; then
+  mux workspace
+fi
+
+killed_bad_session="false"
+
+for session in $sessions; do
+  if [ "$session" = "$bad_session" ]; then
+    killed_bad_session="true"
+    echo "killing $session"
+    tmux kill-session -t $session
+  fi
+done
+
+if [ $killed_bad_session = "false" ]; then
+  echo "yay! session $bad_session doesn't exist"
+fi
+
+#tmux kill
