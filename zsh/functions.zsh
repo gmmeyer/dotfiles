@@ -9,6 +9,7 @@ function loadfunctions {
 
     # Load Prezto functions.
     for pfunction in $HOME/.zsh/functions/$~pfunction_glob; do
+      unfunction $pfunction > /dev/null 2>&1
       autoload -Uz "$pfunction"
     done
   }
