@@ -10,6 +10,8 @@
       indent_size: 2
   "atom-css-comb": {}
   "atom-ide-ui":
+    "atom-ide-diagnostics-ui":
+      showDiagnosticTraces: true
     hyperclick:
       darwinTriggerKeys: "altKey"
     use: {}
@@ -43,6 +45,7 @@
   "go-plus":
     panel:
       currentHeight: "20.239680426098534vh"
+      focusOnFailure: false
     panelDisplayMode: "closed"
   hyperclick:
     darwinTriggerKeys: "altKey,metaKey"
