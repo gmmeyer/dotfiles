@@ -1,0 +1,14 @@
+# -*- mode: shell-script -*-
+# vi: set ft=shell-script :
+
+if [ $(which brew) ]; then
+    if [[ `uname` == 'Darwin' ]]; then
+        echo "\033[1;31mUpdating homebrew \e[0m"
+        brew update
+        local list=($(brew list | grep -v zsh))
+        for item in $list; do
+          brew reinstall $item
+        done
+        brew cleanup
+    fi
+fi
