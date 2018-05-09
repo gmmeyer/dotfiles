@@ -58,3 +58,7 @@ sublime-text-3/Local
 .DS_Store
 *.DS_Store
 .DS_Store*
+
+vim/vimbackup
+vim/vimviews
+vim/vimswap
