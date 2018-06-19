@@ -24,6 +24,7 @@
       "spell-check"
       "linter"
     ]
+    excludeVcsIgnoredPaths: false
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
@@ -72,6 +73,6 @@
   tabs:
     usePreviewTabs: true
   "tree-view":
-    hideVcsIgnoredFiles: true
+    squashDirectoryNames: true
   welcome:
     showOnStartup: false

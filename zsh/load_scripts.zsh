@@ -11,9 +11,9 @@ function load_scripts() {
   # source $HOME/.zsh/tmuxinator.zsh
 
   # tmux
-  if [ -f $HOME/.zsh/tmux.zsh ]; then
-      source $HOME/.zsh/tmux.zsh
-  fi
+  # if [ -f $HOME/.zsh/tmux.zsh ]; then
+  #     source $HOME/.zsh/tmux.zsh
+  # fi
 
   # SCRIPTS=$(find  $HOME/.zsh/scripts  \( -type f -or -type l \) -name \*.zsh)
   # for f in $SCRIPTS; do
