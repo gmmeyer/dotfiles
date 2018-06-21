@@ -43,6 +43,7 @@ path=($HOME/.pyenv/shims
       $HOME/.linuxbrew/bin
       $HOME/.linuxbrew/sbin
       $HOME/eclipse
+      /usr/local/opt/coreutils/libexec/gnubin
       /bin
       /usr/bin
       $HOME/android-studio/bin
