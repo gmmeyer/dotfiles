@@ -6,7 +6,7 @@
 [user]
 	name = Greg Meyer
 	#email = gregory.matthew.meyer@gmail.com
-    email = greg.meyer@datadoghq.com
+  email = greg.meyer@datadoghq.com
 	# signingkey = 51C0CD23
 [credential]
 	helper = cache --timeout=3600
