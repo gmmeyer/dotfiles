@@ -56,9 +56,8 @@ if [ $(which brew) ]; then
 
     brew update
     brew upgrade
-    brew cleanup
     brew cask upgrade || true
-    brew cask cleanup || true
+    brew cleanup
 fi
 
 if type greg-private-update | grep -i function > /dev/null; then
