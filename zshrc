@@ -9,7 +9,7 @@ fi
 
 source $HOME/.zsh/functions.zsh
 
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
@@ -33,3 +33,4 @@ source $HOME/.zsh/overrides.zsh
 source $HOME/.zsh/load_scripts.zsh
 
 source $HOME/.zsh/aliases.zsh
+export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
