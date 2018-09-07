@@ -38,5 +38,7 @@
     path = ~/.secret_gitconfig
 [commit]
 	gpgsign = true
+[tag]
+	forceSignAnnotated = true
 [gpg]
 	program = gpg
