@@ -6,6 +6,6 @@ if [ $(which brew) ]; then
         echo "\033[1;31mUpdating homebrew casks\e[0m"
         brew update
         brew cask reinstall `brew cask list`
-        brew cask cleanup
+        brew cleanup
     fi
 fi

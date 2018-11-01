@@ -7,6 +7,6 @@ if [ $(which brew) ]; then
         brew update
         brew cask upgrade
         brew cask reinstall google-cloud-sdk spotify
-        brew cask cleanup
+        brew cleanup
     fi
 fi
