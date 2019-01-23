@@ -10,6 +10,8 @@
       indent_size: 2
   "atom-css-comb": {}
   "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
     "atom-ide-diagnostics-ui":
       showDiagnosticTraces: true
     hyperclick:
@@ -33,7 +35,7 @@
   editor:
     confirmCheckoutHeadRevision: false
     fontFamily: "Hack"
-    fontSize: 12
+    fontSize: 13
     invisibles: {}
     preferredLineLength: 12
     showIndentGuide: true
