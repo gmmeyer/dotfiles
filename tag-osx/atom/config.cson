@@ -46,10 +46,13 @@
   "go-debug":
     panelInitialVisible: false
   "go-plus":
+    config: {}
     panel:
       currentHeight: "20.239680426098534vh"
       focusOnFailure: false
     panelDisplayMode: "closed"
+    test:
+      runTestsOnSave: false
   hyperclick:
     darwinTriggerKeys: "altKey,metaKey"
     linuxTriggerKeys: "ctrlKey,altKey"
