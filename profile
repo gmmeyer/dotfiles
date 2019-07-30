@@ -37,3 +37,5 @@ PATH=$PATH:/opt/sublime_text # Add sublime to path
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # source $rvm_path/scripts/completion
 [[ -s "/Users/greg/.gvm/scripts/gvm" ]] && source "/Users/greg/.gvm/scripts/gvm"
+
+export PATH="$HOME/.cargo/bin:$PATH"
