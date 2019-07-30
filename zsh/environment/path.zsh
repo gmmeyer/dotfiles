@@ -23,7 +23,9 @@ fpath=($HOME/.zsh/functions
       /usr/local/share/zsh/functions
        $fpath)
 
-path=($HOME/.pyenv/shims
+path=($HOME/bin
+      $HOME/.bin
+      $HOME/.pyenv/shims
       $HOME/.rbenv/shims
       $HOME/.rbenv/bin
       $HOME/.pyenv/bin
@@ -36,8 +38,7 @@ path=($HOME/.pyenv/shims
       /usr/local/m-cli
       $HOME/.cabal/bin
       $HOME/.opam/system/bin
-      $HOME/bin
-      $HOME/.bin
+      $HOME/.cargo/bin
       /usr/local/bin
       /usr/local/sbin
       $HOME/.linuxbrew/bin

@@ -43,6 +43,9 @@
     zoomFontWhenCtrlScrolling: false
   "exception-reporting":
     userId: "31b9246d-8284-36bd-571e-b1f30061e0a3"
+  "fuzzy-finder":
+    scoringSystem: "fast"
+    useRipGrep: true
   "go-debug":
     panelInitialVisible: false
   "go-plus":

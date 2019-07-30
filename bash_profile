@@ -74,3 +74,5 @@ if [ -e /home/greg/.nix-profile/etc/profile.d/nix.sh ]; then . /home/greg/.nix-p
 alias ddscreen='python /Users/GregoryMeyer/dd-workspace/screenboards/gobwords/tech-tips/get-screenboard/ddscreen.py'
 export GET_SCREEN_CREDS='/Users/GregoryMeyer/dd-workspace/screenboards/gobwords/tech-tips/get-screenboard/settings.json'
 export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
+
+export PATH="$HOME/.cargo/bin:$PATH"
