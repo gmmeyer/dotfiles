@@ -26,10 +26,10 @@ function load_scripts() {
   #     source $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
   # fi
 
-  export NVM_DIR="$HOME/.nvm"
-  if [ -f "$NVM_DIR/nvm.sh" ]; then
-      source "$NVM_DIR/nvm.sh" # This loads nvm
-  fi
+#   export NVM_DIR="$HOME/.nvm"
+#   if [ -f "$NVM_DIR/nvm.sh" ]; then
+#       source "$NVM_DIR/nvm.sh" # This loads nvm
+#   fi
 
   if [ -f /etc/zsh_command_not_found ]; then
       source /etc/zsh_command_not_found
@@ -45,7 +45,7 @@ function load_scripts() {
   # fi
 
   if command -v gimme > /dev/null 2>&1; then
-      eval $(gimme 1.12.5) > /dev/null 2>&1
+      eval $(gimme 1.14.4) > /dev/null 2>&1
   fi
 
   # if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
