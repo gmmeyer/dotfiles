@@ -45,7 +45,7 @@ function load_scripts() {
   # fi
 
   if command -v gimme > /dev/null 2>&1; then
-      eval $(gimme 1.14.4) > /dev/null 2>&1
+      eval $(gimme 1.14.5) > /dev/null 2>&1
   fi
 
   # if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
