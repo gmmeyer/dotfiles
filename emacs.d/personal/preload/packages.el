@@ -2,7 +2,9 @@
 
 ;;; Commentary: my packages
 
-(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
+(require 'package)
+
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
                          ("org" . "http://orgmode.org/elpa/")))
@@ -25,9 +27,12 @@
                              less-css-mode
                              magit markdown-mode minitest moe-theme multi-term
                              org
-                             pastels-on-dark-theme paradox pkg-info pony-mode
+                             ;; pastels-on-dark-theme 
+                             paradox pkg-info pony-mode
                              powerline pyenv-mode pyenv-mode-auto
-                             rspec-mode ruby-block rbenv
+                             rspec-mode 
+                             ;; ruby-block
+                             rbenv
                              smart-mode-line
                              textmate tuareg
                              virtualenv

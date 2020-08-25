@@ -42,4 +42,8 @@
 
 (async-bytecomp-package-mode 1)
 
+(require 'helm)
+(global-set-key (kbd "M-x") 'helm-M-x)
+
+
 (provide 'emacs.el)

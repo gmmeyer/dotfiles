@@ -20,7 +20,7 @@ function load_scripts() {
   #   source $f
   # done
 
-  source $HOME/.zsh/scripts/tmuxinator.zsh
+#   source $HOME/.zsh/scripts/tmuxinator.zsh
 
   # if [ -f $HOME/.opam/opam-init/init.zsh ]; then
   #     source $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -45,7 +45,7 @@ function load_scripts() {
   # fi
 
   if command -v gimme > /dev/null 2>&1; then
-      eval $(gimme 1.14.5) > /dev/null 2>&1
+      eval $(gimme 1.14.7) > /dev/null 2>&1
   fi
 
   # if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
