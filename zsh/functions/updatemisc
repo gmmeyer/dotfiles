@@ -47,7 +47,12 @@ if type gvm | grep -i function > /dev/null; then
     gvm update
 fi
 
-if [ $(which brew) ]; then
+# in zsh which has changed behavior and will now print out 
+# ~ ❯❯❯ which atom
+# atom not found
+# Obviously this will not work! So, instead use the system one
+
+if [ -n "$(/usr/bin/which brew)" ]; then
     if [[ `uname` == 'Darwin' ]]; then
         echo "\033[1;31mUpdate homebrew\e[0m"
     else
@@ -66,7 +71,7 @@ if [ type greg-private-update | grep -i function > /dev/null ]; then
 fi
 
 
-if [ $(which atom) ]; then
+if [ -n "$(/usr/bin/which atom)" ]; then
     echo "\033[1;31mUpdate Atom packages\e[0m"
     apm update -c false
     apm upgrade -c false
