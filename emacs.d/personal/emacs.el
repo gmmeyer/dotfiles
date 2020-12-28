@@ -45,5 +45,6 @@
 (require 'helm)
 (global-set-key (kbd "M-x") 'helm-M-x)
 
+(setq max-lisp-eval-depth 1000000)
 
 (provide 'emacs.el)

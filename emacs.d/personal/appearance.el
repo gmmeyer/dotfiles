@@ -1,5 +1,6 @@
 ;;;Set up the appearance of emacs
 
+(require 'moe-theme)
 
 ;;(powerline-default-theme)
 
@@ -19,8 +20,6 @@
 ;; powerline > mode line
 ;; (require 'powerline)
 
-(require 'moe-theme)
-
 (setq moe-theme-highlight-buffer-id t)
 
 ;; (powerline-moe-theme)
@@ -32,9 +31,9 @@
 
 (setq show-paren-style 'expression)
 
-(moe-theme-set-color 'w/b)
-
 (moe-dark)
+
+;; (moe-theme-set-color 'w/b)
 
 ;;(load-theme 'railscasts)
 

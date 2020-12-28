@@ -65,7 +65,7 @@ if [ -n "$(/usr/bin/which brew)" ]; then
     brew cleanup
 fi
 
-if [ type greg-private-update | grep -i function > /dev/null ]; then
+if type greg-private-update | grep -i function > /dev/null; then
     echo "\033[1;31mUpdate private packages\e[0m"
     greg-private-update
 fi

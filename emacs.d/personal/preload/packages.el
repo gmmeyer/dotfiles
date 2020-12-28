@@ -4,8 +4,12 @@
 
 (require 'package)
 
+;; (setq package-archives '(("melpa" . "https://melpa.org/packages/")
+;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
+;;                          ("gnu" . "http://elpa.gnu.org/packages/")
+;;                          ("org" . "http://orgmode.org/elpa/")))
+
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
                          ("org" . "http://orgmode.org/elpa/")))
 
