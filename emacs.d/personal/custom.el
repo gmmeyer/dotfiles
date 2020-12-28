@@ -3,20 +3,17 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
  '(company-quickhelp-color-background "#4F4F4F")
  '(company-quickhelp-color-foreground "#DCDCCC")
- '(custom-safe-themes
-   '("685a7460fdc4b8c38796234d3a96b3aacbe4fba739fb33b5d6d149051ce74a58" "cb8d13429234ff2a8700da4db9bdf6b952c1b54b906a1aad2d0d98317c5b0224" default))
  '(fci-rule-color "#383838")
  '(nrepl-message-colors
    '("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3"))
  '(package-selected-packages
-   '(scala-mode merlin ido-completing-read+ ht hydra sesman lsp-ui company-lsp counsel swiper ivy cask-mode pyenv-mode-auto pyenv-mode zop-to-char zenburn-theme yari yaml-mode which-key websocket web-mode volatile-highlights vkill virtualenv utop undo-tree tuareg textmate smex smartrep smartparens smart-mode-line slime scss-mode scala-mode2 ruby-tools ruby-block rspec-mode rainbow-mode rainbow-delimiters powerline pony-mode pastels-on-dark-theme paradox ov operate-on-number multi-web-mode multi-term move-text moe-theme minitest markdown-mode magit less-css-mode json-mode js2-mode inf-ruby imenu-anywhere ido-ubiquitous helm-projectile helm-descbinds helm-ag haskell-mode guru-mode grizzl gotest god-mode go-projectile go-autocomplete gitignore-mode gitconfig-mode git-timemachine gist geiser fzf flycheck-ocaml flx-ido expand-region exec-path-from-shell ensime emamux elisp-slime-nav easy-kill dockerfile-mode discover-my-major diminish diff-hl ctags-update csv-mode crux company-jedi company-go company-anaconda coffee-mode cider browse-kill-ring beacon anzu ace-window))
+   '(swiper zop-to-char zenburn-theme yari yaml-mode which-key websocket web-mode volatile-highlights virtualenv utop undo-tree tuareg tide textmate super-save smex smartrep smartparens smart-mode-line slime scss-mode scala-mode rspec-mode rbenv rainbow-mode rainbow-delimiters pyenv-mode-auto powerline pony-mode paradox operate-on-number nlinum multi-web-mode multi-term move-text moe-theme minitest magit lsp-ui json-mode js2-mode inf-ruby imenu-anywhere ido-completing-read+ hl-todo helm-projectile helm-descbinds helm-ag haskell-mode guru-mode gotest go-projectile go-autocomplete gitignore-mode gitconfig-mode git-timemachine gist geiser fzf flycheck-ocaml flx-ido expand-region exec-path-from-shell emamux elisp-slime-nav editorconfig easy-kill discover-my-major diminish diff-hl d-mode ctags-update crux counsel company-lsp company-go company-anaconda coffee-mode cider browse-kill-ring beacon anzu ag ace-window))
  '(paradox-github-token t)
  '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
- '(safe-local-variable-values
-   '((projectile-project-name . dogweb)
-     (whitespace-line-column . 100)))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
    '((20 . "#BC8383")
