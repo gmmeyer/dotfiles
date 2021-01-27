@@ -61,7 +61,7 @@ if [ -n "$(/usr/bin/which brew)" ]; then
 
     brew update
     brew upgrade
-    brew cask upgrade || true
+    brew upgrade --cask || true
     brew cleanup
 fi
 
