@@ -26,10 +26,11 @@ function load_scripts() {
   #     source $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
   # fi
 
-#   export NVM_DIR="$HOME/.nvm"
-#   if [ -f "$NVM_DIR/nvm.sh" ]; then
-#       source "$NVM_DIR/nvm.sh" # This loads nvm
-#   fi
+  export NVM_DIR="$HOME/.nvm"
+  if [ -f "$NVM_DIR/nvm.sh" ]; then
+      source "$NVM_DIR/nvm.sh" # This loads nvm
+      [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  fi
 
   if [ -f /etc/zsh_command_not_found ]; then
       source /etc/zsh_command_not_found
@@ -70,6 +71,7 @@ function load_scripts() {
   if type nodenv >/dev/null 2>&1; then
       eval "$(nodenv init -)"
   fi
+
 }
 
 if [ -f $HOME/.zsh/private.zsh ]; then
