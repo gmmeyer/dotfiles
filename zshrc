@@ -9,7 +9,7 @@ fi
 
 source $HOME/.zsh/functions.zsh
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 

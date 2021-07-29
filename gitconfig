@@ -6,7 +6,7 @@
 [user]
 	name = Greg Meyer
 	#email = gregory.matthew.meyer@gmail.com
-  email = greg.meyer@datadoghq.com
+  email = greg@flywheelml.com
 	# signingkey = 51C0CD23
 [credential]
 	helper = cache --timeout=3600
@@ -36,10 +36,10 @@
 [include]
     path = ~/.host_gitconfig
     path = ~/.secret_gitconfig
-[commit]
-	gpgsign = true
-[tag]
-	forceSignAnnotated = true
+# [commit]
+# 	gpgsign = true
+# [tag]
+# 	forceSignAnnotated = true
 [gpg]
 	program = gpg
 [pull]

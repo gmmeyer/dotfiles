@@ -35,6 +35,10 @@
 
 ;; (moe-theme-set-color 'w/b)
 
+(moe-theme-apply-color 'b/w)
+
+;; (setq moe-theme-mode-line-color 'b/w)
+
 ;;(load-theme 'railscasts)
 
 (provide 'appearance.el)
