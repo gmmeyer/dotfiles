@@ -1,8 +1,9 @@
 # -*- mode: shell-script -*-
 # vi: set ft=shell-script :
 
-docker rm -v $(docker ps -a -q -f status=exited)
-docker rmi $(docker images -f "dangling=true" -q)
-docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc
-docker system prune -a -f
+docker rm -v $(docker ps -a -q -f status=exited) || true
+docker rmi $(docker images -f "dangling=true" -q) || true
+# docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes
+# docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc
+docker volume rm $(docker volume ls -qf dangling=true) || true
+docker system prune -a -f || true
