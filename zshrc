@@ -40,3 +40,7 @@ export AWS_VAULT_KEYCHAIN_NAME=login
 # tweak session times so you dont have to re-enter passwords every 5min
 export AWS_SESSION_TTL=24h
 export AWS_ASSUME_ROLE_TTL=1h
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
