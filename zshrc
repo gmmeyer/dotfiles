@@ -21,7 +21,7 @@ eval "$(pyenv virtualenv-init -)"
 # fi
 
 # gitignore!
-function gi() { curl -s https://www.gitignore.io/api/$@ ;}
+function gi() { curl -s https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 if [[ -f "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
