@@ -5,8 +5,7 @@
 	grep = auto
 [user]
 	name = Greg Meyer
-	#email = gregory.matthew.meyer@gmail.com
-  email = greg@flywheelml.com
+	email = gregory.matthew.meyer@gmail.com
 	# signingkey = 51C0CD23
 [credential]
 	helper = cache --timeout=3600
