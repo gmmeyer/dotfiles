@@ -9,17 +9,14 @@
  '(company-quickhelp-color-foreground "#DCDCCC")
  '(fci-rule-color "#383838")
  '(nrepl-message-colors
-   (quote
-    ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
+   '("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3"))
  '(package-selected-packages
-   (quote
-    (merlin helm swiper zop-to-char zenburn-theme yari yaml-mode which-key websocket web-mode volatile-highlights virtualenv utop undo-tree tuareg tide textmate super-save smex smartrep smartparens smart-mode-line slime scss-mode scala-mode rspec-mode rbenv rainbow-mode rainbow-delimiters pyenv-mode-auto powerline pony-mode paradox operate-on-number nlinum multi-web-mode multi-term move-text moe-theme minitest magit lsp-ui json-mode js2-mode inf-ruby imenu-anywhere ido-completing-read+ hl-todo helm-projectile helm-descbinds helm-ag haskell-mode guru-mode gotest go-projectile go-autocomplete gitignore-mode gitconfig-mode git-timemachine gist geiser fzf flycheck-ocaml flx-ido expand-region exec-path-from-shell emamux elisp-slime-nav editorconfig easy-kill discover-my-major diminish diff-hl d-mode ctags-update crux counsel company-lsp company-go company-anaconda coffee-mode cider browse-kill-ring beacon anzu ag ace-window)))
+   '(merlin helm swiper zop-to-char zenburn-theme yari yaml-mode which-key websocket web-mode volatile-highlights virtualenv utop undo-tree tuareg tide textmate super-save smex smartrep smartparens smart-mode-line slime scss-mode scala-mode rspec-mode rbenv rainbow-mode rainbow-delimiters pyenv-mode-auto powerline pony-mode paradox operate-on-number nlinum multi-web-mode multi-term move-text moe-theme minitest magit lsp-ui json-mode js2-mode inf-ruby imenu-anywhere ido-completing-read+ hl-todo helm-projectile helm-descbinds helm-ag haskell-mode guru-mode gotest go-projectile go-autocomplete gitignore-mode gitconfig-mode git-timemachine gist geiser fzf flycheck-ocaml flx-ido expand-region exec-path-from-shell emamux elisp-slime-nav editorconfig easy-kill discover-my-major diminish diff-hl d-mode ctags-update crux counsel company-lsp company-go company-anaconda coffee-mode cider browse-kill-ring beacon anzu ag ace-window))
  '(paradox-github-token t)
- '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
+ '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
-   (quote
-    ((20 . "#BC8383")
+   '((20 . "#BC8383")
      (40 . "#CC9393")
      (60 . "#DFAF8F")
      (80 . "#D0BF8F")
@@ -36,7 +33,7 @@
      (300 . "#7CB8BB")
      (320 . "#8CD0D3")
      (340 . "#94BFF3")
-     (360 . "#DC8CC3"))))
+     (360 . "#DC8CC3")))
  '(vc-annotate-very-old-color "#DC8CC3"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
