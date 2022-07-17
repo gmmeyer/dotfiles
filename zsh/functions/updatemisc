@@ -52,7 +52,7 @@ fi
 # atom not found
 # Obviously this will not work! So, instead use the system one
 
-if [ -n "$(/usr/bin/which brew)" ]; then
+if type brew > /dev/null; then
     if [[ `uname` == 'Darwin' ]]; then
         echo "\033[1;31mUpdate homebrew\e[0m"
     else
@@ -68,11 +68,4 @@ fi
 if type greg-private-update | grep -i function > /dev/null; then
     echo "\033[1;31mUpdate private packages\e[0m"
     greg-private-update
-fi
-
-
-if [ -n "$(/usr/bin/which atom)" ]; then
-    echo "\033[1;31mUpdate Atom packages\e[0m"
-    apm update -c false
-    apm upgrade -c false
 fi
