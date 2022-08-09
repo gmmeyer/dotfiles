@@ -34,7 +34,12 @@ fi
 
 if type rbenv | grep -i function > /dev/null; then
     echo "\033[1;31mUpdate rbenv\e[0m"
-    rbenv update
+    pushd ~/.rbenv
+        git pull
+        pushd plugins/ruby-build
+            git pull
+        popd
+    popd
 fi
 
 if type pyenv | grep -i function > /dev/null; then
