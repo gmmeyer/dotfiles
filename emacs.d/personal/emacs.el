@@ -40,7 +40,7 @@
 (global-set-key (kbd "<mouse-4>") 'down-slightly)
 (global-set-key (kbd "<mouse-5>") 'up-slightly)
 
-(async-bytecomp-package-mode 1)
+;; (async-bytecomp-package-mode 1)
 
 (require 'helm)
 (global-set-key (kbd "M-x") 'helm-M-x)

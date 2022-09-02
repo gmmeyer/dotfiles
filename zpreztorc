@@ -9,6 +9,7 @@ zstyle ':prezto:load' zfunction 'zargs' 'zmv' 'zrecompile'
 zstyle ':prezto:load' pmodule \
        'environment' \
        'helper' \
+       'ssh' \
        'spectrum' \
        'utility' \
        'editor' \
@@ -21,10 +22,7 @@ zstyle ':prezto:load' pmodule \
        'prompt' \
        'fasd'
 
-
-#       'history' \
-#'rails' \
-#       'directory' \
+zstyle ':prezto:module:ssh:load' identities 'github' 'id_github'
 
 zstyle ':prezto:module:prompt' theme 'greg'
 
@@ -37,8 +35,7 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
        'root'
 
 #        'cursor' \
-
-zstyle ':prezto:module:ssh:load' identities 'id_datadog' 'id_github'
+# ssh-add ~/.ssh/github
 
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'no'
