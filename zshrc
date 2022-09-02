@@ -33,7 +33,7 @@ source $HOME/.zsh/overrides.zsh
 source $HOME/.zsh/load_scripts.zsh
 
 source $HOME/.zsh/aliases.zsh
-export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
+# export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
 # store key in the login keychain instead of aws-vault managing a hidden keychain
 export AWS_VAULT_KEYCHAIN_NAME=login
 

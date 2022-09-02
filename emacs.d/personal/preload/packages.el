@@ -33,7 +33,7 @@
                              org
                              ;; pastels-on-dark-theme 
                              paradox pkg-info pony-mode
-                             powerline pyenv-mode pyenv-mode-auto
+                             powerline pyenv-mode
                              rspec-mode 
                              ;; ruby-block
                              rbenv
