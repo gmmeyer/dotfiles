@@ -41,12 +41,12 @@ function load_scripts() {
   fi
 
   # GVM
-  # if [ -f "$HOME/.gvm/scripts/gvm" ]; then
-  #     source "$HOME/.gvm/scripts/gvm"
-  # fi
+#   if [ -f "$HOME/.gvm/scripts/gvm" ]; then
+#       source "$HOME/.gvm/scripts/gvm"
+#   fi
 
   if command -v gimme > /dev/null 2>&1; then
-      eval $(gimme 1.15.6) > /dev/null 2>&1
+      eval $(gimme 1.19.3) > /dev/null 2>&1
   fi
 
   # if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
