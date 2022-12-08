@@ -76,3 +76,5 @@ export GET_SCREEN_CREDS='/Users/GregoryMeyer/dd-workspace/screenboards/gobwords/
 export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+source /Users/greg/.docker/init-bash.sh || true # Added by Docker Desktop
