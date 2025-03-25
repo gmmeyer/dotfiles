@@ -26,6 +26,7 @@ function load_scripts() {
   #     source $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
   # fi
 
+  
   export NVM_DIR="$HOME/.nvm"
   if [ -f "$NVM_DIR/nvm.sh" ]; then
       source "$NVM_DIR/nvm.sh" # This loads nvm
@@ -46,7 +47,16 @@ function load_scripts() {
 #   fi
 
   if command -v gimme > /dev/null 2>&1; then
-      eval $(gimme 1.19.3) > /dev/null 2>&1
+      unset GOOS;
+      unset GOARCH;
+      export GOROOT='/Users/greg/.gimme/versions/go1.23.5.darwin.arm64';
+      export PATH="/Users/greg/.gimme/versions/go1.23.5.darwin.arm64/bin:${PATH}";
+      # go version >&2;
+
+      export GIMME_ENV='/Users/greg/.gimme/envs/go1.23.5.darwin.arm64.env';
+
+      # gimme is very slow, just update the env files
+      # eval $(gimme 1.23.5) > /dev/null 2>&1
   fi
 
   # if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
