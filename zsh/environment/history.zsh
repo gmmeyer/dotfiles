@@ -3,8 +3,8 @@
 #
 
 HISTFILE="${ZDOTDIR:-$HOME}/.zhistory"
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=500000
+SAVEHIST=500000
 
 setopt append_history
 setopt bang_hist

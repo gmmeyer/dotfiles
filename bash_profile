@@ -75,6 +75,6 @@ alias ddscreen='python /Users/GregoryMeyer/dd-workspace/screenboards/gobwords/te
 export GET_SCREEN_CREDS='/Users/GregoryMeyer/dd-workspace/screenboards/gobwords/tech-tips/get-screenboard/settings.json'
 export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
 
-export PATH="$HOME/.cargo/bin:$PATH"
 
 source /Users/greg/.docker/init-bash.sh || true # Added by Docker Desktop
+. "$HOME/.cargo/env"

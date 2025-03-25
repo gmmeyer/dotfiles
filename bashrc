@@ -129,3 +129,5 @@ export NVM_DIR="/home/greg/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source /Users/greg/.docker/init-bash.sh || true # Added by Docker Desktop
+export PATH=$PATH:/usr/local/bin
+. "$HOME/.cargo/env"

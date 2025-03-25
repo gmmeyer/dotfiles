@@ -43,13 +43,11 @@ path=($HOME/bin
       /usr/local/sbin
       $HOME/.linuxbrew/bin
       $HOME/.linuxbrew/sbin
-      $HOME/eclipse
       /usr/local/opt/coreutils/libexec/gnubin
       /bin
       /usr/bin
-      $HOME/android-studio/bin
       $GOPATH/bin
-      $HOME/perl5/bin
+      /opt/homebrew/opt/openjdk/bin:$PATH
       $path)
 
 manpath=(/usr/local/share/man
