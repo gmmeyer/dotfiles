@@ -47,7 +47,9 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-source /Users/greg/.docker/init-zsh.sh || true # Added by Docker Desktop
+# source /Users/greg/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+[[ -s "/Users/gregmeyer/.gvm/scripts/gvm" ]] && source "/Users/gregmeyer/.gvm/scripts/gvm"
