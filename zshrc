@@ -47,7 +47,7 @@ export AWS_ASSUME_ROLE_TTL=1h
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# source /Users/greg/.docker/init-zsh.sh || true # Added by Docker Desktop
+[ -f $HOME/.docker/init-zsh.sh ] && source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
