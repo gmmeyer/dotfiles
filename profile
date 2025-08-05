@@ -39,3 +39,5 @@ PATH=$PATH:/opt/sublime_text # Add sublime to path
 [[ -s "/Users/greg/.gvm/scripts/gvm" ]] && source "/Users/greg/.gvm/scripts/gvm"
 
 . "$HOME/.cargo/env"
+
+[[ -s "/Users/gregmeyer/.gvm/scripts/gvm" ]] && source "/Users/gregmeyer/.gvm/scripts/gvm"

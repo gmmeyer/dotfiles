@@ -120,7 +120,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export NVM_DIR="/home/greg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[[ -s "/home/greg/.gvm/scripts/gvm" ]] && source "/home/greg/.gvm/scripts/gvm"
+[[ -s "/home/greg/.gvm/scripts/gvm" ]] && source "/home/greg/.gvm/scripts/gvm" || true
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
