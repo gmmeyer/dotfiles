@@ -88,5 +88,10 @@ if [ -f $HOME/.zsh/private.zsh ]; then
     source $HOME/.zsh/private.zsh
 fi
 
+if [ -f $HOME/.zsh/git.zsh ]; then
+    # git aliases and colors
+    source $HOME/.zsh/git.zsh
+fi
+
 # load scripts async
 load_scripts
