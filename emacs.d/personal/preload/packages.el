@@ -32,7 +32,7 @@
                              magit markdown-mode minitest moe-theme multi-term
                              org
                              ;; pastels-on-dark-theme 
-                             paradox pkg-info pony-mode
+                             pkg-info pony-mode
                              powerline pyenv-mode
                              rspec-mode 
                              ;; ruby-block
@@ -50,8 +50,8 @@
 
 (install-packages)
 
-(require 'paradox)
+;; (require 'paradox)
 
-(paradox-enable)
+;; (paradox-enable)
 
 (provide 'packages.el)
