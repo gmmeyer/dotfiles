@@ -19,6 +19,10 @@ typeset -gxU PKG_CONFIG_LIBDIR pkg_config_libdir
 
 export GOPATH=$HOME/go
 
+export VAPI_INSTALL="$HOME/.vapi"
+export BUN_INSTALL="$HOME/.bun"
+
+
 fpath=($HOME/.zsh/functions
       /usr/local/share/zsh/functions
        $fpath)
@@ -48,6 +52,8 @@ path=($HOME/bin
       /usr/bin
       $GOPATH/bin
       /opt/homebrew/opt/openjdk/bin:$PATH
+      $VAPI_INSTALL/bin
+      $BUN_INSTALL/bin
       $path)
 
 manpath=(/usr/local/share/man
