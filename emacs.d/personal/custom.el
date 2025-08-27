@@ -12,26 +12,7 @@
  '(nrepl-message-colors
    '("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3"
      "#94BFF3" "#DC8CC3"))
- '(package-selected-packages
-   '(0blayout 0x0 0xc 2048-game 2bit 750words ace-window ag anzu
-              browse-kill-ring cider clojure-mode coffee-mode
-              company-anaconda company-go consult crux ctags-update
-              diff-hl diminish discover-my-major easy-kill
-              elisp-slime-nav emamux exec-path-from-shell
-              expand-region flx-ido flycheck flycheck-ocaml fzf geiser
-              gist git-modes git-timemachine go-autocomplete
-              go-projectile gotest guru-mode haskell-mode helm helm-ag
-              helm-descbinds helm-projectile hl-todo
-              ido-completing-read+ imenu-anywhere inf-ruby js2-mode
-              json-mode json-reformat lsp-ui magit merlin minitest
-              moe-theme move-text multi-term multi-web-mode nlinum
-              operate-on-number orderless pkg-info pony-mode powerline
-              pyenv-mode rainbow-delimiters rainbow-mode rbenv
-              rspec-mode scala-mode scss-mode slime smart-mode-line
-              smartparens smartrep smex super-save textmate tuareg
-              undo-tree utop vertico virtualenv volatile-highlights
-              web-mode websocket yaml-mode yari zenburn-theme
-              zop-to-char))
+ '(package-selected-packages nil)
  '(paradox-github-token t t)
  '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
  '(vc-annotate-background "#2B2B2B")

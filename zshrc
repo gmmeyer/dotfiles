@@ -55,3 +55,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 [[ -s "/Users/gregmeyer/.gvm/scripts/gvm" ]] && unalias cd && source "/Users/gregmeyer/.gvm/scripts/gvm"
 
 [[ -s "/opt/homebrew/bin/fnm" ]] && eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines --shell zsh)"
+
+# vapi
+export MANPATH=""$HOME/.vapi"/share/man:$MANPATH"
+
+# bun completions
+[ -s "/Users/gregmeyer/.bun/_bun" ] && source "/Users/gregmeyer/.bun/_bun"

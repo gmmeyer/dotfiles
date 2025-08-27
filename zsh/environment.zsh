@@ -46,3 +46,5 @@ export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV='true'
 # export NVM_DIR=$HOME"/.nvm"
 
 fpath=($HOME/.zsh/completion $fpath)
+
+export GPG_TTY=$(tty)

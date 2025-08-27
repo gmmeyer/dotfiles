@@ -5,8 +5,7 @@
 	grep = auto
 [user]
 	name = Greg Meyer
-	email = gregory.matthew.meyer@gmail.com
-	# signingkey = 51C0CD23
+	email = greg@zingage.com
 [credential]
 	helper = cache --timeout=3600
 [core]
@@ -32,15 +31,15 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-[include]
-    path = ~/.host_gitconfig
-    path = ~/.secret_gitconfig
+# [include]
+#     path = ~/.host_gitconfig
+#     path = ~/.secret_gitconfig
 # [commit]
 # 	gpgsign = true
 # [tag]
 # 	forceSignAnnotated = true
 [gpg]
-	program = gpg
+	program = /opt/homebrew/bin/gpg
 [pull]
 	rebase = false
 [init]
