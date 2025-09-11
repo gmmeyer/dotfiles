@@ -4,9 +4,6 @@
 [submodule "vim/bundle/vundle"]
 	path = vim/bundle/vundle
 	url = git@github.com:VundleVim/Vundle.vim.git
-[submodule "tag-awesome/config/awesome"]
-	path = tag-awesome/config/awesome
-	url = git@github.com:gmmeyer/awesome-dangerzone.git
 [submodule "zprezto-contrib/zsh-z"]
 	path = zprezto-contrib/zsh-z
 	url = git@github.com:agkozak/zsh-z.git
