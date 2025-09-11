@@ -61,3 +61,4 @@ export MANPATH=""$HOME/.vapi"/share/man:$MANPATH"
 
 # bun completions
 [ -s "/Users/gregmeyer/.bun/_bun" ] && source "/Users/gregmeyer/.bun/_bun"
+
