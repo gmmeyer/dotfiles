@@ -13,20 +13,22 @@
    '("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3"
      "#94BFF3" "#DC8CC3"))
  '(package-selected-packages
-   '(0blayout ace-window ag anzu browse-kill-ring clojure-mode
+   '(0blayout 0x0 ace-window ag anzu browse-kill-ring clojure-mode
               company-anaconda company-go consult crux ctags-update
               diff-hl diminish discover-my-major easy-kill
               elisp-slime-nav emamux exec-path-from-shell
-              expand-region flycheck fzf gist git-modes
+              expand-region flx-ido flycheck fzf gist git-modes
               git-timemachine go-autocomplete go-projectile gotest
-              guru-mode hl-todo imenu-anywhere js2-mode json-mode
+              guru-mode helm helm-projectile hl-todo
+              ido-completing-read+ imenu-anywhere js2-mode json-mode
               json-reformat lsp-ui magit minitest moe-theme move-text
               multi-term multi-web-mode nlinum operate-on-number
               orderless pkg-info pony-mode powerline pyenv-mode
               rainbow-delimiters rainbow-mode rbenv rspec-mode
-              smart-mode-line smartparens smartrep super-save textmate
-              tuareg undo-tree vertico virtualenv volatile-highlights
-              web-mode websocket yaml-mode zenburn-theme zop-to-char))
+              smart-mode-line smartparens smartrep smex super-save
+              textmate tuareg undo-tree vertico virtualenv
+              volatile-highlights web-mode websocket yaml-mode
+              zenburn-theme zop-to-char))
  '(paradox-github-token t t)
  '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
  '(vc-annotate-background "#2B2B2B")
