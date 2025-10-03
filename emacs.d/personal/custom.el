@@ -13,7 +13,7 @@
    '("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3"
      "#94BFF3" "#DC8CC3"))
  '(package-selected-packages
-   '(0blayout 0x0 ace-window ag anzu browse-kill-ring clojure-mode
+   '(0blayout 0x0 0xc ace-window ag anzu browse-kill-ring clojure-mode
               company-anaconda company-go consult crux ctags-update
               diff-hl diminish discover-my-major easy-kill
               elisp-slime-nav emamux exec-path-from-shell

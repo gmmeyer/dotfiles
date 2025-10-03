@@ -28,6 +28,8 @@ alias stt='subl .'
 alias at='atom'
 alias att='atom .'
 
+alias pnt='pnpm turbo run'
+
 alias js='node'
 
 # rails aliases
