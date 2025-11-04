@@ -29,6 +29,7 @@ fpath=($HOME/.zsh/functions
 
 path=($HOME/bin
       $HOME/.bin
+      $HOME/.local/bin
       $HOME/.pyenv/shims
       $HOME/.rbenv/shims
       $HOME/.rbenv/bin
