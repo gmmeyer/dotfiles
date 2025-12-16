@@ -22,11 +22,12 @@ zstyle ':prezto:load' pmodule \
        'syntax-highlighting' \
        'prompt' \
        'fasd' \
+       'git-fixes' \
        'zsh-z'
 
 zstyle ':prezto:module:ssh:load' identities 'github' 'id_github'
 
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'greg'
 
 zstyle ':prezto:module:history-substring-search' color 'yes'
 
