@@ -1,3 +1,7 @@
+
+# Only load this file for non-interactive shells; interactive shells use zshrc.
+[[ -o interactive ]] && return
+
 # Path to your oh-my-zsh installation.
 # export ZSH=$HOME/.oh-my-zsh
 

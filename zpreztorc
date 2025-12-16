@@ -26,7 +26,7 @@ zstyle ':prezto:load' pmodule \
 
 zstyle ':prezto:module:ssh:load' identities 'github' 'id_github'
 
-zstyle ':prezto:module:prompt' theme 'greg'
+zstyle ':prezto:module:prompt' theme 'sorin'
 
 zstyle ':prezto:module:history-substring-search' color 'yes'
 
