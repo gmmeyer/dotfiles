@@ -131,3 +131,6 @@ export NVM_DIR="/home/greg/.nvm"
 source /Users/greg/.docker/init-bash.sh || true # Added by Docker Desktop
 export PATH=$PATH:/usr/local/bin
 . "$HOME/.cargo/env"
+
+# Added by Claude's Party
+export PATH="$HOME/.claude/bin:$PATH"
