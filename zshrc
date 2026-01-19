@@ -9,9 +9,36 @@ fi
 
 source $HOME/.zsh/functions.zsh
 
-eval "$(rbenv init -)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# Lazy-load rbenv - only initializes when ruby/rbenv/gem/bundle is first used
+if command -v rbenv >/dev/null 2>&1; then
+  export PATH="$HOME/.rbenv/shims:$PATH"
+
+  _rbenv_init() {
+    unfunction ruby gem bundle rbenv 2>/dev/null
+    eval "$(command rbenv init -)"
+  }
+  ruby()   { _rbenv_init; command ruby "$@" }
+  gem()    { _rbenv_init; command gem "$@" }
+  bundle() { _rbenv_init; command bundle "$@" }
+  rbenv()  { _rbenv_init; command rbenv "$@" }
+fi
+
+# Lazy-load pyenv - only initializes when python/pyenv/pip is first used
+if command -v pyenv >/dev/null 2>&1; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/shims:$PATH"
+
+  _pyenv_init() {
+    unfunction python python3 pip pip3 pyenv 2>/dev/null
+    eval "$(command pyenv init -)"
+    eval "$(command pyenv virtualenv-init -)"
+  }
+  python()  { _pyenv_init; command python "$@" }
+  python3() { _pyenv_init; command python3 "$@" }
+  pip()     { _pyenv_init; command pip "$@" }
+  pip3()    { _pyenv_init; command pip3 "$@" }
+  pyenv()   { _pyenv_init; command pyenv "$@" }
+fi
 
 # source $ZSH/oh-my-zsh.sh
 
@@ -66,3 +93,6 @@ export MANPATH=""$HOME/.vapi"/share/man:$MANPATH"
 
 # Added by Antigravity
 export PATH="/Users/gregmeyer/.antigravity/antigravity/bin:$PATH"
+
+# Added by Claude's Party
+export PATH="$HOME/.claude/bin:$PATH"

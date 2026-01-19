@@ -28,7 +28,7 @@ alias stt='subl .'
 alias at='atom'
 alias att='atom .'
 
-alias pnt='pnpm turbo run'
+alias pnt='pnpm turbo --no-daemon run'
 
 alias js='node'
 
