@@ -46,3 +46,14 @@
 	rebase = false
 [init]
 	defaultBranch = main
+[rebase]
+	autostash = true
+	autosquash = true
+[fetch]
+	prune = true
+	pruneTags = true
+[diff]
+	algorithm = histogram
+	colorMoved = default
+[merge]
+	conflictstyle = diff3

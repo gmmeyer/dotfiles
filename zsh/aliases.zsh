@@ -4,14 +4,6 @@
 
 alias e='emacsclient -t'
 alias emacs='emacsclient -t'
-# alias e='TERM=rxvt-256color emacsclient -t'
-# alias emacs='TERM=rxvt-256color emacsclient -t'
-
-
-# # editor aliases.
-# if [[ "$TERM" == 'rxvt' || "$TERM" == 'rxvt-256color' ]]; then
-# else
-# fi
 
 # emacs standalone
 if [[ `uname` == 'Darwin' ]]; then
@@ -21,12 +13,11 @@ fi
 
 alias mux='tmuxinator'
 
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 
 alias st='subl'
 alias stt='subl .'
-alias at='atom'
-alias att='atom .'
 
 alias pnt='pnpm turbo run --no-daemon'
 
