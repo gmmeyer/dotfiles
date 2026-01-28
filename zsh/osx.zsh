@@ -35,4 +35,8 @@ export BROWSER='open'
 
 export TERM='xterm-256color'
 
+# Enable colors for ls and other commands
+export CLICOLOR=1
+export LSCOLORS='exfxcxdxbxGxDxabagacad'
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
