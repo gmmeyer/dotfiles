@@ -102,7 +102,7 @@ style = "bold green"
 detect_files = ["package.json", ".node-version", ".nvmrc"]
 
 [python]
-format = "[$symbol($version )(\($virtualenv\) )]($style)"
+format = '[$symbol($version )(\($virtualenv\) )]($style)'
 symbol = "py "
 style = "bold yellow"
 

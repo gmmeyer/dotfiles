@@ -104,3 +104,12 @@ if ("/opt/homebrew/bin/fnm" | path exists) {
 
 mkdir ~/.cache/starship
 ^starship init nu | save -f ~/.cache/starship/init.nu
+
+# =============================================================================
+# Zoxide (directory jumping - replacement for zsh-z)
+# =============================================================================
+
+if ("/opt/homebrew/bin/zoxide" | path exists) or (which zoxide | is-not-empty) {
+    mkdir ~/.cache/zoxide
+    ^zoxide init nushell | save -f ~/.cache/zoxide/init.nu
+}

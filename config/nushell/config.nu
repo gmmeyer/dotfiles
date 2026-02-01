@@ -208,8 +208,8 @@ use ~/.cache/starship/init.nu
 # Zoxide (replacement for zsh-z)
 # =============================================================================
 
-# To use zoxide, install it and generate the init file:
-#   brew install zoxide
-#   zoxide init nushell | save -f ~/.cache/zoxide/init.nu
-# Then uncomment:
-# source ~/.cache/zoxide/init.nu
+# Load zoxide if the init file exists
+const zoxide_init = $"($nu.home-path)/.cache/zoxide/init.nu"
+if ($zoxide_init | path exists) {
+    source ~/.cache/zoxide/init.nu
+}
