@@ -1,0 +1,127 @@
+# Starship Prompt Configuration
+# https://starship.rs/config/
+
+# Timeout for commands (in milliseconds)
+command_timeout = 1000
+
+# Newline at the start of the prompt
+add_newline = true
+
+# Format of the prompt
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$cmd_duration\
+$line_break\
+$jobs\
+$character"""
+
+# Right prompt
+right_format = """
+$aws\
+$kubernetes\
+$ruby\
+$nodejs\
+$python\
+$rust\
+$golang\
+"""
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
+vimcmd_symbol = "[<](bold green)"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold cyan"
+
+[git_branch]
+symbol = ""
+style = "bold purple"
+format = "[$symbol$branch(:$remote_branch)]($style) "
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bold red"
+conflicted = "="
+ahead = ">"
+behind = "<"
+diverged = "<>"
+up_to_date = ""
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
+renamed = "r"
+deleted = "x"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bold yellow"
+
+[git_metrics]
+disabled = true
+
+[cmd_duration]
+min_time = 2000
+format = "took [$duration]($style) "
+style = "bold yellow"
+
+[jobs]
+symbol = "+"
+threshold = 1
+
+[aws]
+format = '[$symbol($profile )(\($region\) )]($style)'
+symbol = "aws "
+style = "bold yellow"
+
+[kubernetes]
+disabled = false
+format = '[$symbol$context( \($namespace\))]($style) '
+symbol = "k8s "
+style = "bold blue"
+
+[ruby]
+format = "[$symbol($version )]($style)"
+symbol = "rb "
+style = "bold red"
+detect_files = ["Gemfile", ".ruby-version", ".ruby-gemset"]
+
+[nodejs]
+format = "[$symbol($version )]($style)"
+symbol = "node "
+style = "bold green"
+detect_files = ["package.json", ".node-version", ".nvmrc"]
+
+[python]
+format = "[$symbol($version )(\($virtualenv\) )]($style)"
+symbol = "py "
+style = "bold yellow"
+
+[rust]
+format = "[$symbol($version )]($style)"
+symbol = "rs "
+style = "bold orange"
+
+[golang]
+format = "[$symbol($version )]($style)"
+symbol = "go "
+style = "bold cyan"
+
+[username]
+show_always = false
+format = "[$user]($style)@"
+style_user = "bold green"
+
+[hostname]
+ssh_only = true
+format = "[$hostname]($style):"
+style = "bold green"
