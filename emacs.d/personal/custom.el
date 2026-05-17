@@ -3,9 +3,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector
-   ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3"
-    "#DCDCCC"])
  '(company-quickhelp-color-background "#4F4F4F")
  '(company-quickhelp-color-foreground "#DCDCCC")
  '(fci-rule-color "#383838")
@@ -13,17 +10,17 @@
    '("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3"
      "#94BFF3" "#DC8CC3"))
  '(package-selected-packages
-   '(0blayout 0x0 0xc ace-window ag anzu browse-kill-ring clojure-mode
-              company-anaconda company-go consult crux ctags-update
-              diff-hl diminish discover-my-major easy-kill
-              elisp-slime-nav emamux exec-path-from-shell
+   '(0blayout 0x0 0xc 2048-game 2bit ace-window ag anzu browse-kill-ring
+              clojure-mode company-anaconda company-go consult crux
+              csv-mode ctags-update diff-hl diminish discover-my-major
+              easy-kill elisp-slime-nav emamux exec-path-from-shell
               expand-region flx-ido flycheck fzf gist git-modes
               git-timemachine go-autocomplete go-projectile gotest
-              guru-mode helm helm-projectile hl-todo
-              ido-completing-read+ imenu-anywhere js2-mode json-mode
-              json-reformat lsp-ui magit minitest moe-theme move-text
-              multi-term multi-web-mode nlinum operate-on-number
-              orderless pkg-info pony-mode powerline pyenv-mode
+              guru-mode helm-projectile hl-todo ido-completing-read+
+              imenu-anywhere js2-mode json-mode json-reformat lsp-ui
+              magit marginalia minitest moe-theme move-text multi-term
+              multi-web-mode nlinum operate-on-number orderless
+              pkg-info pony-mode powerline pyenv-mode
               rainbow-delimiters rainbow-mode rbenv rspec-mode
               smart-mode-line smartparens smartrep smex super-save
               textmate tuareg undo-tree vertico virtualenv

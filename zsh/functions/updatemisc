@@ -46,10 +46,10 @@ if type rbenv | grep -i function > /dev/null; then
     popd
 fi
 
-if type pyenv | grep -i function > /dev/null; then
-    echo "\033[1;31mUpdate pyenv\e[0m"
-    pyenv update
-fi
+# if type pyenv | grep -i function > /dev/null; then
+#     echo "\033[1;31mUpdate pyenv\e[0m"
+#     pyenv update
+# fi
 
 if type gvm | grep -i function > /dev/null; then
     echo "\033[1;31mUpdate gvm\e[0m"
