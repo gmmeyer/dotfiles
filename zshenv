@@ -14,8 +14,9 @@ fi
 source $HOME/.zsh/functions.zsh
 
 eval "$(rbenv init -)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# pyenv disabled
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # source $ZSH/oh-my-zsh.sh
 

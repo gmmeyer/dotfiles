@@ -23,22 +23,23 @@ if command -v rbenv >/dev/null 2>&1; then
   rbenv()  { _rbenv_init; command rbenv "$@" }
 fi
 
-# Lazy-load pyenv - only initializes when python/pyenv/pip is first used
-if command -v pyenv >/dev/null 2>&1; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/shims:$PATH"
-
-  _pyenv_init() {
-    unfunction python python3 pip pip3 pyenv 2>/dev/null
-    eval "$(command pyenv init -)"
-    eval "$(command pyenv virtualenv-init -)"
-  }
-  python()  { _pyenv_init; command python "$@" }
-  python3() { _pyenv_init; command python3 "$@" }
-  pip()     { _pyenv_init; command pip "$@" }
-  pip3()    { _pyenv_init; command pip3 "$@" }
-  pyenv()   { _pyenv_init; command pyenv "$@" }
-fi
+# pyenv disabled
+# # Lazy-load pyenv - only initializes when python/pyenv/pip is first used
+# if command -v pyenv >/dev/null 2>&1; then
+#   export PYENV_ROOT="$HOME/.pyenv"
+#   export PATH="$PYENV_ROOT/shims:$PATH"
+#
+#   _pyenv_init() {
+#     unfunction python python3 pip pip3 pyenv 2>/dev/null
+#     eval "$(command pyenv init -)"
+#     eval "$(command pyenv virtualenv-init -)"
+#   }
+#   python()  { _pyenv_init; command python "$@" }
+#   python3() { _pyenv_init; command python3 "$@" }
+#   pip()     { _pyenv_init; command pip "$@" }
+#   pip3()    { _pyenv_init; command pip3 "$@" }
+#   pyenv()   { _pyenv_init; command pyenv "$@" }
+# fi
 
 # source $ZSH/oh-my-zsh.sh
 
@@ -96,3 +97,8 @@ export PATH="/Users/gregmeyer/.antigravity/antigravity/bin:$PATH"
 
 # Added by Claude's Party
 export PATH="$HOME/.claude/bin:$PATH"
+
+alias claude-mem='bun "/Users/gregmeyer/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
+
+# Claude Octopus project tier
+export OCTO_TIER=production

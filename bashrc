@@ -134,3 +134,5 @@ export PATH=$PATH:/usr/local/bin
 
 # Added by Claude's Party
 export PATH="$HOME/.claude/bin:$PATH"
+
+alias claude-mem='bun "/Users/gregmeyer/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
