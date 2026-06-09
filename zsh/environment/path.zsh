@@ -7,97 +7,34 @@ typeset -gxU manpath MANPATH
 typeset -gxU fpath FPATH
 typeset -gxU cdpath CDPATH
 typeset -gxU infopath INFOPATH
-typeset -gxU mailpath MAILPATH
-typeset -gxU pkg_config_path PKG_CONFIG_PATH
-typeset -gxU pkg_config_libdir PKG_CONFIG_LIBDIR
 
-# tie the new arrays to the variables
 typeset -gxTU INFOPATH infopath
-
-typeset -gxU PKG_CONFIG_PATH pkg_config_path
-typeset -gxU PKG_CONFIG_LIBDIR pkg_config_libdir
 
 export GOPATH=$HOME/go
 
 export VAPI_INSTALL="$HOME/.vapi"
 export BUN_INSTALL="$HOME/.bun"
 
-
 fpath=($HOME/.zsh/functions
-      /usr/local/share/zsh/functions
+       $HOME/.zsh/completion
        $fpath)
 
 path=($HOME/bin
       $HOME/.bin
       $HOME/.local/bin
-      $HOME/.pyenv/shims
       $HOME/.rbenv/shims
-      $HOME/.rbenv/bin
-      $HOME/.pyenv/bin
-      $HOME/.nodenv/bin
-      /usr/local/opt/pyenv/shims
-      /usr/local/opt/rbenv/shims
-      /usr/local/opt/rbenv/bin
-      /usr/local/heroku/bin
-      /usr/local/opt/pyenv/bin
-      /usr/local/m-cli
-      $HOME/.cabal/bin
-      $HOME/.opam/system/bin
-      $HOME/.cargo/bin
+      $HOME/.claude/bin
+      $HOME/.antigravity/antigravity/bin
+      $HOME/.yarn/bin
+      $HOME/.config/yarn/global/node_modules/.bin
+      $BUN_INSTALL/bin
+      $VAPI_INSTALL/bin
+      $GOPATH/bin
+      /opt/homebrew/opt/openjdk/bin
+      /opt/homebrew/opt/coreutils/libexec/gnubin
       /usr/local/bin
       /usr/local/sbin
-      $HOME/.linuxbrew/bin
-      $HOME/.linuxbrew/sbin
-      /usr/local/opt/coreutils/libexec/gnubin
-      /bin
-      /usr/bin
-      $GOPATH/bin
-      /opt/homebrew/opt/openjdk/bin:$PATH
-      $VAPI_INSTALL/bin
-      $BUN_INSTALL/bin
       $path)
 
-manpath=(/usr/local/share/man
-         $HOME/.linuxbrew/share/man
+manpath=($VAPI_INSTALL/share/man
          $manpath)
-
-infopath=(/usr/local/share/info
-          $HOME/.linuxbrew/share/info
-          $infopath)
-
-pkg_config_path=($HOME/.linuxbrew/lib/pkgconfig
-                 $HOME/.linuxbrew/lib
-                 /usr/local/lib/pkgconfig
-                 /usr/local/lib
-                 /usr/lib/x86_64-linux-gnu/pkgconfig
-                 /usr/lib/x86_64-linux-gnu
-                 /usr/share
-                 /usr/share/pkgconfig
-                 /usr/lib/pkgconfig
-                 /usr/lib
-                 /usr/local/include
-                 /opt/X11/lib/pkgconfig
-                 $pkg_config_path)
-
-export PKG_CONFIG_PATH=$HOME/.linuxbrew/lib/pkgconfig:$HOME/.linuxbrew/lib:/usr/local/lib/pkgconfig:/usr/local/lib:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/x86_64-linux-gnu:/usr/share:/usr/share/pkgconfig:/usr/lib/pkgconfig:/usr/lib:/opt/X11/lib/pkgconfig:/usr/X11/lib/pkgconfig:/usr/local/opt/zlib/lib/pkgconfig:$PKG_CONFIG_PATH
-
-# export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-# export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-# export PKG_CONFIG_PATH='~/.linuxbrew/lib/pkgconfig/:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/share/pkgconfig'
-export PKG_CONFIG_LIBDIR='~/.linuxbrew/lib/pkgconfig/:/usr/lib/pkgconfig'
-
-classpath=(~/java/javassist/
-           ~/java/swt/
-           ~/java/TIJ4-code/
-           ~/java/practice/
-          )
-
-CLASSPATH=$classpath
-
-PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
-
-export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
