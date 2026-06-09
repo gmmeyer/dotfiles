@@ -114,3 +114,4 @@ tramp
 
 #sftp configuration file
 sftp-config.json
+**/.claude/settings.local.json
