@@ -5,11 +5,10 @@
 	grep = auto
 [user]
 	name = Greg Meyer
-	email = greg@zingage.com
+	# email lives in ~/.gitconfig-local (private-dotfiles);
+	# work dirs get ~/.gitconfig-work via includeIf below
 [rerere]
 	enabled = true
-[credential]
-	helper = cache --timeout=3600
 [core]
 	editor = emacsclient -t
 	autocrlf = false
@@ -24,25 +23,37 @@
 	type = cat-file -t
 	dump = cat-file -p
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-  cleanup = !git fetch --prune && git fetch --prune origin '+refs/tags/*:refs/tags/*' && git fetch --prune --tags && git remote prune origin && git prune
-  cleanup-all = !git cleanup && git gc --prune=now
+	cleanup = !git fetch --prune && git fetch --prune origin '+refs/tags/*:refs/tags/*' && git fetch --prune --tags && git remote prune origin && git prune
+	cleanup-all = !git cleanup && git gc --prune=now
 [push]
 	default = current
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[pull]
+	rebase = false
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	algorithm = histogram
+	colorMoved = default
+[branch]
+	sort = -committerdate
+[commit]
+	verbose = true
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-# [include]
-#     path = ~/.host_gitconfig
-#     path = ~/.secret_gitconfig
-# [commit]
-# 	gpgsign = true
-# [tag]
-# 	forceSignAnnotated = true
 [gpg]
 	program = /opt/homebrew/bin/gpg
-[pull]
-	rebase = false
 [init]
 	defaultBranch = main
+[include]
+	path = ~/.host_gitconfig
+	path = ~/.gitconfig-local
+[includeIf "gitdir:~/zingage/"]
+	path = ~/.gitconfig-work
+[includeIf "gitdir:~/work/"]
+	path = ~/.gitconfig-work
