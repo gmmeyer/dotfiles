@@ -1,45 +1,9 @@
-#TODO
-====
+# TODO
 
-What I wanna do to make everything better! A ~~cross out~~ means that it's done.
-
-## Setup Script
-
-- testing
-- do setup and installation of node, ruby, etc with RVM, NVM, etc in the setup script. (This will require sourcing RVM, etc, from within the setup script.)
-- ~~alphebetize the installed packages to make them easier to manage~~
-- setup nginx automatically
-
-## Dotfiles
-
-- clean up and organize zshrc
-- look into using antigen instead of ohmyzsh
-
-## EMACS
-
-- better syntax highlighting
-- don't rely on ubuntu's package manager for emacs packages
-- scroll wheel
-
-## Vim
-
-- alias vim='rm -f' and vi='rm -rf'
-- look into oh my vim and vundle
-
-## GUI Editor Stuff
-
-- How dumb is it to keep them like this?
-  - Explore better ways to do it
-
-## Sublime Text
-
-- Clear out all plugins that weren't installed with Package manager.
-
-## Atom
-
-## Awesome
-
-- Backgrounds
-- Widgits.
-  - Replace as many autostart (gtk, etc) widgets as I can with awesome widgets.
-  - Make a few for cpu load, etc.
+- [ ] Prune Brewfile: drop datadog-era taps (datadog/lapdog, datadog-labs/pack,
+      cloudfoundry/tap, chef/chef) and any formulas no longer used
+- [ ] Decide whether vim config (spf13-era, 49K vimrc) is still worth keeping
+      now that emacs is primary
+- [ ] Consider zim or plain zsh instead of prezto if startup needs to get faster
+- [ ] Rotate the vapi CLI api key out of ~/.vapi-cli.yaml into a keychain-backed
+      secret store
