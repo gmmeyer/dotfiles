@@ -1,6 +1,4 @@
-# Path to your oh-my-zsh installation.
-# export ZSH=$HOME/.oh-my-zsh
-
+# Environment variables and PATH (sources zsh/environment/*.zsh)
 source $HOME/.zsh/environment.zsh
 
 if [[ `uname` == 'Darwin' ]]; then
@@ -11,8 +9,6 @@ source $HOME/.zsh/functions.zsh
 
 # Lazy-load rbenv - only initializes when ruby/rbenv/gem/bundle is first used
 if command -v rbenv >/dev/null 2>&1; then
-  export PATH="$HOME/.rbenv/shims:$PATH"
-
   _rbenv_init() {
     unfunction ruby gem bundle rbenv 2>/dev/null
     eval "$(command rbenv init -)"
@@ -22,31 +18,6 @@ if command -v rbenv >/dev/null 2>&1; then
   bundle() { _rbenv_init; command bundle "$@" }
   rbenv()  { _rbenv_init; command rbenv "$@" }
 fi
-
-# pyenv disabled
-# # Lazy-load pyenv - only initializes when python/pyenv/pip is first used
-# if command -v pyenv >/dev/null 2>&1; then
-#   export PYENV_ROOT="$HOME/.pyenv"
-#   export PATH="$PYENV_ROOT/shims:$PATH"
-#
-#   _pyenv_init() {
-#     unfunction python python3 pip pip3 pyenv 2>/dev/null
-#     eval "$(command pyenv init -)"
-#     eval "$(command pyenv virtualenv-init -)"
-#   }
-#   python()  { _pyenv_init; command python "$@" }
-#   python3() { _pyenv_init; command python3 "$@" }
-#   pip()     { _pyenv_init; command pip "$@" }
-#   pip3()    { _pyenv_init; command pip3 "$@" }
-#   pyenv()   { _pyenv_init; command pyenv "$@" }
-# fi
-
-# source $ZSH/oh-my-zsh.sh
-
-# autoloads keychain for ssh
-# if command -v keychain >/dev/null 2>&1; then
-#     eval `keychain --eval --agents ssh -Q --quiet id_rsa`
-# fi
 
 # gitignore!
 function gi() { curl -s https://www.toptal.com/developers/gitignore/api/$@ ;}
@@ -62,43 +33,12 @@ source $HOME/.zsh/load_scripts.zsh
 
 source $HOME/.zsh/aliases.zsh
 
-# export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
-# store key in the login keychain instead of aws-vault managing a hidden keychain
-export AWS_VAULT_KEYCHAIN_NAME=login
+# fnm (node version manager)
+[[ -s "/opt/homebrew/bin/fnm" ]] && eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines --shell zsh)"
 
-# tweak session times so you dont have to re-enter passwords every 5min
-export AWS_SESSION_TTL=24h
-export AWS_ASSUME_ROLE_TTL=1h
-
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 [ -f $HOME/.docker/init-zsh.sh ] && source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-
-[[ -s "/Users/gregmeyer/.gvm/scripts/gvm" ]] && unalias cd && source "/Users/gregmeyer/.gvm/scripts/gvm"
-
-[[ -s "/opt/homebrew/bin/fnm" ]] && eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines --shell zsh)"
-
-# vapi
-export MANPATH=""$HOME/.vapi"/share/man:$MANPATH"
-
-# bun completions
-[ -s "/Users/gregmeyer/.bun/_bun" ] && source "/Users/gregmeyer/.bun/_bun"
-
-
-# Added by Antigravity
-export PATH="/Users/gregmeyer/.antigravity/antigravity/bin:$PATH"
-
-# Added by Claude's Party
-export PATH="$HOME/.claude/bin:$PATH"
-
-alias claude-mem='bun "/Users/gregmeyer/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
-
-# Claude Octopus project tier
-export OCTO_TIER=production

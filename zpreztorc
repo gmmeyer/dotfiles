@@ -21,11 +21,10 @@ zstyle ':prezto:load' pmodule \
        'node' \
        'syntax-highlighting' \
        'prompt' \
-       'fasd' \
        'git-fixes' \
        'zsh-z'
 
-zstyle ':prezto:module:ssh:load' identities 'github' 'id_github'
+zstyle ':prezto:module:ssh:load' identities 'id_ed25519'
 
 zstyle ':prezto:module:prompt' theme 'greg'
 
