@@ -1,0 +1,12 @@
+#!/bin/sh
+# rcm post-up hook.
+
+# nushell on macOS reads config from ~/Library/Application Support/nushell,
+# which rcm cannot link into. Point it at the rcm-managed ~/.config/nushell.
+if [ "$(uname)" = "Darwin" ]; then
+  ns_dir="$HOME/Library/Application Support/nushell"
+  if [ ! -L "$ns_dir" ]; then
+    rm -rf "$ns_dir"
+    ln -s "$HOME/.config/nushell" "$ns_dir"
+  fi
+fi
