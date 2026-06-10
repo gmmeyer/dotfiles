@@ -19,7 +19,7 @@ This repo uses `rcm` for symlink management:
 
 Platform-specific configs live in `tag-osx/` and `tag-linux/` directories. The `rcrc` file defines which tags to use and what to exclude. Note: `EXCLUDES` filters `*.md` globally, so markdown files that must be linked (e.g. `private-dotfiles/claude/CLAUDE.md`) are handled by `private-dotfiles/hooks/post-up`.
 
-`config/` maps to `~/.config/` (zed, btop, gh).
+`config/` maps to `~/.config/` (zed, btop, gh, nvim, nushell). nushell on macOS reads `~/Library/Application Support/nushell`, which `hooks/post-up` symlinks to `~/.config/nushell`.
 
 ## Shell Architecture
 
@@ -54,7 +54,8 @@ Platform-specific configs live in `tag-osx/` and `tag-linux/` directories. The `
 
 **Editors**:
 - Primary: Emacs (via emacsclient, Prelude-based config in `emacs.d/`)
-- Secondary: Vim (spf13-based config, Vundle for plugins)
+- Neovim: modern lua config in `config/nvim/` (lazy.nvim, telescope, treesitter, native LSP — servers enable only if their binary is on PATH)
+- Legacy Vim: spf13-based config, Vundle for plugins
 
 ## Key Aliases
 
