@@ -17,14 +17,12 @@ export BUN_INSTALL="$HOME/.bun"
 
 fpath=($HOME/.zsh/functions
        $HOME/.zsh/completion
-       $HOME/.grok/completions/zsh
        $fpath)
 
 path=($HOME/bin
       $HOME/.bin
       $HOME/.local/bin
       $HOME/.rbenv/shims
-      $HOME/.grok/bin
       $HOME/.claude/bin
       $HOME/.antigravity/antigravity/bin
       $HOME/.yarn/bin
