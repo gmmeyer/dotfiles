@@ -1,12 +1,23 @@
 #!/bin/sh
 # rcm post-up hook.
+# Bridges apps that read config from ~/Library/Application Support (which rcm
+# cannot link into) to the rcm-managed copies under ~/.config.
 
-# nushell on macOS reads config from ~/Library/Application Support/nushell,
-# which rcm cannot link into. Point it at the rcm-managed ~/.config/nushell.
 if [ "$(uname)" = "Darwin" ]; then
+  # nushell — whole-directory link
   ns_dir="$HOME/Library/Application Support/nushell"
   if [ ! -L "$ns_dir" ]; then
     rm -rf "$ns_dir"
     ln -s "$HOME/.config/nushell" "$ns_dir"
+  fi
+
+  # VS Code — per-file links (the User dir also holds machine state we don't track)
+  code_user="$HOME/Library/Application Support/Code/User"
+  if [ -d "$code_user" ]; then
+    for f in settings.json keybindings.json; do
+      if [ -e "$HOME/.config/Code/User/$f" ]; then
+        ln -sf "$HOME/.config/Code/User/$f" "$code_user/$f"
+      fi
+    done
   fi
 fi
