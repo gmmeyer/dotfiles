@@ -1,0 +1,20 @@
+# Ghostty configuration.
+# Ghostty has no GUI settings panel — it's edited here by hand.
+# Docs: https://ghostty.org/docs/config — reload in-app with Cmd+Shift+,
+# On macOS this is read from ~/.config/ghostty/config (linked by rcm).
+
+theme = "Builtin Pastel Dark"
+
+# Send a literal newline on Shift+Enter — handy for multi-line prompts
+# (Claude Code, REPLs, etc.) without submitting.
+keybind = shift+enter=text:\x1b\r
+
+# --- Quality of life — uncomment to taste ---
+# mouse-hide-while-typing = true
+# window-save-state = always
+# clipboard-trim-trailing-spaces = true
+
+# macos-option-as-alt makes the Option key send Meta, so emacs/readline
+# M- bindings work in the terminal. Trade-off: you lose Option+key for
+# typing special characters (e.g. # on some layouts). Uncomment if wanted.
+# macos-option-as-alt = true

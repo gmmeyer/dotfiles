@@ -1,0 +1,33 @@
+{
+    "python.formatting.provider": "black",
+    "isort.check": true,
+    "sqltools.highlightQuery": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "redhat.telemetry.enabled": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "playwright.reuseBrowser": true,
+    "playwright.showTrace": false,
+    "bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
+    "bitoAI.codeCompletion.enableAutoCompletion": false,
+    "bitoAI.codeCompletion.enableCommentToCode": true,
+    "editor.inlineSuggest.showToolbar": "onHover",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
