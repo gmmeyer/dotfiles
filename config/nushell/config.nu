@@ -40,3 +40,31 @@ alias be = bundle exec
 alias gl = git pull
 
 def pnt [...args] { pnpm turbo run --no-daemon ...$args }
+
+# --- Prompt: current dir + git branch and status ---
+# Returns "" outside a git repo; inside, shows the branch (or short SHA when
+# detached) and a dot that's green when clean, yellow when there are changes.
+def git_prompt [] {
+  let inside = (do -i { ^git rev-parse --is-inside-work-tree } | complete)
+  if $inside.exit_code != 0 { return "" }
+
+  let branch = (do -i { ^git symbolic-ref --short HEAD } | complete | get stdout | str trim)
+  let ref = (if ($branch | is-empty) {
+    (do -i { ^git rev-parse --short HEAD } | complete | get stdout | str trim)
+  } else { $branch })
+
+  let dirty = (do -i { ^git status --porcelain } | complete | get stdout | str trim | is-not-empty)
+  let dot = (if $dirty { $"(ansi yellow_bold)●(ansi reset)" } else { $"(ansi green)●(ansi reset)" })
+
+  $" (ansi blue)($ref)(ansi reset) ($dot)"
+}
+
+$env.PROMPT_COMMAND = {||
+  let dir = ($env.PWD | str replace $env.HOME "~")
+  $"(ansi green_bold)($dir)(ansi reset)(git_prompt)"
+}
+$env.PROMPT_COMMAND_RIGHT = {|| "" }
+$env.PROMPT_INDICATOR = {|| " › " }
+$env.PROMPT_INDICATOR_VI_INSERT = {|| " › " }
+$env.PROMPT_INDICATOR_VI_NORMAL = {|| " : " }
+$env.PROMPT_MULTILINE_INDICATOR = {|| "::: " }
