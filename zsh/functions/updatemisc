@@ -32,6 +32,35 @@ if [ -d $HOME/.zprezto ] && [ -d $HOME/.zprezto/.git ]; then
     git -C $HOME/.zprezto pull && git -C $HOME/.zprezto submodule update --init --recursive
 fi
 
+# Pull every git-backed plugin/marketplace repo under the AI tool dirs
+# (codex, claude, opencode, ...). Fast-forward only, skips detached
+# checkouts, repos without a remote, and temp/backup/vendored trees.
+echo "\033[1;31mUpdate AI tool plugin repos\e[0m"
+update_plugin_repos=(
+    "$HOME/.claude/plugins/marketplaces"
+    "$HOME/.codex"
+    "$HOME/.config/opencode"
+    "$HOME/.opencode"
+)
+for base in $update_plugin_repos; do
+    [ -d "$base" ] || continue
+    find "$base" -maxdepth 4 -type d -name .git 2>/dev/null | while read -r gitdir; do
+        repo="${gitdir%/.git}"
+        case "$repo" in
+            */.tmp/*|*/node_modules/*|*-backup-*/*) continue ;;
+        esac
+        branch=$(git -C "$repo" symbolic-ref --short -q HEAD) || {
+            echo "  skip (detached HEAD): $repo"; continue
+        }
+        git -C "$repo" remote get-url origin >/dev/null 2>&1 || {
+            echo "  skip (no remote): $repo"; continue
+        }
+        echo "  pulling ${repo/#$HOME/~} ($branch)"
+        git -C "$repo" pull --ff-only --recurse-submodules 2>&1 | sed 's/^/    /'
+    done
+done
+unset update_plugin_repos base
+
 if type rbenv | grep -i function > /dev/null; then
     echo "\033[1;31mUpdate rbenv\e[0m"
     pushd ~/.rbenv
