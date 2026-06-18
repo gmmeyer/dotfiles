@@ -42,3 +42,7 @@ source $HOME/.zsh/aliases.zsh
 [ -f $HOME/.docker/init-zsh.sh ] && source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/gregmeyer/.local/bin:$PATH"

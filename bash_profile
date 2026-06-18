@@ -78,3 +78,7 @@ export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
 
 source /Users/greg/.docker/init-bash.sh || true # Added by Docker Desktop
 . "$HOME/.cargo/env"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/gregmeyer/.local/bin:$PATH"

@@ -136,3 +136,7 @@ export PATH=$PATH:/usr/local/bin
 export PATH="$HOME/.claude/bin:$PATH"
 
 alias claude-mem='bun "/Users/gregmeyer/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/gregmeyer/.local/bin:$PATH"
