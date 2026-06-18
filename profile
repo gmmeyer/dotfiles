@@ -41,3 +41,7 @@ PATH=$PATH:/opt/sublime_text # Add sublime to path
 . "$HOME/.cargo/env"
 
 [[ -s "/Users/gregmeyer/.gvm/scripts/gvm" ]] && source "/Users/gregmeyer/.gvm/scripts/gvm"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/gregmeyer/.local/bin:$PATH"
