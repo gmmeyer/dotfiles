@@ -1,83 +1,92 @@
-tap "chef/chef"
-tap "cloudfoundry/tap"
-tap "datadog-labs/pack"
-tap "datadog/lapdog"
-tap "go-delve/delve"
+# Brewfile — curated package manifest for `setup.sh` / `brew bundle`.
+#
+# This list is hand-curated and intentionally omits transitive dependencies
+# (the libs Homebrew pulls in automatically for the formulae below). Do NOT
+# regenerate it blindly with `brew bundle dump --force` — that re-adds every
+# dependency plus any one-off experiment. To pick up new top-level installs,
+# dump to a scratch file and copy over only the new leaves:
+#   brew leaves --installed-on-request
+
+# --- Taps ---------------------------------------------------------------
 tap "infisical/get-cli"
-tap "steipete/tap"
-tap "thoughtbot/formulae"
 tap "withgraphite/tap"
-brew "aom"
-brew "aribb24"
-brew "asciinema"
-brew "aspell"
-brew "autoconf"
-brew "awscli"
-brew "boost"
-brew "btop"
-brew "c-ares"
-brew "cairo"
-brew "cjson"
+
+# --- Shell & dotfiles ---------------------------------------------------
+brew "zsh"
+brew "nushell"
+brew "rcm"
 brew "coreutils"
-brew "dav1d"
-brew "double-conversion"
-brew "edencommon"
-brew "eksctl"
-brew "emacs"
-brew "ffmpeg"
-brew "fish"
-brew "fnm"
-brew "libnghttp3"
-brew "libngtcp2"
-brew "libuv"
-brew "node"
-brew "gemini-cli"
-brew "gh"
-brew "git"
-brew "git-lfs"
-brew "glances"
 brew "gnu-sed"
-brew "gnupg"
+brew "direnv"
+brew "fzf"
+brew "z"
+brew "tmux"
+
+# --- Editors ------------------------------------------------------------
+brew "emacs"
+brew "neovim"
+brew "vim"
+
+# --- Languages & version managers --------------------------------------
+brew "rbenv"
+brew "ruby", link: false
+brew "fnm"
+brew "node"
 brew "go"
-brew "ncurses"
-brew "htop"
-brew "imagemagick"
-brew "ipython"
-brew "krb5"
-brew "kubernetes-cli"
-brew "libpq"
-brew "libyaml"
 brew "lua"
+brew "zig"
+brew "python@3.13"
 brew "openjdk"
 brew "maven"
-brew "neovim"
-brew "nushell"
-brew "openai-whisper"
-brew "pkgconf"
+
+# --- JS package managers ------------------------------------------------
 brew "pnpm"
-brew "postgresql@14"
-brew "postgresql@16"
-brew "pulumi"
-brew "python@3.13"
-brew "rbenv"
-brew "rcm"
-brew "ripgrep"
-brew "rtk"
-brew "ruby", link: false
-brew "shellcheck"
-brew "speedtest-cli"
-brew "sqlfluff"
-brew "temporal"
-brew "vim"
-brew "watchman"
 brew "yarn"
-brew "z"
-brew "zig"
-brew "zsh"
-brew "datadog-labs/pack/pup"
-brew "datadog/lapdog/lapdog"
-brew "infisical/get-cli/infisical"
+
+# --- Dev tooling --------------------------------------------------------
+brew "git"
+brew "git-lfs"
+brew "gh"
+brew "ripgrep"
+brew "shellcheck"
+brew "watchman"
+brew "sqlfluff"
+brew "asciinema"
 brew "withgraphite/tap/graphite"
+
+# --- Cloud & infra ------------------------------------------------------
+brew "awscli"
+brew "eksctl"
+brew "kubernetes-cli"
+brew "pulumi"
+brew "temporal"
+brew "infisical/get-cli/infisical"
+
+# --- Data ---------------------------------------------------------------
+brew "postgresql@16"
+brew "libpq"
+brew "ipython"
+
+# --- Media --------------------------------------------------------------
+brew "ffmpeg"
+brew "imagemagick"
+brew "openai-whisper"
+brew "aspell"
+
+# --- System monitoring --------------------------------------------------
+brew "btop"
+brew "htop"
+brew "glances"
+brew "speedtest-cli"
+
+# --- Security -----------------------------------------------------------
+brew "gnupg"
+
+# --- AI / assistants ----------------------------------------------------
+brew "gemini-cli"
+brew "rtk"
+
+# --- Casks --------------------------------------------------------------
 cask "android-platform-tools"
 cask "codex"
 cask "codexbar"
@@ -88,6 +97,8 @@ cask "ngrok"
 cask "orbstack"
 cask "t3-code"
 cask "youtube-downloader"
+
+# --- VS Code extensions -------------------------------------------------
 vscode "connor4312.nodejs-testing"
 vscode "coolbear.systemd-unit-file"
 vscode "dbaeumer.vscode-eslint"
@@ -135,6 +146,8 @@ vscode "vscjava.vscode-java-pack"
 vscode "vscjava.vscode-java-test"
 vscode "vscjava.vscode-maven"
 vscode "yoavbls.pretty-ts-errors"
+
+# --- Global npm packages ------------------------------------------------
 npm "@posthog/cli"
 npm "codebuff"
 npm "corepack"

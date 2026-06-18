@@ -8,7 +8,9 @@ Personal dotfiles repository managed with [rcm](https://github.com/thoughtbot/rc
 
 ## Setup
 
-New machine: run `./setup.sh` (installs Homebrew + Brewfile packages, inits submodules, runs `rcup`). `Brewfile` is the package manifest; regenerate with `brew bundle dump --file=Brewfile --force`. `macos.sh` applies system `defaults` (keyboard/Finder/Dock/screenshots) — run by hand, not by rcup. Both `setup.sh` and `macos.sh` are in `EXCLUDES` so rcm doesn't symlink them into `$HOME`.
+New machine: run `./setup.sh` (installs Homebrew + Brewfile packages, inits submodules, runs `rcup`). `Brewfile` is a **hand-curated** package manifest — it deliberately omits transitive dependencies, so do NOT regenerate it with `brew bundle dump --force` (that re-adds every dep and one-off). Add lines by hand; use `brew leaves --installed-on-request` to find new top-level installs. `macos.sh` applies system `defaults` (keyboard/Finder/Dock/screenshots) — run by hand, not by rcup. `setup.sh`, `macos.sh`, and `Makefile` are in `EXCLUDES` so rcm doesn't symlink them into `$HOME`.
+
+Common tasks are in the `Makefile`: `make check` (shellcheck lint + `brew bundle check`), `make lint`, `make brew-check`, `make install` (brew bundle install + relink), `make link` (rcup).
 
 ## Dotfile Management
 
