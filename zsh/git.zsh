@@ -185,7 +185,9 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias giX='git rm -r --force --cached'
 
   # Log (l)
-  alias gl='git log --topo-order --pretty=format:"$_git_log_medium_format"'
+  # NOTE: `gl` is intentionally remapped to `git pull` in zsh/aliases.zsh
+  # (loaded after this file). Use `gll` for the medium-format log.
+  alias gll='git log --topo-order --pretty=format:"$_git_log_medium_format"'
   alias gls='git log --topo-order --stat --pretty=format:"$_git_log_medium_format"'
   alias gld='git log --topo-order --stat --patch --full-diff --pretty=format:"$_git_log_medium_format"'
   alias glo='git log --topo-order --pretty=format:"$_git_log_oneline_format"'
