@@ -4,11 +4,4 @@
 [[ -o interactive ]] && return
 
 source $HOME/.zsh/environment/path.zsh
-
-export EDITOR='emacsclient -t'
-export VISUAL='emacsclient -t'
-export PAGER='less'
-
-if [[ -z "$LANG" ]]; then
-  export LANG='en_US.UTF-8'
-fi
+source $HOME/.zsh/environment/core.zsh
