@@ -140,3 +140,6 @@ alias claude-mem='bun "/Users/gregmeyer/.claude/plugins/marketplaces/thedotmack/
 
 # Added by Antigravity CLI installer
 export PATH="/Users/gregmeyer/.local/bin:$PATH"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"

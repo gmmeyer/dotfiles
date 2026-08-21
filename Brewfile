@@ -105,8 +105,8 @@ vscode "dbaeumer.vscode-eslint"
 vscode "docker.docker"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot"
-vscode "github.copilot-chat"
+# github.copilot / github.copilot-chat ship built into VS Code now — a
+# marketplace install can't satisfy them (built-in copilot-chat outranks it).
 vscode "github.vscode-github-actions"
 vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-syntax"
@@ -148,7 +148,8 @@ vscode "vscjava.vscode-maven"
 vscode "yoavbls.pretty-ts-errors"
 
 # --- Global npm packages ------------------------------------------------
+# NOTE: corepack intentionally omitted — its pnpm/pnpx/yarn shims collide with
+# the brew-installed `pnpm`/`yarn` above (EEXIST on /opt/homebrew/bin).
 npm "@posthog/cli"
 npm "codebuff"
-npm "corepack"
 npm "happy-coder"

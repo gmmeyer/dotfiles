@@ -5,3 +5,6 @@
 
 source $HOME/.zsh/environment/path.zsh
 source $HOME/.zsh/environment/core.zsh
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
