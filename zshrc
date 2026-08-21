@@ -38,18 +38,3 @@ source $HOME/.zsh/aliases.zsh
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-[ -f $HOME/.docker/init-zsh.sh ] && source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-
-# Added by Antigravity CLI installer
-export PATH="/Users/gregmeyer/.local/bin:$PATH"
-
-# Vite+ bin (https://viteplus.dev)
-. "$HOME/.vite-plus/env"
-
-# opencode
-export PATH="$HOME/.opencode/bin:$PATH"
-export PATH=$PATH:$HOME/.maestro/bin

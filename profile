@@ -25,26 +25,10 @@ fi
 alias irb='pry'
 # colorize ls
 alias ls='ls --color'
-alias sublime='sublime_text'
-alias node='js'
 
 PS1='greg@\W: '
 
 # alias for xfce4-terminal
 #alias term='xfce4-terminal'
 
-PATH=$PATH:/opt/sublime_text # Add sublime to path
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-# source $rvm_path/scripts/completion
-[[ -s "/Users/greg/.gvm/scripts/gvm" ]] && source "/Users/greg/.gvm/scripts/gvm"
-
-. "$HOME/.cargo/env"
-
-[[ -s "/Users/gregmeyer/.gvm/scripts/gvm" ]] && source "/Users/gregmeyer/.gvm/scripts/gvm"
-
-
-# Added by Antigravity CLI installer
-export PATH="/Users/gregmeyer/.local/bin:$PATH"
-
-# Vite+ bin (https://viteplus.dev)
-. "$HOME/.vite-plus/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"

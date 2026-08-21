@@ -20,4 +20,5 @@ fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 
-export GPG_TTY=$(tty)
+# Only meaningful when attached to a terminal; $TTY avoids forking tty(1)
+[[ -n "$TTY" ]] && export GPG_TTY="$TTY"

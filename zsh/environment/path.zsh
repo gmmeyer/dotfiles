@@ -25,6 +25,8 @@ path=($HOME/bin
       $HOME/.rbenv/shims
       $HOME/.claude/bin
       $HOME/.antigravity/antigravity/bin
+      $HOME/.opencode/bin
+      $HOME/.maestro/bin
       $HOME/.yarn/bin
       $HOME/.config/yarn/global/node_modules/.bin
       $BUN_INSTALL/bin

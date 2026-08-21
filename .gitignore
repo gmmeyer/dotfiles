@@ -62,3 +62,6 @@ sublime-text-3/Local
 vim/vimbackup
 vim/vimviews
 vim/vimswap
+
+# AI tool state
+.claude-octopus/
