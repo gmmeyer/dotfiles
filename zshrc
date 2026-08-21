@@ -47,9 +47,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Added by Antigravity CLI installer
 export PATH="/Users/gregmeyer/.local/bin:$PATH"
 
-# opencode
-export PATH=/Users/greg/.opencode/bin:$PATH
-
 # Vite+ bin (https://viteplus.dev)
 . "$HOME/.vite-plus/env"
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
 export PATH=$PATH:$HOME/.maestro/bin
