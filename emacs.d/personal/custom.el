@@ -8,8 +8,8 @@
                 cdlatex cider clojure-mode cmake-mode company-anaconda
                 company-auctex company-go corfu crux ctags-update
                 dart-mode diff-hl diminish discover-my-major easy-kill
-                eglot-fsharp elisp-slime-nav elixir-mode emamux
-                embark-consult erlang exec-path-from-shell
+                editorconfig eglot-fsharp elisp-slime-nav elixir-mode
+                emamux embark-consult erlang exec-path-from-shell
                 expand-region flx-ido flycheck-eglot flycheck-rust
                 forge fsharp-mode fzf geiser gist git-modes
                 git-timemachine go-autocomplete go-projectile gotest
