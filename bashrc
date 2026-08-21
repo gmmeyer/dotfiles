@@ -114,9 +114,6 @@ if ! shopt -oq posix; then
 fi
 
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export NVM_DIR="/home/greg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -124,22 +121,10 @@ export NVM_DIR="/home/greg/.nvm"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# added by travis gem
-[ -f /Users/gregmeyer/.travis/travis.sh ] && source /Users/gregmeyer/.travis/travis.sh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source /Users/greg/.docker/init-bash.sh || true # Added by Docker Desktop
 export PATH=$PATH:/usr/local/bin
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 # Added by Claude's Party
 export PATH="$HOME/.claude/bin:$PATH"
-
-alias claude-mem='bun "/Users/gregmeyer/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
-
-
-# Added by Antigravity CLI installer
-export PATH="/Users/gregmeyer/.local/bin:$PATH"
-
-# Vite+ bin (https://viteplus.dev)
-. "$HOME/.vite-plus/env"

@@ -7,8 +7,6 @@
 	name = Greg Meyer
 	# email lives in ~/.gitconfig-local (private-dotfiles);
 	# work dirs get ~/.gitconfig-work via includeIf below
-[rerere]
-	enabled = true
 [core]
 	editor = emacsclient -t
 	autocrlf = false
@@ -23,13 +21,14 @@
 	type = cat-file -t
 	dump = cat-file -p
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-	cleanup = !git fetch --prune && git fetch --prune origin '+refs/tags/*:refs/tags/*' && git fetch --prune --tags && git remote prune origin && git prune
+	cleanup = !git fetch --prune --prune-tags && git prune
 	cleanup-all = !git cleanup && git gc --prune=now
 [push]
 	default = current
 	autoSetupRemote = true
 [fetch]
 	prune = true
+	pruneTags = true
 [pull]
 	rebase = false
 [merge]
@@ -37,6 +36,17 @@
 [diff]
 	algorithm = histogram
 	colorMoved = default
+	mnemonicPrefix = true
+	renames = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[rebase]
+	autoStash = true
+[column]
+	ui = auto
+[help]
+	autocorrect = prompt
 [branch]
 	sort = -committerdate
 [commit]
