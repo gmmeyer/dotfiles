@@ -45,3 +45,6 @@ PATH=$PATH:/opt/sublime_text # Add sublime to path
 
 # Added by Antigravity CLI installer
 export PATH="/Users/gregmeyer/.local/bin:$PATH"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"

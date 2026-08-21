@@ -82,3 +82,7 @@ source /Users/greg/.docker/init-bash.sh || true # Added by Docker Desktop
 
 # Added by Antigravity CLI installer
 export PATH="/Users/gregmeyer/.local/bin:$PATH"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
+export PATH=$PATH:$HOME/.maestro/bin
