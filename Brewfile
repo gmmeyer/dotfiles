@@ -8,7 +8,9 @@
 #   brew leaves --installed-on-request
 
 # --- Taps ---------------------------------------------------------------
+tap "anomalyco/tap"
 tap "infisical/get-cli"
+tap "oven-sh/bun"
 tap "withgraphite/tap"
 
 # --- Shell & dotfiles ---------------------------------------------------
@@ -52,6 +54,8 @@ brew "watchman"
 brew "sqlfluff"
 brew "asciinema"
 brew "withgraphite/tap/graphite"
+brew "oven-sh/bun/bun"
+brew "anomalyco/tap/opencode"
 
 # --- Cloud & infra ------------------------------------------------------
 brew "awscli"

@@ -18,6 +18,10 @@ fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 info "Installing packages from Brewfile"
+# Homebrew 6 skips third-party tap formulae unless the tap is trusted.
+grep -E '^tap "' "$DOTFILES_DIR/Brewfile" | sed -E 's/tap "([^"]+)".*/\1/' | while read -r tap; do
+  brew trust "$tap" >/dev/null
+done
 brew bundle install --file="$DOTFILES_DIR/Brewfile" --no-upgrade
 
 # --- Git submodules (prezto, tpm, vundle, zsh-z) ------------------------
