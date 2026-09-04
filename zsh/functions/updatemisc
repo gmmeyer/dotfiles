@@ -79,7 +79,18 @@ if _um_want plugins; then
     _um_hdr "AI tool plugin repos"
 
     local -a bases=("$HOME/.codex" "$HOME/.config/opencode" "$HOME/.opencode")
-    if (( $+commands[claude] )); then
+    # Update marketplaces one at a time: the bare `marketplace update` does a
+    # fresh shallow clone of every marketplace and hits the CLI's 120s timeout
+    # on large repos (claude-mem) when GitHub is routed through a slow path.
+    # Per-name updates do an incremental fetch of the existing checkout.
+    local known="$HOME/.claude/plugins/known_marketplaces.json" mkt
+    if (( $+commands[claude] )) && [[ -r $known ]] && (( $+commands[jq] )); then
+        for mkt in $(jq -r 'keys[]' "$known"); do
+            print "  claude plugin marketplace update $mkt"
+            claude plugin marketplace update "$mkt" 2>&1 | sed 's/^/    /' \
+                || _um_fail "plugins:marketplace:$mkt"
+        done
+    elif (( $+commands[claude] )); then
         print "  claude plugin marketplace update"
         claude plugin marketplace update 2>&1 | sed 's/^/    /' || _um_fail "plugins:claude-marketplaces"
     else
