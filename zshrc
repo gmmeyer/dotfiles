@@ -1,7 +1,7 @@
 # Environment variables and PATH (sources zsh/environment/*.zsh)
 source $HOME/.zsh/environment.zsh
 
-if [[ `uname` == 'Darwin' ]]; then
+if [[ $OSTYPE == darwin* ]]; then
     source $HOME/.zsh/osx.zsh
 fi
 
@@ -18,9 +18,6 @@ if command -v rbenv >/dev/null 2>&1; then
   bundle() { _rbenv_init; command bundle "$@" }
   rbenv()  { _rbenv_init; command rbenv "$@" }
 fi
-
-# gitignore!
-function gi() { curl -s https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 if [[ -f "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"

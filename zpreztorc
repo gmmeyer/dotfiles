@@ -16,12 +16,12 @@ zstyle ':prezto:load' pmodule \
        'editor' \
        'history' \
        'history-substring-search' \
+       'git-fixes' \
        'completion' \
        'ruby' \
        'node' \
        'syntax-highlighting' \
        'prompt' \
-       'git-fixes' \
        'zsh-z'
 
 zstyle ':prezto:module:ssh:load' identities 'id_ed25519'

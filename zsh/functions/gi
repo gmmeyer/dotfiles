@@ -1,0 +1,6 @@
+# -*- mode: shell-script -*-
+# vi: set ft=shell-script :
+#
+# Fetch a .gitignore template: gi node,macos > .gitignore
+
+curl -s "https://www.toptal.com/developers/gitignore/api/${(j:,:)@}"

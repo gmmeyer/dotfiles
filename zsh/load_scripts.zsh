@@ -11,22 +11,18 @@ function load_scripts() {
       source /etc/zsh_command_not_found
   fi
 
-  if [ -f $HOME/.fzf.zsh ]; then
-    source $HOME/.fzf.zsh
+  # fzf keybindings + completion (brew's fzf has no ~/.fzf.zsh; use --zsh)
+  if (( $+commands[fzf] )); then
+    source <(fzf --zsh)
   fi
 
-  if command -v direnv > /dev/null 2>&1; then
+  if (( $+commands[direnv] )); then
       eval "$(direnv hook zsh)"
   fi
 }
 
 if [ -f $HOME/.zsh/private.zsh ]; then
     source $HOME/.zsh/private.zsh
-fi
-
-if [ -f $HOME/.zsh/git.zsh ]; then
-    # git aliases and colors
-    source $HOME/.zsh/git.zsh
 fi
 
 load_scripts

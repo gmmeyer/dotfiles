@@ -1,8 +1,0 @@
-# ~/.tmuxinator/jumpbox-tools.yml
-
-name: jumpbox-tools
-root: ~/jumpbox-tools
-
-windows:
-  - workspace:
-  - editor:

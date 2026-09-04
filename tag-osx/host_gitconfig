@@ -1,4 +1,2 @@
-[user]
-	signingkey = 2BD74CB4CE9FE1C8
 [credential]
 	helper = osxkeychain

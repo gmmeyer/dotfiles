@@ -22,6 +22,7 @@ brew "gnu-sed"
 brew "direnv"
 brew "fzf"
 brew "tmux"
+brew "tmuxinator"
 
 # --- Editors ------------------------------------------------------------
 brew "emacs"

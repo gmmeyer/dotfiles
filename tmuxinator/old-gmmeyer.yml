@@ -1,8 +1,0 @@
-# ~/.tmuxinator/old-gmmeyer.yml
-
-name: old-gmmeyer
-root: ~/development/gmmeyer.github.io/
-
-windows:
-  - workspace:
-  - editor: e .

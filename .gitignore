@@ -38,22 +38,6 @@ tramp
 # AUCTeX auto folder
 /auto/
 
-# Atom #
-####################
-atom/.node-gyp
-atom/packages
-atom/nohup.out
-compile-cache
-atom/storage
-
-# Sublime Text #
-###################
-
-sublime-text-3/Backup
-sublime-text-3/Cache
-sublime-text-3/Index
-sublime-text-3/Local
-
 ## OSX
 .DS_Store
 *.DS_Store
@@ -67,3 +51,9 @@ vim/vimswap
 .claude-octopus/
 # agentmemory runtime store (lives in private-dotfiles; symlinked here for the running server)
 data
+
+# Dropped into the repo by Claude Code / claude-mem / Warp; not config
+.claude/settings.local.json
+.cmem-projects/
+agent-transcripts/
+WARP.md

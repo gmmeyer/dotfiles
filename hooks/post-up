@@ -7,7 +7,8 @@ if [ "$(uname)" = "Darwin" ]; then
   # nushell — whole-directory link
   ns_dir="$HOME/Library/Application Support/nushell"
   if [ ! -L "$ns_dir" ]; then
-    rm -rf "$ns_dir"
+    # Keep any pre-existing config rather than deleting it on a fresh machine.
+    [ -e "$ns_dir" ] && mv "$ns_dir" "$ns_dir.bak-$(date +%Y%m%d%H%M%S)"
     ln -s "$HOME/.config/nushell" "$ns_dir"
   fi
 

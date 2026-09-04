@@ -33,4 +33,5 @@ bindkey -s "^[OX" "="
 #
 export BROWSER='open'
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Skip the fork in nested shells that already inherited brew env.
+[[ -z "$HOMEBREW_PREFIX" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
