@@ -35,3 +35,6 @@ source $HOME/.zsh/aliases.zsh
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# opencode
+export PATH=/Users/gregmeyer/.opencode/bin:$PATH
