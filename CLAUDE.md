@@ -46,7 +46,7 @@ Platform-specific configs live in `tag-osx/` and `tag-linux/` directories (bash 
 - Editor: `emacsclient -t`
 - Aliases: `co`, `ci`, `st`, `br`, `lg`, `cleanup`, `cleanup-all`
 - Default branch: `main`
-- Identity is split: email comes from `~/.gitconfig-local` (private-dotfiles); repos under `~/zingage/` and `~/work/` get the work email via includeIf → `~/.gitconfig-work`. Signing keys, if any, belong in those private files too
+- Identity: email comes from `~/.gitconfig-local` (private-dotfiles) everywhere — personal email, no per-directory work override. Signing keys, if any, belong there too
 
 **Tmux** (tmux.conf):
 - Prefix: `C-a` (not `C-b`)

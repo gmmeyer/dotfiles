@@ -5,8 +5,7 @@
 	grep = auto
 [user]
 	name = Greg Meyer
-	# email lives in ~/.gitconfig-local (private-dotfiles);
-	# work dirs get ~/.gitconfig-work via includeIf below
+	# email lives in ~/.gitconfig-local (private-dotfiles)
 [core]
 	editor = emacsclient -t
 	autocrlf = false
@@ -63,7 +62,3 @@
 [include]
 	path = ~/.host_gitconfig
 	path = ~/.gitconfig-local
-[includeIf "gitdir:~/zingage/"]
-	path = ~/.gitconfig-work
-[includeIf "gitdir:~/work/"]
-	path = ~/.gitconfig-work
