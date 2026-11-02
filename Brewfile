@@ -88,7 +88,6 @@ brew "gnupg"
 
 # --- AI / assistants ----------------------------------------------------
 brew "gemini-cli"
-brew "rtk"
 
 # --- Casks --------------------------------------------------------------
 cask "android-platform-tools"
