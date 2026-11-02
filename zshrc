@@ -31,7 +31,7 @@ source $HOME/.zsh/load_scripts.zsh
 source $HOME/.zsh/aliases.zsh
 
 # fnm (node version manager)
-[[ -s "/opt/homebrew/bin/fnm" ]] && eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines --shell zsh)"
+[[ -s "/opt/homebrew/bin/fnm" ]] && eval "$(fnm env --use-on-cd --version-file-strategy=recursive --resolve-engines --shell zsh)"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
