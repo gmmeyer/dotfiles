@@ -1,7 +1,31 @@
 #!/bin/sh
 # rcm post-up hook.
-# Bridges apps that read config from ~/Library/Application Support (which rcm
-# cannot link into) to the rcm-managed copies under ~/.config.
+# 1. Prunes symlinks whose source was deleted from a dotfiles repo.
+# 2. Bridges apps that read config from ~/Library/Application Support (which rcm
+#    cannot link into) to the rcm-managed copies under ~/.config.
+
+# rcm links files one at a time and never removes a link once its source is
+# gone, so files deleted from a repo (or from a submodule, e.g. completions
+# dropped from zprezto's bundled zsh-completions) leave dangling links behind.
+# Dangling _* files in fpath make compinit print "no such file or directory"
+# on every dump rebuild. A broken link back into a repo is never useful.
+# (Existence is checked in one batched sh per find: ~/.zprezto alone holds
+# ~1000 links, and forking `test` per link made this take seconds.)
+# shellcheck disable=SC2016  # $l expands in the inner sh, not here
+prune='for l; do [ -e "$l" ] || { echo "pruned dangling link: $l"; rm -f "$l"; }; done'
+for repo in "$HOME/dotfiles" "$HOME/private-dotfiles"; do
+  [ -d "$repo" ] || continue
+  find "$HOME" -maxdepth 1 -type l -lname "$repo/*" -exec sh -c "$prune" sh {} +
+  # Dirs rcm builds file-by-file (~/.zprezto, ~/.zsh, ~/.config, ...)
+  seen=' '
+  for src in "$repo"/* "$repo"/tag-*/* "$repo"/host-*/*; do
+    dest="$HOME/.${src##*/}"
+    [ -d "$dest" ] && [ ! -L "$dest" ] || continue
+    case $seen in *" $dest "*) continue ;; esac
+    seen="$seen$dest "
+    find "$dest" -type l -lname "$repo/*" -exec sh -c "$prune" sh {} +
+  done
+done
 
 if [ "$(uname)" = "Darwin" ]; then
   # nushell — whole-directory link

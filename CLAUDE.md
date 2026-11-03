@@ -19,7 +19,7 @@ This repo uses `rcm` for symlink management:
 - `rcdn` - Remove dotfile symlinks
 - `lsrc` - List managed dotfiles
 
-Platform-specific configs live in `tag-osx/` and `tag-linux/` directories (bash configs are Linux-only and live in `tag-linux/`; macOS is zsh-only). The `rcrc` file defines which tags to use and what to exclude. Note: `EXCLUDES` filters `*.md` globally, so markdown files that must be linked (e.g. `private-dotfiles/claude/CLAUDE.md`) are handled by `private-dotfiles/hooks/post-up`.
+Platform-specific configs live in `tag-osx/` and `tag-linux/` directories (bash configs are Linux-only and live in `tag-linux/`; macOS is zsh-only). The `rcrc` file defines which tags to use and what to exclude. Note: `EXCLUDES` filters `*.md` globally, so markdown files that must be linked (e.g. `private-dotfiles/claude/CLAUDE.md`) are handled by `private-dotfiles/hooks/post-up`. rcm links directories like `~/.zprezto` and `~/.zsh` file-by-file and never removes stale links, so `hooks/post-up` prunes dangling links into either repo (otherwise files deleted upstream, e.g. completions dropped from zprezto's zsh-completions, make compinit error on every dump rebuild).
 
 `config/` maps to `~/.config/` (zed, btop, gh, nvim, nushell, ghostty, Code). Apps that read config from `~/Library/Application Support` are bridged to the rcm-managed `~/.config` copies by `hooks/post-up`: nushell (whole-dir link) and VS Code (`Code/User/{settings,keybindings}.json`, per-file since that dir also holds untracked machine state). Ghostty reads `~/.config/ghostty/config` natively, no bridge needed. opencode config lives in private-dotfiles (`config/opencode/`).
 
