@@ -58,7 +58,9 @@ if _um_want prezto; then
     _um_hdr "Prezto ($(_um_path "$dotfiles/zprezto"))"
     if [[ -e $dotfiles/zprezto/.git ]]; then
         local before=$(git -C "$dotfiles/zprezto" rev-parse HEAD)
-        if git -C "$dotfiles/zprezto" pull --ff-only 2>&1 | sed 's/^/  /' \
+        # Submodules sit on a detached HEAD, so `git pull` can't be used;
+        # --remote checks out the tip of the upstream default branch instead.
+        if git -C "$dotfiles" submodule update --init --remote zprezto 2>&1 | sed 's/^/  /' \
             && git -C "$dotfiles/zprezto" submodule update --init --recursive 2>&1 | sed 's/^/  /'; then
             if [[ $before != $(git -C "$dotfiles/zprezto" rev-parse HEAD) ]]; then
                 (( $+commands[rcup] )) && rcup -q
