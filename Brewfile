@@ -88,7 +88,6 @@ brew "gnupg"
 
 # --- AI / assistants ----------------------------------------------------
 brew "gemini-cli"
-brew "rtk"
 
 # --- Casks --------------------------------------------------------------
 cask "android-platform-tools"
@@ -100,7 +99,6 @@ cask "jordanbaird-ice"
 cask "ngrok"
 cask "orbstack"
 cask "t3-code"
-cask "youtube-downloader"
 
 # --- VS Code extensions -------------------------------------------------
 vscode "connor4312.nodejs-testing"

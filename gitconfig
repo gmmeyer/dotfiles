@@ -62,3 +62,5 @@
 [include]
 	path = ~/.host_gitconfig
 	path = ~/.gitconfig-local
+	# this machine only (untracked, not in any repo); last so it wins
+	path = ~/.gitconfig-machine
