@@ -38,4 +38,9 @@ fi
 info "Linking dotfiles with rcup"
 RCRC="$DOTFILES_DIR/tag-osx/rcrc" rcup -v
 
+# --- Emacs Prelude -------------------------------------------------------
+# After rcup, so the emacs.d overlay already exists and is preserved.
+info "Installing Emacs Prelude"
+"$DOTFILES_DIR/install-prelude.sh"
+
 info "Done. Open a new shell or run: exec zsh"

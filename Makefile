@@ -5,7 +5,7 @@
 DOTFILES_DIR := $(HOME)/dotfiles
 
 # Scripts for shellcheck (POSIX sh/bash only; it chokes on zsh syntax).
-SHELL_SCRIPTS := setup.sh macos.sh hooks/post-up
+SHELL_SCRIPTS := setup.sh macos.sh install-prelude.sh hooks/post-up
 # zsh files get a `zsh -n` parse check instead.
 ZSH_FILES := zshrc zshenv zprofile zlogin zpreztorc \
              $(wildcard zsh/*.zsh zsh/environment/*.zsh zsh/functions/* tag-linux/zsh/functions/*)

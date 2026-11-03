@@ -45,11 +45,9 @@ if _um_want prelude; then
     _um_hdr "Prelude (~/.emacs.d)"
     if [[ -e $HOME/.emacs.d/.git ]]; then
         git -C "$HOME/.emacs.d" pull --ff-only 2>&1 | sed 's/^/  /' || _um_fail prelude
-    elif [[ -e $HOME/.emacs.d ]]; then
-        print "  skip: ~/.emacs.d exists but is not a git checkout"
     else
-        curl -fsSL https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh \
-            || _um_fail prelude
+        # Missing, or only the rcm-linked overlay: install Prelude in place.
+        "$dotfiles/install-prelude.sh" 2>&1 | sed 's/^/  /' || _um_fail prelude
     fi
 fi
 

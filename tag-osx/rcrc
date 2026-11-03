@@ -1,5 +1,5 @@
 DOTFILES_DIRS="$HOME/dotfiles $HOME/private-dotfiles $HOME/private $HOME/.dotfiles"
-EXCLUDES="*.md setup.sh macos.sh Makefile tmuxinator-old* vim-bk* emacs.bk setup-scripts* deprecated-tmuxinator* tmuxp ssh-bk data"
+EXCLUDES="*.md setup.sh macos.sh install-prelude.sh Makefile tmuxinator-old* vim-bk* emacs.bk setup-scripts* deprecated-tmuxinator* tmuxp ssh-bk data"
 
 TAGS="osx"
 
