@@ -100,6 +100,7 @@ cask "jordanbaird-ice"
 cask "ngrok"
 cask "orbstack"
 cask "t3-code"
+cask "zed"
 
 # --- VS Code extensions -------------------------------------------------
 vscode "connor4312.nodejs-testing"
