@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;;Summary: load my themes!
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")

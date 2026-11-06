@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;;Set up the appearance of emacs
 
 (require 'moe-theme)
