@@ -11,6 +11,7 @@
 # Sections:
 #   prelude  ~/.emacs.d (bbatsov/prelude checkout)
 #   prezto   zprezto submodule in the dotfiles repo (relinked with rcup)
+#   ai       Claude, Codex, OpenCode CLIs (unless managed by Homebrew)
 #   plugins  AI tool plugin/marketplace repos (claude CLI, codex, opencode)
 #   brew     brew update/upgrade/autoremove/cleanup
 #   private  greg-private-update from private-dotfiles, if defined
@@ -21,7 +22,7 @@
 emulate -L zsh
 setopt local_options pipe_fail
 
-local -a all_sections=(prelude prezto plugins brew private)
+local -a all_sections=(prelude prezto ai plugins brew private)
 local -a want=("$@") failed
 local dotfiles="${DOTFILES:-$HOME/dotfiles}"
 local red=$'\e[1;31m' dim=$'\e[2m' reset=$'\e[0m'
@@ -72,6 +73,55 @@ if _um_want prezto; then
     else
         print "  skip: $(_um_path "$dotfiles/zprezto") is not a git checkout (run: git submodule update --init)"
     fi
+fi
+
+# --------------------------------------------------------------------- ai
+if _um_want ai; then
+    _um_hdr "AI command-line tools"
+    local cellar caskroom tool executable
+    local -a update_args
+    if (( $+commands[brew] )); then
+        cellar=$(brew --cellar) && caskroom=$(brew --caskroom) || {
+            _um_fail "ai:homebrew-detection"
+            cellar=unknown
+        }
+        if [[ $cellar != unknown ]]; then
+            cellar=${cellar:A}
+            caskroom=${caskroom:A}
+        fi
+    fi
+    for tool in claude codex opencode; do
+        if (( ! $+commands[$tool] )); then
+            print "  skip: $tool is not installed"
+            continue
+        fi
+        # Resolve symlinks: a Homebrew bin directory may also contain npm
+        # installs, and a native install can shadow a Homebrew installation.
+        executable=${commands[$tool]:A}
+        if [[ $cellar == unknown ]]; then
+            print "  skip: cannot determine whether Homebrew manages $tool"
+            continue
+        elif [[ -n $cellar && $executable == "$cellar/"* ]] \
+            || [[ -n $caskroom && $executable == "$caskroom/"* ]]; then
+            print "  skip: $tool is managed by Homebrew (updatemisc brew)"
+            continue
+        fi
+        case $tool in
+            claude)   update_args=(claude update) ;;
+            codex)
+                # Older npm releases predate the self-update command.
+                if [[ $executable == */node_modules/@openai/codex/* ]] \
+                    && ! codex update --help &>/dev/null; then
+                    update_args=(npm install -g @openai/codex@latest)
+                else
+                    update_args=(codex update)
+                fi
+                ;;
+            opencode) update_args=(opencode upgrade) ;;
+        esac
+        print "  ${update_args[*]}"
+        "${update_args[@]}" 2>&1 | sed 's/^/    /' || _um_fail "ai:$tool"
+    done
 fi
 
 # ---------------------------------------------------------------- plugins

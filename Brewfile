@@ -57,7 +57,7 @@ brew "sqlfluff"
 brew "asciinema"
 brew "withgraphite/tap/graphite"
 brew "oven-sh/bun/bun"
-brew "anomalyco/tap/opencode"
+brew "anomalyco/tap/opencode-v2"
 
 # --- Cloud & infra ------------------------------------------------------
 brew "awscli"
