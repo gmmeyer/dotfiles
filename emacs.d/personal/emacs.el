@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; This is just my general config file.
 ;;; I am mostly going to put my config in this file,
 ;;; though I will also use some other breakout files.

@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;;This one is pretty self explanitory
 
 ;;tab width

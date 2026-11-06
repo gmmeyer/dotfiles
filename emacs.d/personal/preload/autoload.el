@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; Autoload some files that I use frequently
 
 ;(autoload 'lua-mode "lua-mode" "Lua editing mode." t)

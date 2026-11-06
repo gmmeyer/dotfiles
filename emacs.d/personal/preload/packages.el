@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; packages --- my packages
 
 ;;; Commentary: my packages
