@@ -38,6 +38,7 @@ brew "go"
 brew "lua"
 brew "zig"
 brew "python@3.13"
+brew "uv"
 brew "openjdk"
 brew "maven"
 
