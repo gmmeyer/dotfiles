@@ -24,6 +24,10 @@
     "bitoAI.codeCompletion.enableAutoCompletion": false,
     "bitoAI.codeCompletion.enableCommentToCode": true,
     "editor.inlineSuggest.showToolbar": "onHover",
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path-mac": "/Users/greg/.vs-kubernetes/tools/helm/darwin-arm64/helm",
+        "vscode-kubernetes.minikube-path-mac": "/Users/greg/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+    },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
