@@ -86,7 +86,8 @@ brew "speedtest-go"
 brew "gnupg"
 
 # --- AI / assistants ----------------------------------------------------
-brew "asymptote-labs/tap/beacon"
+# Skipped on the work box (GregBookPro).
+brew "asymptote-labs/tap/beacon" unless `hostname -s`.strip == "GregBookPro"
 # opencode is NOT here: it's the standalone install in ~/.opencode/bin
 # (setup.sh installs it, `updatemisc ai` upgrades it).
 
