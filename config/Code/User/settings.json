@@ -1,38 +1,43 @@
 {
-    "python.formatting.provider": "black",
-    "isort.check": true,
-    "sqltools.highlightQuery": false,
-    "[python]": {
-        "editor.formatOnType": true
-    },
-    "redhat.telemetry.enabled": true,
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "playwright.reuseBrowser": true,
-    "playwright.showTrace": false,
-    "bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
-    "bitoAI.codeCompletion.enableAutoCompletion": false,
-    "bitoAI.codeCompletion.enableCommentToCode": true,
-    "editor.inlineSuggest.showToolbar": "onHover",
-    "vs-kubernetes": {
-        "vscode-kubernetes.helm-path-mac": "/Users/greg/.vs-kubernetes/tools/helm/darwin-arm64/helm",
-        "vscode-kubernetes.minikube-path-mac": "/Users/greg/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "chat.disableAIFeatures": true
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "bitoAI.codeCompletion.enableAutoCompletion": false,
+  "bitoAI.codeCompletion.enableCommentToCode": true,
+  "bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
+  "chat.disableAIFeatures": true,
+  "editor.inlineSuggest.showToolbar": "onHover",
+  "github.copilot.chat.otel.captureContent": false,
+  "github.copilot.chat.otel.enabled": true,
+  "github.copilot.chat.otel.exporterType": "otlp-http",
+  "github.copilot.chat.otel.maxAttributeSizeChars": 8192,
+  "github.copilot.chat.otel.otlpEndpoint": "http://127.0.0.1:4318",
+  "isort.check": true,
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": false,
+  "python.formatting.provider": "black",
+  "redhat.telemetry.enabled": true,
+  "sqltools.highlightQuery": false,
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path-mac": "/Users/greg/.vs-kubernetes/tools/helm/darwin-arm64/helm",
+    "vscode-kubernetes.minikube-path-mac": "/Users/greg/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+  }
 }

@@ -68,3 +68,8 @@ $env.PROMPT_INDICATOR = {|| " › " }
 $env.PROMPT_INDICATOR_VI_INSERT = {|| " › " }
 $env.PROMPT_INDICATOR_VI_NORMAL = {|| " : " }
 $env.PROMPT_MULTILINE_INDICATOR = {|| "::: " }
+
+# rustup: `source` fails at parse time if the file is missing, so resolve it
+# to null (a no-op) on machines without rust.
+const cargo_env = if ("~/.cargo/env.nu" | path exists) { "~/.cargo/env.nu" } else { null }
+source $cargo_env
