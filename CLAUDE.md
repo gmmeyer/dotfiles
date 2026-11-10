@@ -21,7 +21,7 @@ This repo uses `rcm` for symlink management:
 
 Platform-specific configs live in `tag-osx/` and `tag-linux/` directories (bash configs are Linux-only and live in `tag-linux/`; macOS is zsh-only). The `rcrc` file defines which tags to use and what to exclude. Note: `EXCLUDES` filters `*.md` globally, so markdown files that must be linked (e.g. `private-dotfiles/claude/CLAUDE.md`) are handled by `private-dotfiles/hooks/post-up`.
 
-`config/` maps to `~/.config/` (zed, btop, gh, nvim, nushell, ghostty, Code). Apps that read config from `~/Library/Application Support` are bridged to the rcm-managed `~/.config` copies by `hooks/post-up`: nushell (whole-dir link) and VS Code (`Code/User/{settings,keybindings}.json`, per-file since that dir also holds untracked machine state). Ghostty reads `~/.config/ghostty/config` natively, no bridge needed. opencode config lives in private-dotfiles (`config/opencode/`).
+`config/` maps to `~/.config/` (zed, btop, gh, nvim, nushell, ghostty, Code). Apps that read config from `~/Library/Application Support` are bridged to the rcm-managed `~/.config` copies by `hooks/post-up`: nushell (whole-dir link) and VS Code (`Code/User/{settings,keybindings}.json`, per-file since that dir also holds untracked machine state). Ghostty reads `~/.config/ghostty/config` natively, no bridge needed. opencode config lives in private-dotfiles (`config/opencode/`); the opencode binary itself is the standalone install in `~/.opencode/bin` (installed by `setup.sh`, upgraded by `updatemisc ai`), deliberately not in the Brewfile.
 
 ## Shell Architecture
 
@@ -34,9 +34,9 @@ Platform-specific configs live in `tag-osx/` and `tag-linux/` directories (bash 
 6. `zsh/overrides.zsh` - Post-Prezto overrides
 7. `zsh/load_scripts.zsh` - private.zsh, fzf (`fzf --zsh`) and direnv hooks
 8. `zsh/aliases.zsh` - Shell aliases
-9. fnm, bun completions, docker, iterm2 integrations
+9. fnm, bun completions, Vite+ `vp` wrapper
 
-`zshenv` is intentionally minimal: PATH + core env for non-interactive shells only. `path.zsh` filters its candidate list with `(N-/)`, so listing a dir that may not exist is fine. Don't force `TERM` anywhere (terminal sets it). Keep interactive startup fast (~0.5s); check with `time zsh -i -c exit`.
+`zshenv` is intentionally minimal: PATH + core env for non-interactive shells only. `zprofile` re-sources `path.zsh` because macOS `path_helper` (in `/etc/zprofile`) reorders PATH for login shells. History size/file are set via `':prezto:module:history'` zstyles in `zpreztorc` — Prezto's history module overwrites `HISTSIZE`/`SAVEHIST`/`HISTFILE` set anywhere earlier. `path.zsh` filters its candidate list with `(N-/)`, so listing a dir that may not exist is fine. Don't force `TERM` anywhere (terminal sets it). Keep interactive startup fast (~0.5s); check with `time zsh -i -c exit`.
 
 **Prezto modules** (zpreztorc): environment, helper, ssh, spectrum, utility, editor, history, history-substring-search, git-fixes, completion, ruby, node, syntax-highlighting, prompt, zsh-z. `git-fixes` (in `zprezto-contrib/`) is the git module and supplies all the `g*` aliases; the few personal overrides (`gl`=pull, `gll`, `glS`, `gwC`) are in `zsh/aliases.zsh`.
 

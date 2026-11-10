@@ -24,6 +24,15 @@ grep -E '^tap "' "$DOTFILES_DIR/Brewfile" | sed -E 's/tap "([^"]+)".*/\1/' | whi
 done
 brew bundle install --file="$DOTFILES_DIR/Brewfile" --no-upgrade
 
+# --- OpenCode (standalone, not Homebrew) ---------------------------------
+# Lives in ~/.opencode/bin and self-updates (`opencode upgrade`, run by
+# `updatemisc ai`). --no-modify-path stops the installer appending a PATH
+# line to the rcm-linked zshrc; zsh/environment/path.zsh already lists it.
+if [ ! -x "$HOME/.opencode/bin/opencode" ]; then
+  info "Installing OpenCode"
+  curl -fsSL https://opencode.ai/v2/install | bash -s -- --no-modify-path
+fi
+
 # --- Git submodules (prezto, tpm, vundle, zsh-z) ------------------------
 info "Initializing git submodules"
 git -C "$DOTFILES_DIR" submodule update --init --recursive

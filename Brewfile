@@ -8,9 +8,8 @@
 #   brew leaves --installed-on-request
 
 # --- Taps ---------------------------------------------------------------
-tap "anomalyco/tap"
+tap "asymptote-labs/tap"
 tap "infisical/get-cli"
-tap "oven-sh/bun"
 tap "withgraphite/tap"
 
 # --- Shell & dotfiles ---------------------------------------------------
@@ -31,7 +30,7 @@ brew "vim"
 
 # --- Languages & version managers --------------------------------------
 brew "rbenv"
-brew "ruby", link: false
+brew "ruby"
 brew "fnm"
 brew "node"
 brew "go"
@@ -56,8 +55,7 @@ brew "watchman"
 brew "sqlfluff"
 brew "asciinema"
 brew "withgraphite/tap/graphite"
-brew "oven-sh/bun/bun"
-brew "anomalyco/tap/opencode-v2"
+brew "bun"
 
 # --- Cloud & infra ------------------------------------------------------
 brew "awscli"
@@ -82,16 +80,19 @@ brew "aspell"
 brew "btop"
 brew "htop"
 brew "glances"
-brew "speedtest-cli"
+brew "speedtest-go"
 
 # --- Security -----------------------------------------------------------
 brew "gnupg"
 
 # --- AI / assistants ----------------------------------------------------
-brew "gemini-cli"
+brew "asymptote-labs/tap/beacon"
+# opencode is NOT here: it's the standalone install in ~/.opencode/bin
+# (setup.sh installs it, `updatemisc ai` upgrades it).
 
 # --- Casks --------------------------------------------------------------
 cask "android-platform-tools"
+cask "antigravity-cli"
 cask "codex"
 cask "codexbar"
 cask "dbeaver-community"
@@ -155,4 +156,3 @@ vscode "yoavbls.pretty-ts-errors"
 # the brew-installed `pnpm`/`yarn` above (EEXIST on /opt/homebrew/bin).
 npm "@posthog/cli"
 npm "codebuff"
-npm "happy-coder"
