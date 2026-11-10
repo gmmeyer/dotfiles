@@ -24,6 +24,11 @@ zstyle ':prezto:load' pmodule \
        'prompt' \
        'zsh-z'
 
+# History: the module defaults to 10000 entries and ignores HISTSIZE/SAVEHIST
+# set earlier in startup, so the size has to be given here.
+zstyle ':prezto:module:history' histsize 500000
+zstyle ':prezto:module:history' savehist 500000
+
 zstyle ':prezto:module:ssh:load' identities 'id_ed25519'
 
 zstyle ':prezto:module:prompt' theme 'greg'

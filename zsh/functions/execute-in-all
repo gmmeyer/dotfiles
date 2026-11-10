@@ -7,7 +7,7 @@ local cmd=$1
 
 if [ ! "$cmd" ]; then
   printf "this doesn't work without a command"
-  exit 1
+  return 1
 fi
 
 

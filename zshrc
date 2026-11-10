@@ -31,10 +31,10 @@ source $HOME/.zsh/load_scripts.zsh
 source $HOME/.zsh/aliases.zsh
 
 # fnm (node version manager)
-[[ -s "/opt/homebrew/bin/fnm" ]] && eval "$(fnm env --use-on-cd --version-file-strategy=recursive --resolve-engines --shell zsh)"
+(( $+commands[fnm] )) && eval "$(fnm env --use-on-cd --version-file-strategy=recursive --resolve-engines --shell zsh)"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-# opencode
-export PATH=/Users/gregmeyer/.opencode/bin:$PATH
+# Vite+ `vp` wrapper function (zshenv only sources this for non-interactive shells)
+[[ -f "$HOME/.vite-plus/env" ]] && source "$HOME/.vite-plus/env"

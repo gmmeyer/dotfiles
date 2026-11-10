@@ -29,6 +29,9 @@ path=($HOME/.bin
       $BUN_INSTALL/bin
       $VAPI_INSTALL/bin
       $GOPATH/bin
+      $HOME/.cargo/bin
+      /opt/homebrew/bin
+      /opt/homebrew/sbin
       /opt/homebrew/opt/openjdk/bin
       /opt/homebrew/opt/coreutils/libexec/gnubin
       /usr/local/bin
